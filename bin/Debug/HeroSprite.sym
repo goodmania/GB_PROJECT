@@ -1,0 +1,75 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000000 L
+  0 G$HeroBlinkTile$0_0$0                                       =  000400 GR
+  0 G$HeroDownAttack1Tile$0_0$0                                 =  000280 GR
+  0 G$HeroDownAttack2Tile$0_0$0                                 =  0002C0 GR
+  0 G$HeroDownTile$0_0$0                                        =  000000 GR
+  0 G$HeroDownWalkTile$0_0$0                                    =  000040 GR
+  0 G$HeroLeftAttack1Tile$0_0$0                                 =  000180 GR
+  0 G$HeroLeftAttack2Tile$0_0$0                                 =  0001C0 GR
+  0 G$HeroLeftTile$0_0$0                                        =  000080 GR
+  0 G$HeroLeftWalkTile$0_0$0                                    =  0000C0 GR
+  0 G$HeroRightAttack1Tile$0_0$0                                =  000200 GR
+  0 G$HeroRightAttack2Tile$0_0$0                                =  000240 GR
+  0 G$HeroRightTile$0_0$0                                       =  000100 GR
+  0 G$HeroRightWalkTile$0_0$0                                   =  000140 GR
+  0 G$HeroUpAttack1Tile$0_0$0                                   =  000380 GR
+  0 G$HeroUpAttack2Tile$0_0$0                                   =  0003C0 GR
+  0 G$HeroUpTile$0_0$0                                          =  000300 GR
+  0 G$HeroUpWalkTile$0_0$0                                      =  000340 GR
+  0 G$SwordDownTile$0_0$0                                       =  000580 GR
+  0 G$SwordLeftDownTile$0_0$0                                   =  000600 GR
+  0 G$SwordLeftTile$0_0$0                                       =  000500 GR
+  0 G$SwordLeftUpTile$0_0$0                                     =  000480 GR
+  0 G$SwordRightDownTile$0_0$0                                  =  0005C0 GR
+  0 G$SwordRightTile$0_0$0                                      =  0004C0 GR
+  0 G$SwordRightUpTile$0_0$0                                    =  000440 GR
+  0 G$SwordUpTile$0_0$0                                         =  000540 GR
+  0 _HeroBlinkTile                                                 000400 GR
+  0 _HeroDownAttack1Tile                                           000280 GR
+  0 _HeroDownAttack2Tile                                           0002C0 GR
+  0 _HeroDownTile                                                  000000 GR
+  0 _HeroDownWalkTile                                              000040 GR
+  0 _HeroLeftAttack1Tile                                           000180 GR
+  0 _HeroLeftAttack2Tile                                           0001C0 GR
+  0 _HeroLeftTile                                                  000080 GR
+  0 _HeroLeftWalkTile                                              0000C0 GR
+  0 _HeroRightAttack1Tile                                          000200 GR
+  0 _HeroRightAttack2Tile                                          000240 GR
+  0 _HeroRightTile                                                 000100 GR
+  0 _HeroRightWalkTile                                             000140 GR
+  0 _HeroUpAttack1Tile                                             000380 GR
+  0 _HeroUpAttack2Tile                                             0003C0 GR
+  0 _HeroUpTile                                                    000300 GR
+  0 _HeroUpWalkTile                                                000340 GR
+  0 _SwordDownTile                                                 000580 GR
+  0 _SwordLeftDownTile                                             000600 GR
+  0 _SwordLeftTile                                                 000500 GR
+  0 _SwordLeftUpTile                                               000480 GR
+  0 _SwordRightDownTile                                            0005C0 GR
+  0 _SwordRightTile                                                0004C0 GR
+  0 _SwordRightUpTile                                              000440 GR
+  0 _SwordUpTile                                                   000540 GR
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size    640   flags    0
+   1 _DATA                                      size      0   flags    0
+   2 _INITIALIZED                               size      0   flags    0
+   3 _DABS                                      size      0   flags    8
+   4 _HOME                                      size      0   flags    0
+   5 _GSINIT                                    size      0   flags    0
+   6 _GSFINAL                                   size      0   flags    0
+   7 _INITIALIZER                               size      0   flags    0
+   8 _CABS                                      size      0   flags    8
+

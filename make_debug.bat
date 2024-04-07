@@ -8,7 +8,7 @@ mkdir dist\Debug
 
 SET GBDK_HOME=..\..\Resources\gbdk
 
-SET LCC_COMPILE_BASE=%GBDK_HOME%\bin\lcc
+SET LCC_COMPILE_BASE=%GBDK_HOME%\bin\lcc -Wa-l -Wl-m -Wl-j
 SET LCC_COMPILE=%LCC_COMPILE_BASE% -debug -c -o 
 
 SETLOCAL ENABLEDELAYEDEXPANSION
