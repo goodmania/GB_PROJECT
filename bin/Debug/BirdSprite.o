@@ -3,7 +3,7 @@ H 9 areas 5 global symbols
 M BirdSprite
 O -msm83
 S .__.ABS. Def000000
-A _CODE size 264 flags 0 addr 0
+A _CODE size 280 flags 0 addr 0
 S _BirdSprite_tilemap Def000260
 S G$BirdSprite_tilemap$0_0$0 Def000260
 S _BirdSprite_tileset Def000000
@@ -114,5 +114,9 @@ T 56 02 00 88 F8 10 F0 60 E0 80 80 C0 80
 R 00 00 00 00
 T 60 02 00
 R 00 00 00 00
-T 60 02 00 09 0A 13 14
+T 60 02 00 09 0A 13 14 0B 0A 15 14 0C 0A 16 17 0D
+R 00 00 00 00
+T 6D 02 00 0E 18 19 0F 0E 18 19 10 0E 1A 1B 11 0E
+R 00 00 00 00
+T 7A 02 00 1C 1B 12 0A 1D 14
 R 00 00 00 00

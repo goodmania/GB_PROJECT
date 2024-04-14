@@ -8,10 +8,13 @@ void SetupBackGround(void);
 
 // grobal variable
 Character player;
-uint8_t frameCount = 0;
+uint8_t movementFrameCount = 0;
+uint8_t animationFrameCount = 0;
+uint8_t jumpFrameCount = 0;
 int8_t lastMovementX = 0;
 int8_t lastMovementY = 0;
 int8_t slowingX = 0;
+
 #define PLAYER_ANIMATION_FRAMES 8
 
 void showTitle(void)
@@ -32,12 +35,21 @@ void SetupBackGround()
 
 }
 
+void DetectCollisions(Character *character, uint8_t *predictedX, uint8_t *predictedY)
+{
+     // If we hit ground...
+     if (*predictedY >= 120)
+     {
+          // Snap to ground
+          *predictedY = 120; 
+
+          // Remove velocity
+          character->velocityY = 0;
+     }
+}
+
 void MovementPhysics(Character *character, uint8_t slowDownFrames)
 {
-     // Calculate if in air
-     uint8_t inAir = 0;
-     inAir = character->y < 112;
-
      // Reset frame every time we start and stop moving...
      if (
           // Stopped
@@ -46,18 +58,26 @@ void MovementPhysics(Character *character, uint8_t slowDownFrames)
           (lastMovementX == 0 && character->movementForceX != 0))
           {
                // Reset frame count
-               frameCount = 0;
+               movementFrameCount = 0;
+               animationFrameCount = 0;
           }
 
      // Flag true when we release from movement...
      if (lastMovementX != 0 && character->movementForceX == 0)
           slowingX = lastMovementX > 0 ? 1 : -1;
 
+     // Sprite flip for moving right
+     if (lastMovementX <= 0 && character->movementForceX > 0)
+          SetSpriteFlip(character, 0, 0);
+     // Sprite flip for moving left
+     else if (lastMovementX >= 0 && character->movementForceX < 0)
+          SetSpriteFlip(character, 1, 0);
+
      // While moving...
      if (character->movementForceX != 0)
      {
           // Compare movement to animation frames...
-          if (frameCount == 2 || frameCount == 6)
+          if (0) // movementFrameCount == 2 || movementFrameCount == 6)
           {
                // Don't move during this frame
                character->velocityX = 0;
@@ -68,24 +88,37 @@ void MovementPhysics(Character *character, uint8_t slowDownFrames)
                character->velocityX = character->movementForceX;
           }
 
-          // Increment frame count
-          frameCount++;
+          // Progress movement counter
+          movementFrameCount++;
           
           // Roll around after max frame
-          if (frameCount == PLAYER_ANIMATION_FRAMES)
+          if (movementFrameCount == PLAYER_ANIMATION_FRAMES)
           {
-               frameCount = 0;
+               movementFrameCount = 0;
           }
+          
+          // Progress animation counter
+          animationFrameCount++;
+          
+          // Roll around after max frame
+          if (animationFrameCount == PLAYER_ANIMATION_FRAMES)
+          {
+               animationFrameCount = 0;
+
+               // Move to next animation
+               LoadNextSpriteFrame(character);
+          }
+
      }
      // When no longer moving
      else
      {
-          if (slowingX && frameCount < slowDownFrames)
+          if (slowingX && movementFrameCount < slowDownFrames)
           {
-               frameCount++;
+               movementFrameCount++;
 
                // Allow character to move one frame before stopping
-               if (frameCount == slowDownFrames - 1)
+               if (movementFrameCount == slowDownFrames - 1)
                {
                     character->velocityX = 0;
                     slowingX = 0;
@@ -95,12 +128,48 @@ void MovementPhysics(Character *character, uint8_t slowDownFrames)
                     character->velocityX = slowingX;
           }
      }
+
+     // While jumping...
+     if (character->movementForceY != 0)
+     {
+          character->velocityY += character->movementForceY;
+
+          // jumpFrameCount = 0;
+     }
+     // Otherwise, if in the air...
+     else if (character->underfootState & FOOT_IN_AIR)
+     {
+          // Jump frame count from 0 to 60
+          jumpFrameCount = (jumpFrameCount + 1) % 60;
+
+          // Apply gravity
+          if (jumpFrameCount < 5)
+               character->velocityY = -2;
+          else if (jumpFrameCount < 10)
+               character->velocityY = -1;
+          else if (jumpFrameCount < 14)
+               character->velocityY = 0;
+          else if (jumpFrameCount < 20)
+               character->velocityY = 1;
+          else
+               character->velocityY = 2;
+     }
+
+     // Velocity limits
+     if (character->velocityY != 0 && character->velocityY < -3)
+          character->velocityY = -3;
+     if (character->velocityY != 0 && character->velocityY > 3)
+          character->velocityY = 3;
      
      // Calculate future position
      uint8_t predictedX = character->x + character->velocityX;
+     uint8_t predictedY = character->y + character->velocityY;
+
+     // Update predictions based on collision
+     DetectCollisions(character, &predictedX, &predictedY);
 
      // Move character to new position
-     MoveCharacter(character, predictedX, character->y);
+     MoveCharacter(character, predictedX, predictedY);
 
      // Which way were we moving
      lastMovementX = character->movementForceX;
@@ -123,8 +192,11 @@ void main(void)
 
     while(1)
     {
+        // TODO: Level interaction
+        player.underfootState = player.y >= 120 ? FOOT_ON_LAND : FOOT_IN_AIR;
         MoveCharacterWithJoypad(&player);
         MovementPhysics(&player, 3);
+        LoadNextSpriteFrame(&player);
         wait_vbl_done();
     }
 }

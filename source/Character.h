@@ -1,6 +1,10 @@
 #include <gb/gb.h>
 #include <stdio.h>
 
+#define FOOT_ON_LAND    0x01U
+#define FOOT_IN_AIR     0x02U
+#define MAX_JUMP_FRAMES 15
+
 // A structure for a character
 typedef struct Character
 {
@@ -86,6 +90,27 @@ void LoadSpriteFrame(Character* character, uint8_t frame)
         }
 }
 
+void RefreshSprite(Character *character)
+{
+    LoadSpriteFrame(character, character->spriteCurrentFrame);
+}
+
+void LoadNextSpriteFrame(Character *character)
+{
+    // Set next frame 
+    character->spriteCurrentFrame = (character->spriteCurrentFrame + 1) % character->spriteFrames;
+
+    RefreshSprite(character);
+}
+
+void SetSpriteFlip(Character *character, uint8_t flipX, uint8_t flipY)
+{
+    character->spriteFlippedX = flipX;
+    character->spriteFlippedY = flipY;
+
+    RefreshSprite(character);
+}
+
 void MoveCharacter(Character *character, uint8_t x, uint8_t y)
 {
     // Set characters new position
@@ -132,16 +157,43 @@ void MoveCharacterWithJoypad(Character *character)
 
     if (buttons & J_UP)
     {
-        moveY = -1;
     }
     else if (buttons & J_DOWN)
     {
-        moveY = 1;
     }
-    // Jumping
-    else if (buttons & J_A)
+    
+    // Have we jumped?
+    if ((character->underfootState & FOOT_ON_LAND) && (buttons & J_A))
     {
+        // Mark character as jumped
+        character->hasJumped = 1;
+        character->jumpedFrames = 0;
+    }
 
+    // If we are on land again after jumping...
+    else if (character->underfootState & FOOT_ON_LAND)
+    {
+        // Reset jump height
+        character->jumpedFrames = 0;
+
+        // Reset has jumped
+        character->hasJumped = 0;
+    }
+
+    // End jumping if not pressing A or gone above frames
+    if (!(buttons & J_A) || character->jumpedFrames > MAX_JUMP_FRAMES)
+    {
+        character->hasJumped = 0;
+    }
+
+    // If we have jumped and still have button pressed...
+    if (character->hasJumped && (buttons & J_A))
+    {
+        // Apply upward velocity
+        moveY = -1;
+
+        // Keep track of jumped height
+        character->jumpedFrames++;
     }
 
     // Set movement force
@@ -158,6 +210,9 @@ void SetupCharacter(Character* character, uint8_t spriteId, uint8_t tileWidth, u
     character->spriteTileHeight = tileHeight;
     character->tilesetStart = tilesetStart;
     character->spriteFrames = totalFrames;
+    character->underfootState = 0;
+    character->jumpedFrames = 0;
+    character->hasJumped = 0;
     // Load first sprite frame
     LoadSpriteFrame(character, 0);
 }
