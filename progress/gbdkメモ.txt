@@ -1,0 +1,25 @@
+task 実行
+ctrl shift B -> F5
+
+
+グラフィクスは３つのレイヤーを合成
+
+バックグラウンド
+ウィンドウ
+スプライト
+
+バイナリの意味
+0x1F, 0x1F
+
+0x1F 0001 1110 - lsb
+0x1F 0001 1111 - msb
+2byte で 1行 (8pix)
+
+色
+00 white
+01 light gray
+10 dark  gray
+11 black
+
+w w w b b b b d
+

@@ -9,420 +9,293 @@
                                       9 ; Public variables in this module
                                      10 ;--------------------------------------------------------
                                      11 	.globl _main
-                                     12 	.globl _keyInput
-                                     13 	.globl _set_sprite_data
-                                     14 	.globl _set_bkg_tiles
-                                     15 	.globl _set_bkg_data
-                                     16 	.globl _vsync
-                                     17 	.globl _joypad
-                                     18 	.globl _blinkFlag
-                                     19 	.globl _swordAction
-                                     20 	.globl _direction
-                                     21 	.globl _heroAction
-                                     22 	.globl _swordCnt
-                                     23 	.globl _blinkCnt
-                                     24 	.globl _actionCnt
-                                     25 	.globl _velocityY
-                                     26 	.globl _velocityX
-                                     27 	.globl _bkgY
-                                     28 	.globl _bkgX
-                                     29 	.globl _spriteY
-                                     30 	.globl _spriteX
-                                     31 	.globl _joypadPrevious
-                                     32 	.globl _initDangeonSprite
-                                     33 	.globl _initHeroSprite
-                                     34 ;--------------------------------------------------------
-                                     35 ; special function registers
-                                     36 ;--------------------------------------------------------
-                                     37 ;--------------------------------------------------------
-                                     38 ; ram data
-                                     39 ;--------------------------------------------------------
-                                     40 	.area _DATA
-                           000000    41 G$joypadPrevious$0_0$0==.
-      000000                         42 _joypadPrevious::
-      000000                         43 	.ds 1
-                           000001    44 G$spriteX$0_0$0==.
-      000001                         45 _spriteX::
-      000001                         46 	.ds 1
-                           000002    47 G$spriteY$0_0$0==.
-      000002                         48 _spriteY::
-      000002                         49 	.ds 1
-                           000003    50 G$bkgX$0_0$0==.
-      000003                         51 _bkgX::
-      000003                         52 	.ds 1
-                           000004    53 G$bkgY$0_0$0==.
-      000004                         54 _bkgY::
-      000004                         55 	.ds 1
-                           000005    56 G$velocityX$0_0$0==.
-      000005                         57 _velocityX::
-      000005                         58 	.ds 1
-                           000006    59 G$velocityY$0_0$0==.
-      000006                         60 _velocityY::
-      000006                         61 	.ds 1
-                           000007    62 G$actionCnt$0_0$0==.
-      000007                         63 _actionCnt::
-      000007                         64 	.ds 1
-                           000008    65 G$blinkCnt$0_0$0==.
-      000008                         66 _blinkCnt::
-      000008                         67 	.ds 1
-                           000009    68 G$swordCnt$0_0$0==.
-      000009                         69 _swordCnt::
-      000009                         70 	.ds 1
-                           00000A    71 G$heroAction$0_0$0==.
-      00000A                         72 _heroAction::
-      00000A                         73 	.ds 1
-                           00000B    74 G$direction$0_0$0==.
-      00000B                         75 _direction::
-      00000B                         76 	.ds 1
-                           00000C    77 G$swordAction$0_0$0==.
-      00000C                         78 _swordAction::
-      00000C                         79 	.ds 1
-                           00000D    80 G$blinkFlag$0_0$0==.
-      00000D                         81 _blinkFlag::
-      00000D                         82 	.ds 1
-                                     83 ;--------------------------------------------------------
-                                     84 ; ram data
-                                     85 ;--------------------------------------------------------
-                                     86 	.area _INITIALIZED
-                                     87 ;--------------------------------------------------------
-                                     88 ; absolute external ram data
-                                     89 ;--------------------------------------------------------
-                                     90 	.area _DABS (ABS)
-                                     91 ;--------------------------------------------------------
-                                     92 ; global & static initialisations
-                                     93 ;--------------------------------------------------------
-                                     94 	.area _HOME
-                                     95 	.area _GSINIT
-                                     96 	.area _GSFINAL
-                                     97 	.area _GSINIT
-                                     98 ;--------------------------------------------------------
-                                     99 ; Home
-                                    100 ;--------------------------------------------------------
-                                    101 	.area _HOME
-                                    102 	.area _HOME
-                                    103 ;--------------------------------------------------------
-                                    104 ; code
-                                    105 ;--------------------------------------------------------
-                                    106 	.area _CODE
-                           000000   107 	G$keyInput$0$0	= .
-                                    108 	.globl	G$keyInput$0$0
-                           000000   109 	C$main.c$31$0_0$133	= .
-                                    110 	.globl	C$main.c$31$0_0$133
-                                    111 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:31: void keyInput(void)
-                                    112 ;	---------------------------------
-                                    113 ; Function keyInput
-                                    114 ; ---------------------------------
-      000000                        115 _keyInput::
-                           000000   116 	C$main.c$33$1_0$133	= .
-                                    117 	.globl	C$main.c$33$1_0$133
-                                    118 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:33: switch (joypad())
-      000000 CDr00r00         [24]  119 	call	_joypad
-      000003 FE 01            [ 8]  120 	cp	a, #0x01
-      000005 28 17            [12]  121 	jr	Z, 00102$
-      000007 FE 02            [ 8]  122 	cp	a, #0x02
-      000009 28 09            [12]  123 	jr	Z, 00101$
-      00000B FE 04            [ 8]  124 	cp	a, #0x04
-      00000D 28 19            [12]  125 	jr	Z, 00103$
-      00000F D6 08            [ 8]  126 	sub	a, #0x08
-      000011 28 1F            [12]  127 	jr	Z, 00104$
-      000013 C9               [16]  128 	ret
-                           000014   129 	C$main.c$35$2_0$134	= .
-                                    130 	.globl	C$main.c$35$2_0$134
-                                    131 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:35: case J_LEFT:
-      000014                        132 00101$:
-                                    133 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
-      000014 01r00r00         [12]  134 	ld	bc, #_shadow_OAM+0
-                                    135 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
-      000017 0A               [ 8]  136 	ld	a, (bc)
-      000018 02               [ 8]  137 	ld	(bc), a
-      000019 03               [ 8]  138 	inc	bc
-      00001A 0A               [ 8]  139 	ld	a, (bc)
-      00001B 3D               [ 4]  140 	dec	a
-      00001C 02               [ 8]  141 	ld	(bc), a
-                           00001D   142 	C$main.c$37$2_0$134	= .
-                                    143 	.globl	C$main.c$37$2_0$134
-                                    144 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:37: break;
-      00001D C9               [16]  145 	ret
-                           00001E   146 	C$main.c$38$2_0$134	= .
-                                    147 	.globl	C$main.c$38$2_0$134
-                                    148 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:38: case J_RIGHT:
-      00001E                        149 00102$:
-                                    150 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
-      00001E 01r00r00         [12]  151 	ld	bc, #_shadow_OAM
-                                    152 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
-      000021 0A               [ 8]  153 	ld	a, (bc)
-      000022 02               [ 8]  154 	ld	(bc), a
-      000023 03               [ 8]  155 	inc	bc
-      000024 0A               [ 8]  156 	ld	a, (bc)
-      000025 3C               [ 4]  157 	inc	a
-      000026 02               [ 8]  158 	ld	(bc), a
-                           000027   159 	C$main.c$40$2_0$134	= .
-                                    160 	.globl	C$main.c$40$2_0$134
-                                    161 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:40: break;
-      000027 C9               [16]  162 	ret
-                           000028   163 	C$main.c$41$2_0$134	= .
-                                    164 	.globl	C$main.c$41$2_0$134
-                                    165 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:41: case J_UP:
-      000028                        166 00103$:
-                                    167 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
-      000028 01r00r00         [12]  168 	ld	bc, #_shadow_OAM
-                                    169 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
-      00002B 0A               [ 8]  170 	ld	a, (bc)
-      00002C 3D               [ 4]  171 	dec	a
-      00002D 02               [ 8]  172 	ld	(bc), a
-      00002E 03               [ 8]  173 	inc	bc
-      00002F 0A               [ 8]  174 	ld	a, (bc)
-      000030 02               [ 8]  175 	ld	(bc), a
-                           000031   176 	C$main.c$43$2_0$134	= .
-                                    177 	.globl	C$main.c$43$2_0$134
-                                    178 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:43: break;
-      000031 C9               [16]  179 	ret
-                           000032   180 	C$main.c$44$2_0$134	= .
-                                    181 	.globl	C$main.c$44$2_0$134
-                                    182 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:44: case J_DOWN:
-      000032                        183 00104$:
-                                    184 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
-      000032 01r00r00         [12]  185 	ld	bc, #_shadow_OAM
-                                    186 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
-      000035 0A               [ 8]  187 	ld	a, (bc)
-      000036 3C               [ 4]  188 	inc	a
-      000037 02               [ 8]  189 	ld	(bc), a
-      000038 03               [ 8]  190 	inc	bc
-      000039 0A               [ 8]  191 	ld	a, (bc)
-      00003A 02               [ 8]  192 	ld	(bc), a
-                           00003B   193 	C$main.c$47$1_0$133	= .
-                                    194 	.globl	C$main.c$47$1_0$133
-                                    195 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:47: }
-                           00003B   196 	C$main.c$48$1_0$133	= .
-                                    197 	.globl	C$main.c$48$1_0$133
-                                    198 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:48: }
-                           00003B   199 	C$main.c$48$1_0$133	= .
-                                    200 	.globl	C$main.c$48$1_0$133
-                           00003B   201 	XG$keyInput$0$0	= .
-                                    202 	.globl	XG$keyInput$0$0
-      00003B C9               [16]  203 	ret
-                           00003C   204 	G$initDangeonSprite$0$0	= .
-                                    205 	.globl	G$initDangeonSprite$0$0
-                           00003C   206 	C$main.c$50$1_0$148	= .
-                                    207 	.globl	C$main.c$50$1_0$148
-                                    208 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:50: void initDangeonSprite(void)
-                                    209 ;	---------------------------------
-                                    210 ; Function initDangeonSprite
-                                    211 ; ---------------------------------
-      00003C                        212 _initDangeonSprite::
-                           00003C   213 	C$main.c$52$1_0$148	= .
-                                    214 	.globl	C$main.c$52$1_0$148
-                                    215 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:52: HIDE_BKG;
-      00003C F0r00            [12]  216 	ldh	a, (_LCDC_REG + 0)
-      00003E E6 FE            [ 8]  217 	and	a, #0xfe
-      000040 E0r00            [12]  218 	ldh	(_LCDC_REG + 0), a
-                           000042   219 	C$main.c$53$1_0$148	= .
-                                    220 	.globl	C$main.c$53$1_0$148
-                                    221 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:53: set_bkg_data(0, 52, doukutsuTile);
-      000042 11r00r00         [12]  222 	ld	de, #_doukutsuTile
-      000045 D5               [16]  223 	push	de
-      000046 21 00 34         [12]  224 	ld	hl, #0x3400
-      000049 E5               [16]  225 	push	hl
-      00004A CDr00r00         [24]  226 	call	_set_bkg_data
-      00004D E8 04            [16]  227 	add	sp, #4
-                           00004F   228 	C$main.c$54$1_0$148	= .
-                                    229 	.globl	C$main.c$54$1_0$148
-                                    230 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:54: set_bkg_tiles(0,0,32,32,doukutsu);
-      00004F 11r00r00         [12]  231 	ld	de, #_doukutsu
-      000052 D5               [16]  232 	push	de
-      000053 21 20 20         [12]  233 	ld	hl, #0x2020
-      000056 E5               [16]  234 	push	hl
-      000057 AF               [ 4]  235 	xor	a, a
-      000058 0F               [ 4]  236 	rrca
-      000059 F5               [16]  237 	push	af
-      00005A CDr00r00         [24]  238 	call	_set_bkg_tiles
-      00005D E8 06            [16]  239 	add	sp, #6
-                           00005F   240 	C$main.c$55$1_0$148	= .
-                                    241 	.globl	C$main.c$55$1_0$148
-                                    242 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:55: SHOW_BKG;
-      00005F F0r00            [12]  243 	ldh	a, (_LCDC_REG + 0)
-      000061 F6 01            [ 8]  244 	or	a, #0x01
-      000063 E0r00            [12]  245 	ldh	(_LCDC_REG + 0), a
-                           000065   246 	C$main.c$56$1_0$148	= .
-                                    247 	.globl	C$main.c$56$1_0$148
-                                    248 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:56: }
-                           000065   249 	C$main.c$56$1_0$148	= .
-                                    250 	.globl	C$main.c$56$1_0$148
-                           000065   251 	XG$initDangeonSprite$0$0	= .
-                                    252 	.globl	XG$initDangeonSprite$0$0
-      000065 C9               [16]  253 	ret
-                           000066   254 	G$initHeroSprite$0$0	= .
-                                    255 	.globl	G$initHeroSprite$0$0
-                           000066   256 	C$main.c$58$1_0$150	= .
-                                    257 	.globl	C$main.c$58$1_0$150
-                                    258 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:58: void initHeroSprite(void)
-                                    259 ;	---------------------------------
-                                    260 ; Function initHeroSprite
-                                    261 ; ---------------------------------
-      000066                        262 _initHeroSprite::
-                           000066   263 	C$main.c$61$1_0$150	= .
-                                    264 	.globl	C$main.c$61$1_0$150
-                                    265 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:61: set_sprite_data(4,4,HeroDownTile);
-      000066 11r00r00         [12]  266 	ld	de, #_HeroDownTile
-      000069 D5               [16]  267 	push	de
-      00006A 21 04 04         [12]  268 	ld	hl, #0x404
-      00006D E5               [16]  269 	push	hl
-      00006E CDr00r00         [24]  270 	call	_set_sprite_data
-      000071 E8 04            [16]  271 	add	sp, #4
-                                    272 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1804: shadow_OAM[nb].tile=tile;
-      000073 21r0Ar00         [12]  273 	ld	hl, #(_shadow_OAM + 10)
-      000076 36 04            [12]  274 	ld	(hl), #0x04
-                                    275 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1850: shadow_OAM[nb].prop=prop;
-      000078 21r0Br00         [12]  276 	ld	hl, #(_shadow_OAM + 11)
-      00007B 36 00            [12]  277 	ld	(hl), #0x00
-                                    278 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1804: shadow_OAM[nb].tile=tile;
-      00007D 21r0Er00         [12]  279 	ld	hl, #(_shadow_OAM + 14)
-      000080 36 06            [12]  280 	ld	(hl), #0x06
-                                    281 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1850: shadow_OAM[nb].prop=prop;
-      000082 21r0Fr00         [12]  282 	ld	hl, #(_shadow_OAM + 15)
-      000085 36 00            [12]  283 	ld	(hl), #0x00
-                           000087   284 	C$main.c$66$1_0$150	= .
-                                    285 	.globl	C$main.c$66$1_0$150
-                                    286 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:66: spriteX=80;
-      000087 21r01r00         [12]  287 	ld	hl, #_spriteX
-      00008A 36 50            [12]  288 	ld	(hl), #0x50
-                           00008C   289 	C$main.c$67$1_0$150	= .
-                                    290 	.globl	C$main.c$67$1_0$150
-                                    291 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:67: spriteY=72;
-      00008C 21r02r00         [12]  292 	ld	hl, #_spriteY
-      00008F 36 48            [12]  293 	ld	(hl), #0x48
-                                    294 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1877: OAM_item_t * itm = &shadow_OAM[nb];
-      000091 21r08r00         [12]  295 	ld	hl, #(_shadow_OAM + 8)
-                                    296 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1878: itm->y=y, itm->x=x;
-      000094 3E 48            [ 8]  297 	ld	a, #0x48
-      000096 22               [ 8]  298 	ld	(hl+), a
-      000097 36 50            [12]  299 	ld	(hl), #0x50
-                                    300 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:69: move_sprite(3, spriteX + 8, spriteY);
-      000099 21r02r00         [12]  301 	ld	hl, #_spriteY
-      00009C 46               [ 8]  302 	ld	b, (hl)
-      00009D FAr01r00         [16]  303 	ld	a, (#_spriteX)
-      0000A0 C6 08            [ 8]  304 	add	a, #0x08
-      0000A2 4F               [ 4]  305 	ld	c, a
-                                    306 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1877: OAM_item_t * itm = &shadow_OAM[nb];
-      0000A3 21r0Cr00         [12]  307 	ld	hl, #(_shadow_OAM + 12)
-                                    308 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1878: itm->y=y, itm->x=x;
-      0000A6 78               [ 4]  309 	ld	a, b
-      0000A7 22               [ 8]  310 	ld	(hl+), a
-      0000A8 71               [ 8]  311 	ld	(hl), c
-                           0000A9   312 	C$main.c$70$1_0$150	= .
-                                    313 	.globl	C$main.c$70$1_0$150
-                                    314 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:70: velocityX=0;
-      0000A9 21r05r00         [12]  315 	ld	hl, #_velocityX
-      0000AC 36 00            [12]  316 	ld	(hl), #0x00
-                           0000AE   317 	C$main.c$71$1_0$150	= .
-                                    318 	.globl	C$main.c$71$1_0$150
-                                    319 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:71: velocityY=0;
-      0000AE 21r06r00         [12]  320 	ld	hl, #_velocityY
-      0000B1 36 00            [12]  321 	ld	(hl), #0x00
-                           0000B3   322 	C$main.c$72$1_0$150	= .
-                                    323 	.globl	C$main.c$72$1_0$150
-                                    324 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:72: actionCnt=0;
-      0000B3 21r07r00         [12]  325 	ld	hl, #_actionCnt
-      0000B6 36 00            [12]  326 	ld	(hl), #0x00
-                           0000B8   327 	C$main.c$73$1_0$150	= .
-                                    328 	.globl	C$main.c$73$1_0$150
-                                    329 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:73: heroAction=NOACTION;
-      0000B8 21r0Ar00         [12]  330 	ld	hl, #_heroAction
-      0000BB 36 00            [12]  331 	ld	(hl), #0x00
-                           0000BD   332 	C$main.c$74$1_0$150	= .
-                                    333 	.globl	C$main.c$74$1_0$150
-                                    334 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:74: bkgX = 0;
-      0000BD 21r03r00         [12]  335 	ld	hl, #_bkgX
-      0000C0 36 00            [12]  336 	ld	(hl), #0x00
-                           0000C2   337 	C$main.c$75$1_0$150	= .
-                                    338 	.globl	C$main.c$75$1_0$150
-                                    339 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:75: bkgY = 0;
-      0000C2 21r04r00         [12]  340 	ld	hl, #_bkgY
-      0000C5 36 00            [12]  341 	ld	(hl), #0x00
-                           0000C7   342 	C$main.c$76$1_0$150	= .
-                                    343 	.globl	C$main.c$76$1_0$150
-                                    344 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:76: blinkFlag = FALSE;
-      0000C7 21r0Dr00         [12]  345 	ld	hl, #_blinkFlag
-      0000CA 36 00            [12]  346 	ld	(hl), #0x00
-                           0000CC   347 	C$main.c$77$1_0$150	= .
-                                    348 	.globl	C$main.c$77$1_0$150
-                                    349 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:77: blinkCnt = 0;
-      0000CC 21r08r00         [12]  350 	ld	hl, #_blinkCnt
-      0000CF 36 00            [12]  351 	ld	(hl), #0x00
-                           0000D1   352 	C$main.c$78$1_0$150	= .
-                                    353 	.globl	C$main.c$78$1_0$150
-                                    354 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:78: swordAction = NOACTION;
-      0000D1 21r0Cr00         [12]  355 	ld	hl, #_swordAction
-      0000D4 36 00            [12]  356 	ld	(hl), #0x00
-                           0000D6   357 	C$main.c$79$1_0$150	= .
-                                    358 	.globl	C$main.c$79$1_0$150
-                                    359 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:79: swordCnt = 0;
-      0000D6 21r09r00         [12]  360 	ld	hl, #_swordCnt
-      0000D9 36 00            [12]  361 	ld	(hl), #0x00
-                           0000DB   362 	C$main.c$80$1_0$150	= .
-                                    363 	.globl	C$main.c$80$1_0$150
-                                    364 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:80: direction = DOWN;   
-      0000DB 21r0Br00         [12]  365 	ld	hl, #_direction
-      0000DE 36 02            [12]  366 	ld	(hl), #0x02
-                           0000E0   367 	C$main.c$81$1_0$150	= .
-                                    368 	.globl	C$main.c$81$1_0$150
-                                    369 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:81: }
-                           0000E0   370 	C$main.c$81$1_0$150	= .
-                                    371 	.globl	C$main.c$81$1_0$150
-                           0000E0   372 	XG$initHeroSprite$0$0	= .
-                                    373 	.globl	XG$initHeroSprite$0$0
-      0000E0 C9               [16]  374 	ret
-                           0000E1   375 	G$main$0$0	= .
-                                    376 	.globl	G$main$0$0
-                           0000E1   377 	C$main.c$83$1_0$170	= .
-                                    378 	.globl	C$main.c$83$1_0$170
-                                    379 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:83: void main(void)
-                                    380 ;	---------------------------------
-                                    381 ; Function main
-                                    382 ; ---------------------------------
-      0000E1                        383 _main::
-                           0000E1   384 	C$main.c$85$1_0$170	= .
-                                    385 	.globl	C$main.c$85$1_0$170
-                                    386 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:85: DISPLAY_ON;
-      0000E1 F0r00            [12]  387 	ldh	a, (_LCDC_REG + 0)
-      0000E3 F6 80            [ 8]  388 	or	a, #0x80
-      0000E5 E0r00            [12]  389 	ldh	(_LCDC_REG + 0), a
-                           0000E7   390 	C$main.c$86$1_0$170	= .
-                                    391 	.globl	C$main.c$86$1_0$170
-                                    392 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:86: SPRITES_8x16;
-      0000E7 F0r00            [12]  393 	ldh	a, (_LCDC_REG + 0)
-      0000E9 F6 04            [ 8]  394 	or	a, #0x04
-      0000EB E0r00            [12]  395 	ldh	(_LCDC_REG + 0), a
-                           0000ED   396 	C$main.c$88$1_0$170	= .
-                                    397 	.globl	C$main.c$88$1_0$170
-                                    398 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:88: initDangeonSprite();
-      0000ED CDr3Cr00         [24]  399 	call	_initDangeonSprite
-                           0000F0   400 	C$main.c$89$1_0$170	= .
-                                    401 	.globl	C$main.c$89$1_0$170
-                                    402 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:89: initHeroSprite();
-      0000F0 CDr66r00         [24]  403 	call	_initHeroSprite
-                           0000F3   404 	C$main.c$91$1_0$170	= .
-                                    405 	.globl	C$main.c$91$1_0$170
-                                    406 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:91: SHOW_SPRITES;
-      0000F3 F0r00            [12]  407 	ldh	a, (_LCDC_REG + 0)
-      0000F5 F6 02            [ 8]  408 	or	a, #0x02
-      0000F7 E0r00            [12]  409 	ldh	(_LCDC_REG + 0), a
-                           0000F9   410 	C$main.c$92$1_0$170	= .
-                                    411 	.globl	C$main.c$92$1_0$170
-                                    412 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:92: while(1){
-      0000F9                        413 00102$:
-                           0000F9   414 	C$main.c$93$2_0$171	= .
-                                    415 	.globl	C$main.c$93$2_0$171
-                                    416 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:93: vsync();
-      0000F9 CDr00r00         [24]  417 	call	_vsync
-                           0000FC   418 	C$main.c$95$1_0$170	= .
-                                    419 	.globl	C$main.c$95$1_0$170
-                                    420 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:95: }
-                           0000FC   421 	C$main.c$95$1_0$170	= .
-                                    422 	.globl	C$main.c$95$1_0$170
-                           0000FC   423 	XG$main$0$0	= .
-                                    424 	.globl	XG$main$0$0
-      0000FC 18 FB            [12]  425 	jr	00102$
-                                    426 	.area _CODE
-                                    427 	.area _INITIALIZER
-                                    428 	.area _CABS (ABS)
+                                     12 	.globl _set_sprite_data
+                                     13 	.globl _set_bkg_tiles
+                                     14 	.globl _set_bkg_data
+                                     15 	.globl _wait_vbl_done
+                                     16 	.globl _joypad
+                                     17 	.globl _showTitle
+                                     18 ;--------------------------------------------------------
+                                     19 ; special function registers
+                                     20 ;--------------------------------------------------------
+                                     21 ;--------------------------------------------------------
+                                     22 ; ram data
+                                     23 ;--------------------------------------------------------
+                                     24 	.area _DATA
+                                     25 ;--------------------------------------------------------
+                                     26 ; ram data
+                                     27 ;--------------------------------------------------------
+                                     28 	.area _INITIALIZED
+                                     29 ;--------------------------------------------------------
+                                     30 ; absolute external ram data
+                                     31 ;--------------------------------------------------------
+                                     32 	.area _DABS (ABS)
+                                     33 ;--------------------------------------------------------
+                                     34 ; global & static initialisations
+                                     35 ;--------------------------------------------------------
+                                     36 	.area _HOME
+                                     37 	.area _GSINIT
+                                     38 	.area _GSFINAL
+                                     39 	.area _GSINIT
+                                     40 ;--------------------------------------------------------
+                                     41 ; Home
+                                     42 ;--------------------------------------------------------
+                                     43 	.area _HOME
+                                     44 	.area _HOME
+                                     45 ;--------------------------------------------------------
+                                     46 ; code
+                                     47 ;--------------------------------------------------------
+                                     48 	.area _CODE
+                           000000    49 	G$showTitle$0$0	= .
+                                     50 	.globl	G$showTitle$0$0
+                           000000    51 	C$main.c$7$0_0$131	= .
+                                     52 	.globl	C$main.c$7$0_0$131
+                                     53 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:7: void showTitle(void)
+                                     54 ;	---------------------------------
+                                     55 ; Function showTitle
+                                     56 ; ---------------------------------
+      000000                         57 _showTitle::
+                           000000    58 	C$main.c$10$1_0$131	= .
+                                     59 	.globl	C$main.c$10$1_0$131
+                                     60 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:10: set_bkg_data(0, SplashScreenSprite_tileset_size, SplashScreenSprite_tileset);
+      000000 11r00r00         [12]   61 	ld	de, #_SplashScreenSprite_tileset
+      000003 D5               [16]   62 	push	de
+      000004 21 00 C8         [12]   63 	ld	hl, #0xc800
+      000007 E5               [16]   64 	push	hl
+      000008 CDr00r00         [24]   65 	call	_set_bkg_data
+      00000B E8 04            [16]   66 	add	sp, #4
+                           00000D    67 	C$main.c$13$1_0$131	= .
+                                     68 	.globl	C$main.c$13$1_0$131
+                                     69 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:13: set_bkg_tiles(0, 0, 20, 18, SplashScreenSprite_tilemap);
+      00000D 11r00r00         [12]   70 	ld	de, #_SplashScreenSprite_tilemap
+      000010 D5               [16]   71 	push	de
+      000011 21 14 12         [12]   72 	ld	hl, #0x1214
+      000014 E5               [16]   73 	push	hl
+      000015 AF               [ 4]   74 	xor	a, a
+      000016 0F               [ 4]   75 	rrca
+      000017 F5               [16]   76 	push	af
+      000018 CDr00r00         [24]   77 	call	_set_bkg_tiles
+      00001B E8 06            [16]   78 	add	sp, #6
+                           00001D    79 	C$main.c$16$1_0$131	= .
+                                     80 	.globl	C$main.c$16$1_0$131
+                                     81 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:16: SHOW_BKG;
+      00001D F0r00            [12]   82 	ldh	a, (_LCDC_REG + 0)
+      00001F F6 01            [ 8]   83 	or	a, #0x01
+      000021 E0r00            [12]   84 	ldh	(_LCDC_REG + 0), a
+                           000023    85 	C$main.c$17$1_0$131	= .
+                                     86 	.globl	C$main.c$17$1_0$131
+                                     87 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:17: DISPLAY_ON;
+      000023 F0r00            [12]   88 	ldh	a, (_LCDC_REG + 0)
+      000025 F6 80            [ 8]   89 	or	a, #0x80
+      000027 E0r00            [12]   90 	ldh	(_LCDC_REG + 0), a
+                           000029    91 	C$main.c$18$1_0$131	= .
+                                     92 	.globl	C$main.c$18$1_0$131
+                                     93 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:18: }
+                           000029    94 	C$main.c$18$1_0$131	= .
+                                     95 	.globl	C$main.c$18$1_0$131
+                           000029    96 	XG$showTitle$0$0	= .
+                                     97 	.globl	XG$showTitle$0$0
+      000029 C9               [16]   98 	ret
+                           00002A    99 	G$main$0$0	= .
+                                    100 	.globl	G$main$0$0
+                           00002A   101 	C$main.c$20$1_0$133	= .
+                                    102 	.globl	C$main.c$20$1_0$133
+                                    103 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:20: void main(void)
+                                    104 ;	---------------------------------
+                                    105 ; Function main
+                                    106 ; ---------------------------------
+      00002A                        107 _main::
+                           00002A   108 	C$main.c$22$1_0$133	= .
+                                    109 	.globl	C$main.c$22$1_0$133
+                                    110 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:22: set_sprite_data(0, BirdSprite_tileset_size, BirdSprite_tileset);
+      00002A 11r00r00         [12]  111 	ld	de, #_BirdSprite_tileset
+      00002D D5               [16]  112 	push	de
+      00002E 21 00 26         [12]  113 	ld	hl, #0x2600
+      000031 E5               [16]  114 	push	hl
+      000032 CDr00r00         [24]  115 	call	_set_sprite_data
+      000035 E8 04            [16]  116 	add	sp, #4
+                                    117 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:23: for(uint8_t i = 0; i < 16; i++)
+      000037 0E 00            [ 8]  118 	ld	c, #0x00
+      000039                        119 00125$:
+      000039 79               [ 4]  120 	ld	a, c
+      00003A D6 10            [ 8]  121 	sub	a, #0x10
+      00003C 30 19            [12]  122 	jr	NC, 00101$
+                                    123 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:25: set_sprite_tile(i, BirdSprite_tilemap[i]);
+      00003E 21r00r00         [12]  124 	ld	hl, #_BirdSprite_tilemap
+      000041 06 00            [ 8]  125 	ld	b, #0x00
+      000043 09               [ 8]  126 	add	hl, bc
+      000044 46               [ 8]  127 	ld	b, (hl)
+                                    128 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1804: shadow_OAM[nb].tile=tile;
+      000045 11r00r00         [12]  129 	ld	de, #_shadow_OAM+0
+      000048 69               [ 4]  130 	ld	l, c
+                                    131 ;	spillPairReg hl
+                                    132 ;	spillPairReg hl
+      000049 26 00            [ 8]  133 	ld	h, #0x00
+                                    134 ;	spillPairReg hl
+                                    135 ;	spillPairReg hl
+      00004B 29               [ 8]  136 	add	hl, hl
+      00004C 29               [ 8]  137 	add	hl, hl
+      00004D 19               [ 8]  138 	add	hl, de
+      00004E 23               [ 8]  139 	inc	hl
+      00004F 23               [ 8]  140 	inc	hl
+      000050 5D               [ 4]  141 	ld	e, l
+      000051 54               [ 4]  142 	ld	d, h
+      000052 78               [ 4]  143 	ld	a, b
+      000053 12               [ 8]  144 	ld	(de), a
+                           000054   145 	C$main.c$23$2_0$134	= .
+                                    146 	.globl	C$main.c$23$2_0$134
+                                    147 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:23: for(uint8_t i = 0; i < 16; i++)
+      000054 0C               [ 4]  148 	inc	c
+      000055 18 E2            [12]  149 	jr	00125$
+      000057                        150 00101$:
+                                    151 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1877: OAM_item_t * itm = &shadow_OAM[nb];
+      000057 21r00r00         [12]  152 	ld	hl, #_shadow_OAM
+                                    153 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1878: itm->y=y, itm->x=x;
+      00005A 3E 10            [ 8]  154 	ld	a, #0x10
+      00005C 22               [ 8]  155 	ld	(hl+), a
+      00005D 36 08            [12]  156 	ld	(hl), #0x08
+                                    157 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1877: OAM_item_t * itm = &shadow_OAM[nb];
+      00005F 21r04r00         [12]  158 	ld	hl, #(_shadow_OAM + 4)
+                                    159 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1878: itm->y=y, itm->x=x;
+      000062 3E 10            [ 8]  160 	ld	a, #0x10
+      000064 22               [ 8]  161 	ld	(hl+), a
+      000065 36 10            [12]  162 	ld	(hl), #0x10
+                                    163 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1877: OAM_item_t * itm = &shadow_OAM[nb];
+      000067 21r10r00         [12]  164 	ld	hl, #(_shadow_OAM + 16)
+                                    165 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1878: itm->y=y, itm->x=x;
+      00006A 3E 18            [ 8]  166 	ld	a, #0x18
+      00006C 22               [ 8]  167 	ld	(hl+), a
+      00006D 36 08            [12]  168 	ld	(hl), #0x08
+                                    169 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1877: OAM_item_t * itm = &shadow_OAM[nb];
+      00006F 21r14r00         [12]  170 	ld	hl, #(_shadow_OAM + 20)
+                                    171 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1878: itm->y=y, itm->x=x;
+      000072 3E 18            [ 8]  172 	ld	a, #0x18
+      000074 22               [ 8]  173 	ld	(hl+), a
+      000075 36 10            [12]  174 	ld	(hl), #0x10
+                           000077   175 	C$main.c$33$1_0$133	= .
+                                    176 	.globl	C$main.c$33$1_0$133
+                                    177 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:33: SHOW_BKG;
+      000077 F0r00            [12]  178 	ldh	a, (_LCDC_REG + 0)
+      000079 F6 01            [ 8]  179 	or	a, #0x01
+      00007B E0r00            [12]  180 	ldh	(_LCDC_REG + 0), a
+                           00007D   181 	C$main.c$34$1_0$133	= .
+                                    182 	.globl	C$main.c$34$1_0$133
+                                    183 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:34: SHOW_SPRITES;
+      00007D F0r00            [12]  184 	ldh	a, (_LCDC_REG + 0)
+      00007F F6 02            [ 8]  185 	or	a, #0x02
+      000081 E0r00            [12]  186 	ldh	(_LCDC_REG + 0), a
+                           000083   187 	C$main.c$35$1_0$133	= .
+                                    188 	.globl	C$main.c$35$1_0$133
+                                    189 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:35: DISPLAY_ON;
+      000083 F0r00            [12]  190 	ldh	a, (_LCDC_REG + 0)
+      000085 F6 80            [ 8]  191 	or	a, #0x80
+      000087 E0r00            [12]  192 	ldh	(_LCDC_REG + 0), a
+                           000089   193 	C$main.c$37$1_0$133	= .
+                                    194 	.globl	C$main.c$37$1_0$133
+                                    195 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:37: while(1)
+      000089                        196 00113$:
+                           000089   197 	C$main.c$39$2_0$136	= .
+                                    198 	.globl	C$main.c$39$2_0$136
+                                    199 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:39: uint8_t buttons = joypad();
+      000089 CDr00r00         [24]  200 	call	_joypad
+                           00008C   201 	C$main.c$40$2_0$136	= .
+                                    202 	.globl	C$main.c$40$2_0$136
+                                    203 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:40: uint8_t moveX = 0;
+                           00008C   204 	C$main.c$41$2_0$136	= .
+                                    205 	.globl	C$main.c$41$2_0$136
+                                    206 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:41: uint8_t moveY = 0;
+      00008C 0E 00            [ 8]  207 	ld	c, #0x00
+      00008E 59               [ 4]  208 	ld	e, c
+                           00008F   209 	C$main.c$43$2_0$136	= .
+                                    210 	.globl	C$main.c$43$2_0$136
+                                    211 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:43: if(buttons & J_LEFT)
+      00008F CB 4F            [ 8]  212 	bit	1, a
+      000091 28 04            [12]  213 	jr	Z, 00105$
+                           000093   214 	C$main.c$45$3_0$137	= .
+                                    215 	.globl	C$main.c$45$3_0$137
+                                    216 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:45: moveX = -1;
+      000093 0E FF            [ 8]  217 	ld	c, #0xff
+      000095 18 06            [12]  218 	jr	00106$
+      000097                        219 00105$:
+                           000097   220 	C$main.c$47$2_0$136	= .
+                                    221 	.globl	C$main.c$47$2_0$136
+                                    222 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:47: else if(buttons & J_RIGHT)
+      000097 CB 47            [ 8]  223 	bit	0, a
+      000099 28 02            [12]  224 	jr	Z, 00106$
+                           00009B   225 	C$main.c$49$3_0$138	= .
+                                    226 	.globl	C$main.c$49$3_0$138
+                                    227 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:49: moveX = 1;
+      00009B 0E 01            [ 8]  228 	ld	c, #0x01
+      00009D                        229 00106$:
+                           00009D   230 	C$main.c$52$2_0$136	= .
+                                    231 	.globl	C$main.c$52$2_0$136
+                                    232 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:52: if(buttons & J_UP)
+      00009D CB 57            [ 8]  233 	bit	2, a
+      00009F 28 04            [12]  234 	jr	Z, 00110$
+                           0000A1   235 	C$main.c$54$3_0$139	= .
+                                    236 	.globl	C$main.c$54$3_0$139
+                                    237 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:54: moveY = -1;
+      0000A1 1E FF            [ 8]  238 	ld	e, #0xff
+      0000A3 18 06            [12]  239 	jr	00111$
+      0000A5                        240 00110$:
+                           0000A5   241 	C$main.c$56$2_0$136	= .
+                                    242 	.globl	C$main.c$56$2_0$136
+                                    243 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:56: else if(buttons & J_DOWN)
+      0000A5 CB 5F            [ 8]  244 	bit	3, a
+      0000A7 28 02            [12]  245 	jr	Z, 00111$
+                           0000A9   246 	C$main.c$58$3_0$140	= .
+                                    247 	.globl	C$main.c$58$3_0$140
+                                    248 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:58: moveY = 1;
+      0000A9 1E 01            [ 8]  249 	ld	e, #0x01
+      0000AB                        250 00111$:
+                                    251 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
+      0000AB 21r00r00         [12]  252 	ld	hl, #_shadow_OAM
+                                    253 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
+      0000AE 7E               [ 8]  254 	ld	a, (hl)
+      0000AF 83               [ 4]  255 	add	a, e
+      0000B0 22               [ 8]  256 	ld	(hl+), a
+      0000B1 7E               [ 8]  257 	ld	a, (hl)
+      0000B2 81               [ 4]  258 	add	a, c
+      0000B3 77               [ 8]  259 	ld	(hl), a
+                                    260 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
+      0000B4 21r04r00         [12]  261 	ld	hl, #(_shadow_OAM + 4)
+                                    262 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
+      0000B7 7E               [ 8]  263 	ld	a, (hl)
+      0000B8 83               [ 4]  264 	add	a, e
+      0000B9 22               [ 8]  265 	ld	(hl+), a
+      0000BA 7E               [ 8]  266 	ld	a, (hl)
+      0000BB 81               [ 4]  267 	add	a, c
+      0000BC 77               [ 8]  268 	ld	(hl), a
+                                    269 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
+      0000BD 21r10r00         [12]  270 	ld	hl, #(_shadow_OAM + 16)
+                                    271 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
+      0000C0 7E               [ 8]  272 	ld	a, (hl)
+      0000C1 83               [ 4]  273 	add	a, e
+      0000C2 22               [ 8]  274 	ld	(hl+), a
+      0000C3 7E               [ 8]  275 	ld	a, (hl)
+      0000C4 81               [ 4]  276 	add	a, c
+      0000C5 77               [ 8]  277 	ld	(hl), a
+                                    278 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1893: OAM_item_t * itm = &shadow_OAM[nb];
+      0000C6 21r14r00         [12]  279 	ld	hl, #(_shadow_OAM + 20)
+                                    280 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1894: itm->y+=y, itm->x+=x;
+      0000C9 7E               [ 8]  281 	ld	a, (hl)
+      0000CA 83               [ 4]  282 	add	a, e
+      0000CB 22               [ 8]  283 	ld	(hl+), a
+      0000CC 7E               [ 8]  284 	ld	a, (hl)
+      0000CD 81               [ 4]  285 	add	a, c
+      0000CE 77               [ 8]  286 	ld	(hl), a
+                           0000CF   287 	C$main.c$65$2_0$136	= .
+                                    288 	.globl	C$main.c$65$2_0$136
+                                    289 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:65: wait_vbl_done();
+      0000CF CDr00r00         [24]  290 	call	_wait_vbl_done
+                           0000D2   291 	C$main.c$67$1_0$133	= .
+                                    292 	.globl	C$main.c$67$1_0$133
+                                    293 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:67: }
+                           0000D2   294 	C$main.c$67$1_0$133	= .
+                                    295 	.globl	C$main.c$67$1_0$133
+                           0000D2   296 	XG$main$0$0	= .
+                                    297 	.globl	XG$main$0$0
+      0000D2 18 B5            [12]  298 	jr	00113$
+                                    299 	.area _CODE
+                                    300 	.area _INITIALIZER
+                                    301 	.area _CABS (ABS)

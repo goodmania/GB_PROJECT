@@ -7,10 +7,10 @@ Symbol Table
     .__.ABS.                                                    =  000000 G
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
-  0 G$doukutsu$0_0$0                                            =  000340 GR
-  0 G$doukutsuTile$0_0$0                                        =  000000 GR
-  0 _doukutsu                                                      000340 GR
-  0 _doukutsuTile                                                  000000 GR
+  0 G$SplashScreenSprite_tilemap$0_0$0                          =  000C80 GR
+  0 G$SplashScreenSprite_tileset$0_0$0                          =  000000 GR
+  0 _SplashScreenSprite_tilemap                                    000C80 GR
+  0 _SplashScreenSprite_tileset                                    000000 GR
 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
@@ -18,7 +18,7 @@ Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    740   flags    0
+   0 _CODE                                      size    DE8   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      0   flags    0
    3 _DABS                                      size      0   flags    8
