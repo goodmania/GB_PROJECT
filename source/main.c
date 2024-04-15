@@ -6,24 +6,34 @@
 #include "BirdSprite.h"
 #include "BlockSprite.h"
 
+#define BLOCK_SPRITE_OFFSET 4
+#define MAX_BLOCK_COUNT 6
+#define PLAYER_ANIMATION_FRAMES 8
+#define GLOUND_LEVEL 130
+#define MAX_HEIGHT_LEVEL 20
+
+typedef struct Block
+{
+     int8_t x; // topleft
+     int8_t y; // topleft
+     uint8_t blockWidth;
+     uint8_t blockHeight;
+} Block;
+
 // prototype
 void ShowTitle(void);
 void SetupBackGround(void);
-void SetupBlock(void);
+void SetupBlock(Block* block);
 
 // grobal variable
 Character player;
+Block block[MAX_BLOCK_COUNT];
 uint8_t movementFrameCount = 0;
 uint8_t animationFrameCount = 0;
 uint8_t jumpFrameCount = 0;
 int8_t lastMovementX = 0;
 int8_t lastMovementY = 0;
 int8_t slowingX = 0;
-
-#define MAX_BLOCK_COUNT 4
-#define PLAYER_ANIMATION_FRAMES 8
-#define GLOUND_LEVEL 130
-#define MAX_HEIGHT_LEVEL 20
 
 void ShowTitle(void)
 {
@@ -112,25 +122,51 @@ void MovementPhysics(Character *character, uint8_t slowDownFrames)
 
 BOOLEAN Hit(uint8_t playerX, uint8_t playerY, uint8_t objX, uint8_t objY)
 {
-     return (playerX < objX + 8 && objX < playerX + 8) && (playerY < objY + 8 && objY < playerY + 8) ;
+     return (playerX < objX + 8 && objX < playerX + 8) && (playerY < objY + 8 && objY < playerY + 8);
 }
 
-void SetupBlock()
+void SetupBlock(Block* block)
 {
      const uint8_t blockOffset = 4;
      set_sprite_data(BirdSprite_tileset_size + 1, 4, blocksprite_tileset);
 
      for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
      {
-          set_sprite_tile(i * blockOffset + 4, 39); 
-          set_sprite_tile(i * blockOffset + 5, 40); 
-          set_sprite_tile(i * blockOffset + 6, 41); 
-          set_sprite_tile(i * blockOffset + 7, 42); 
+          uint8_t baseSpriteId = i * blockOffset;
+          set_sprite_tile(baseSpriteId + 4, 39); 
+          set_sprite_tile(baseSpriteId + 5, 40); 
+          set_sprite_tile(baseSpriteId + 6, 41); 
+          set_sprite_tile(baseSpriteId + 7, 42);
 
-          move_sprite(i * blockOffset + 4, 30, 30);
-          move_sprite(i * blockOffset + 5, 30, 38);
-          move_sprite(i * blockOffset + 6, 38, 30);
-          move_sprite(i * blockOffset + 7, 38, 38);
+          for (uint8_t iy = 0; iy != block->blockHeight; iy++)
+          {
+               for (uint8_t ix = 0; ix != block->blockWidth; ix++)
+                    {
+                    uint8_t index = baseSpriteId + iy + (ix * block->blockWidth);
+                    move_sprite(index, block[i].x + (ix * 8), block[i].y + (iy * 8));       
+               }
+          }
+     }
+}
+
+void ScrollBlock()
+{
+     for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+     {
+          uint8_t baseSpriteId = i * BLOCK_SPRITE_OFFSET;
+          block[i].x -= 1;
+          for (uint8_t iy = 0; iy != block->blockHeight; iy++)
+          {
+               for (uint8_t ix = 0; ix != block->blockWidth; ix++)
+               {
+                    uint8_t index = baseSpriteId + iy + (ix * block->blockWidth);
+                    scroll_sprite(index, -1, 0);
+                    if(block[i].x <= -128)
+                    {
+                         block[i].x = 127;
+                    }
+               }
+          }
      }
 }
 
@@ -147,7 +183,16 @@ void main(void)
 
      MoveCharacter(&player, 16, 56);
 
-     SetupBlock();
+     // init block
+     for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+     {
+          block[i].x = 60 * (i + 1);
+          block[i].y = 20 * (i + 1);
+          block[i].blockWidth = 2;
+          block[i].blockHeight = 2;
+     }
+
+     SetupBlock(block);
 
      SHOW_BKG;
      SHOW_SPRITES;
@@ -163,12 +208,19 @@ void main(void)
           LoadNextSpriteFrame(&player);
 
           scroll_bkg(1, 0);
+          ScrollBlock();
 
-          if(Hit(player.x, player.y, 0, 0))
+          for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
           {
-               gameLoop= 0;
+               if(Hit(player.x, player.y, block[i].x, block[i].y))
+               {
+                    gameLoop= 0;
+                    break;
+               }
           }
           wait_vbl_done();
      }
+     HIDE_SPRITES;
+     move_bkg(0, 0);
      printf("GameOver");
 }

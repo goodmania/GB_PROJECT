@@ -10,4 +10,8 @@
         },
     },
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.associations": {
+        "*.usf": "hlsl",
+        "blocksprite.h": "c"
+    },
 }
