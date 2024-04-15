@@ -1,8 +1,11 @@
 ;!FILE bin/Debug/main.asm
 XL3
-H 9 areas 5F2 global symbols
+H 9 areas 4C0 global symbols
 M main
 O -msm83
+S _BackGroundSprite_tilemap Ref000000
+S _SCX_REG Ref000000
+S _BackGroundSprite_tileset Ref000000
 S _set_sprite_data Ref000000
 S .__.ABS. Def000000
 S __muluchar Ref000000
@@ -17,135 +20,66 @@ S _SplashScreenSprite_tileset Ref000000
 S __modsint Ref000000
 S _wait_vbl_done Ref000000
 S _set_bkg_tiles Ref000000
-A _CODE size 74E flags 0 addr 0
-S A$main$1980 Def000704
-S A$main$1971 Def0006F7
-S A$main$1962 Def0006ED
-S A$main$1953 Def0006DF
-S A$main$1935 Def0006DC
-S A$main$1926 Def0006D3
-S A$main$1917 Def0006CA
-S A$main$1908 Def0006C1
-S A$main$1890 Def0006AC
-S A$main$1881 Def0006A3
-S A$main$1872 Def00069A
-S A$main$1863 Def00068E
-S A$main$1854 Def000686
-S A$main$1845 Def00067C
-S A$main$1827 Def00066B
-S A$main$1818 Def00065F
-S A$main$1809 Def000652
-S A$main$1782 Def00063B
-S A$main$1773 Def000634
-S A$main$1764 Def00062C
-S A$main$1755 Def000621
-S A$main$1746 Def00061A
-S A$main$1692 Def0005DF
-S A$main$1674 Def0005C8
-S A$main$1665 Def0005C1
-S A$main$1656 Def0005B7
-S A$main$1629 Def00059D
-S A$main$1575 Def000569
-S A$main$1566 Def00055B
-S A$main$1485 Def000511
-S A$main$1476 Def00050A
-S A$main$1467 Def000502
-S A$main$1386 Def0004A5
-S A$main$1377 Def00049D
-S A$main$1368 Def000493
-S A$main$1359 Def000487
-S A$main$1296 Def000442
-S A$main$1278 Def000437
-S A$main$1098 Def0003B7
-S A$main$1089 Def0003AE
+A _CODE size 5A5 flags 0 addr 0
+S A$main$1665 Def0005A3
+S A$main$1638 Def00058A
+S A$main$1629 Def000580
+S A$main$1584 Def00054D
+S A$main$1539 Def000529
+S A$main$1485 Def0004F1
+S A$main$1476 Def0004E7
+S A$main$1458 Def0004D7
+S A$main$1449 Def0004CB
+S A$main$1395 Def00049A
+S A$main$1368 Def000483
+S A$main$1359 Def00047A
+S A$main$1296 Def00043B
+S A$main$1287 Def000432
+S A$main$1278 Def000428
+S A$main$1269 Def00041C
+S A$main$1197 Def0003F2
+S A$main$1098 Def0003AA
 S A$main$200 Def000076
 S A$main$110 Def00000C
 S A$main$101 Def000006
-S C$main.c$172$1_1$192 Def0006BC
-S C$main.c$155$2_0$191 Def000631
-S C$main.c$146$2_0$191 Def0005F1
-S C$main.c$121$3_0$188 Def000559
+S C$main.c$126$2_0$184 Def000595
+S C$main.c$119$1_0$183 Def000571
+S C$main.c$105$1_1$178 Def000530
 S C$Character.h$98$1_0$144 Def0001B3
-S A$main$1972 Def0006F8
-S A$main$1927 Def0006D5
-S A$main$1918 Def0006CC
-S A$main$1909 Def0006C2
-S A$main$1891 Def0006AD
-S A$main$1882 Def0006A4
-S A$main$1873 Def00069B
-S A$main$1864 Def00068F
-S A$main$1855 Def000687
-S A$main$1846 Def00067D
-S A$main$1819 Def000661
-S A$main$1783 Def00063C
-S A$main$1774 Def000635
-S A$main$1765 Def00062D
-S A$main$1756 Def000624
-S A$main$1747 Def00061B
-S A$main$1729 Def000608
-S A$main$1693 Def0005E0
-S A$main$1684 Def0005D3
-S A$main$1675 Def0005CB
-S A$main$1657 Def0005B8
-S A$main$1594 Def000578
-S A$main$1576 Def00056A
-S A$main$1567 Def00055C
-S A$main$1495 Def00051A
-S A$main$1486 Def000512
-S A$main$1477 Def00050B
-S A$main$1468 Def000503
-S A$main$1396 Def0004B1
-S A$main$1387 Def0004A6
-S A$main$1378 Def00049E
-S A$main$1279 Def000438
-S A$main$1198 Def000406
-S A$main$1189 Def0003F9
-S A$main$1099 Def0003B8
+S A$main$1657 Def0005A0
+S A$main$1648 Def000595
+S A$main$1594 Def000559
+S A$main$1585 Def00054E
+S A$main$1576 Def000541
+S A$main$1567 Def000534
+S A$main$1486 Def0004F2
+S A$main$1477 Def0004E8
+S A$main$1396 Def00049D
+S A$main$1387 Def000494
+S A$main$1369 Def000485
+S A$main$1297 Def00043C
+S A$main$1279 Def000429
+S A$main$1198 Def0003F3
 S A$main$300 Def0000E7
 S A$main$210 Def000084
 S A$main$201 Def000077
 S A$main$120 Def000016
 S A$main$111 Def00000F
-S C$main.c$190$1_0$194 Def000719
-S C$main.c$181$1_0$194 Def0006DF
-S C$main.c$159$1_0$180 Def000638
-S C$main.c$147$2_0$191 Def0005F8
-S C$main.c$106$3_0$186 Def000538
-S G$MovementPhysics$0$0 Def00043A
+S G$MovementPhysics$0$0 Def000415
 S G$SetSpriteFlip$0$0 Def0001EF
 S _LoadSpriteFrame Def000000
-S A$main$1973 Def0006F9
-S A$main$1928 Def0006D6
-S A$main$1919 Def0006CD
-S A$main$1892 Def0006AE
-S A$main$1883 Def0006A5
-S A$main$1874 Def00069C
-S A$main$1865 Def000690
-S A$main$1856 Def000688
-S A$main$1847 Def00067E
-S A$main$1793 Def000647
-S A$main$1784 Def00063D
-S A$main$1775 Def000636
-S A$main$1766 Def00062F
-S A$main$1757 Def000626
-S A$main$1748 Def00061C
-S A$main$1739 Def000611
-S A$main$1694 Def0005E3
-S A$main$1685 Def0005D6
-S A$main$1676 Def0005CC
-S A$main$1658 Def0005B9
-S A$main$1649 Def0005B0
-S A$main$1595 Def000579
-S A$main$1577 Def00056B
-S A$main$1568 Def00055E
-S A$main$1496 Def00051B
-S A$main$1487 Def000513
-S A$main$1478 Def00050C
-S A$main$1469 Def000504
-S A$main$1397 Def0004B3
-S A$main$1388 Def0004A7
-S A$main$1379 Def00049F
-S A$main$1199 Def000409
+S A$main$1649 Def000598
+S A$main$1595 Def00055B
+S A$main$1586 Def000550
+S A$main$1577 Def000544
+S A$main$1568 Def000537
+S A$main$1487 Def0004F3
+S A$main$1478 Def0004E9
+S A$main$1469 Def0004DD
+S A$main$1397 Def00049F
+S A$main$1388 Def000495
+S A$main$1298 Def00043D
+S A$main$1199 Def0003F4
 S A$main$400 Def00015D
 S A$main$310 Def0000F2
 S A$main$301 Def0000E8
@@ -155,35 +89,15 @@ S A$main$202 Def000078
 S A$main$130 Def000020
 S A$main$121 Def000017
 S A$main$112 Def000010
-S C$main.c$191$1_0$194 Def00071F
-S C$main.c$177$1_1$180 Def0006DE
-S C$main.c$165$1_1$192 Def000674
-S C$main.c$159$1_1$180 Def00064C
-S C$main.c$148$2_0$191 Def000601
-S C$main.c$116$2_0$187 Def000547
-S A$main$1974 Def0006FB
-S A$main$1929 Def0006D7
-S A$main$1893 Def0006B1
-S A$main$1884 Def0006A6
-S A$main$1875 Def00069D
-S A$main$1866 Def000691
-S A$main$1857 Def000689
-S A$main$1848 Def00067F
-S A$main$1794 Def000648
-S A$main$1785 Def00063E
-S A$main$1749 Def00061D
-S A$main$1695 Def0005E4
-S A$main$1686 Def0005D7
-S A$main$1677 Def0005CD
-S A$main$1659 Def0005BA
-S A$main$1596 Def00057A
-S A$main$1587 Def000571
-S A$main$1569 Def00055F
-S A$main$1497 Def00051C
-S A$main$1488 Def000516
-S A$main$1479 Def00050D
-S A$main$1398 Def0004B5
-S A$main$1389 Def0004A9
+S A$main$1596 Def00055C
+S A$main$1587 Def000551
+S A$main$1578 Def000545
+S A$main$1569 Def000538
+S A$main$1497 Def0004FA
+S A$main$1488 Def0004F4
+S A$main$1479 Def0004EB
+S A$main$1389 Def000497
+S A$main$1299 Def00043E
 S A$main$410 Def000167
 S A$main$401 Def00015F
 S A$main$320 Def0000FA
@@ -197,31 +111,13 @@ S A$main$140 Def00002D
 S A$main$131 Def000021
 S A$main$122 Def000018
 S A$main$113 Def000011
-S C$main.c$183$1_0$194 Def0006E2
-S C$main.c$175$1_1$192 Def0006CA
-S C$main.c$166$1_1$192 Def00068C
-S C$main.c$149$2_0$191 Def000608
+S C$main.c$129$2_0$184 Def0005A0
 S _MoveCharacter Def000205
-S A$main$1993 Def000713
-S A$main$1984 Def000707
-S A$main$1975 Def0006FC
-S A$main$1966 Def0006EF
-S A$main$1957 Def0006E2
-S A$main$1894 Def0006B2
-S A$main$1885 Def0006A8
-S A$main$1876 Def00069E
-S A$main$1867 Def000694
-S A$main$1858 Def00068B
-S A$main$1849 Def000680
-S A$main$1795 Def000649
-S A$main$1786 Def00063F
-S A$main$1696 Def0005E5
-S A$main$1687 Def0005D9
-S A$main$1678 Def0005CE
-S A$main$1597 Def00057D
-S A$main$1588 Def000574
-S A$main$1489 Def000517
-S A$main$1399 Def0004B6
+S A$main$1597 Def00055D
+S A$main$1588 Def000552
+S A$main$1579 Def000547
+S A$main$1498 Def0004FC
+S A$main$1489 Def0004F5
 S A$main$600 Def0001FF
 S A$main$420 Def000175
 S A$main$411 Def000168
@@ -239,26 +135,11 @@ S A$main$132 Def000022
 S A$main$123 Def000019
 S A$main$114 Def000012
 S A$main$105 Def000007
-S C$main.c$193$1_0$194 Def000725
-S C$main.c$176$1_1$192 Def0006D3
-S C$main.c$123$4_0$189 Def00056D
-S C$main.c$109$3_0$186 Def00053D
-S G$SetupBackGround$0$0 Def000423
-S _main Def0006DF
-S A$main$1994 Def000715
-S A$main$1985 Def000709
-S A$main$1976 Def0006FE
-S A$main$1967 Def0006F2
-S A$main$1958 Def0006E5
-S A$main$1895 Def0006B3
-S A$main$1877 Def00069F
-S A$main$1868 Def000695
-S A$main$1796 Def00064A
-S A$main$1787 Def000641
-S A$main$1697 Def0005E6
-S A$main$1688 Def0005DA
-S A$main$1679 Def0005CF
-S A$main$1589 Def000576
+S G$SetupBackGround$0$0 Def0003D0
+S _main Def000531
+S A$main$1598 Def00055F
+S A$main$1589 Def000553
+S A$main$1499 Def0004FD
 S A$main$700 Def000261
 S A$main$520 Def0001BA
 S A$main$502 Def0001B0
@@ -283,19 +164,7 @@ S A$main$133 Def000023
 S A$main$124 Def00001A
 S A$main$115 Def000013
 S A$main$106 Def000008
-S C$main.c$185$1_0$194 Def0006EF
-S C$main.c$124$4_0$189 Def000571
-S A$main$1995 Def000717
-S A$main$1986 Def00070A
-S A$main$1977 Def0006FF
-S A$main$1968 Def0006F3
-S A$main$1959 Def0006E6
-S A$main$1896 Def0006B4
-S A$main$1878 Def0006A0
-S A$main$1869 Def000696
-S A$main$1788 Def000643
-S A$main$1698 Def0005E9
-S A$main$1689 Def0005DC
+S A$main$1599 Def000562
 S A$main$800 Def0002B6
 S A$main$710 Def00026C
 S A$main$701 Def000262
@@ -326,18 +195,9 @@ S A$main$143 Def000031
 S A$main$134 Def000025
 S A$main$125 Def00001B
 S A$main$107 Def000009
-S C$main.c$169$1_1$192 Def0006A9
-S C$main.c$118$3_0$188 Def000555
-S C$main.c$20$1_0$173 Def0003F9
+S C$main.c$22$1_0$171 Def0003B2
 S _MoveCharacterWithJoypad Def0002D6
-S A$main$1987 Def00070B
-S A$main$1978 Def000700
-S A$main$1969 Def0006F5
-S A$main$1897 Def0006B6
-S A$main$1879 Def0006A1
-S A$main$1789 Def000645
-S A$main$1699 Def0005EB
-S A$main$900 Def000307
+S A$main$900 Def000306
 S A$main$801 Def0002B7
 S A$main$720 Def000279
 S A$main$711 Def00026E
@@ -372,15 +232,9 @@ S A$main$144 Def000032
 S A$main$135 Def000026
 S A$main$126 Def00001C
 S A$main$108 Def00000A
-S C$main.c$187$1_0$194 Def000707
-S C$main.c$128$3_0$188 Def000578
-S C$main.c$30$1_0$173 Def00041C
-S A$main$1988 Def00070D
-S A$main$1979 Def000701
-S A$main$1898 Def0006B7
-S A$main$1889 Def0006A9
-S A$main$910 Def000313
-S A$main$901 Def000309
+S C$main.c$31$1_0$172 Def0003D0
+S A$main$910 Def000310
+S A$main$901 Def000307
 S A$main$820 Def0002CA
 S A$main$802 Def0002B8
 S A$main$730 Def000282
@@ -421,12 +275,9 @@ S A$main$145 Def000033
 S A$main$136 Def000027
 S A$main$127 Def00001D
 S A$main$109 Def00000B
-S C$main.c$51$1_0$180 Def00043A
-S C$main.c$31$1_0$173 Def000422
-S A$main$1989 Def000710
-S A$main$1899 Def0006B8
-S A$main$911 Def000316
-S A$main$902 Def00030B
+S A$main$920 Def000319
+S A$main$911 Def000311
+S A$main$902 Def000308
 S A$main$830 Def0002D4
 S A$main$821 Def0002CC
 S A$main$803 Def0002BB
@@ -471,15 +322,12 @@ S A$main$146 Def000035
 S A$main$137 Def000028
 S A$main$128 Def00001E
 S A$main$119 Def000014
-S C$main.c$196$2_0$195 Def000725
-S C$main.c$189$1_0$194 Def000713
-S C$main.c$179$1_1$194 Def0006DF
-S C$main.c$70$1_0$180 Def0004C5
-S C$main.c$23$1_0$173 Def0003F9
-S A$main$1999 Def000719
-S A$main$930 Def00032B
-S A$main$912 Def000317
-S A$main$903 Def00030C
+S C$main.c$40$1_0$174 Def0003EE
+S C$main.c$25$1_0$171 Def0003B2
+S A$main$930 Def000322
+S A$main$921 Def00031A
+S A$main$912 Def000313
+S A$main$903 Def00030A
 S A$main$831 Def0002D5
 S A$main$822 Def0002CD
 S A$main$813 Def0002C3
@@ -527,12 +375,12 @@ S A$main$156 Def00003D
 S A$main$147 Def000036
 S A$main$138 Def00002B
 S A$main$129 Def00001F
-S C$main.c$197$2_0$195 Def000735
-S C$main.c$71$1_0$180 Def0004E1
-S A$main$940 Def000334
-S A$main$931 Def00032C
-S A$main$913 Def000318
-S A$main$904 Def00030E
+S C$main.c$50$1_0$174 Def000408
+S C$main.c$34$1_0$172 Def0003D0
+S A$main$940 Def00032B
+S A$main$931 Def000323
+S A$main$922 Def00031C
+S A$main$913 Def000314
 S A$main$841 Def0002D6
 S A$main$823 Def0002CE
 S A$main$814 Def0002C4
@@ -579,15 +427,13 @@ S A$main$175 Def000053
 S A$main$166 Def000047
 S A$main$148 Def000037
 S A$main$139 Def00002C
-S C$main.c$198$2_0$195 Def00073B
-S C$main.c$61$2_0$181 Def00046D
-S G$DetectCollisions$0$0 Def000424
-S A$main$950 Def00033D
-S A$main$941 Def000336
-S A$main$932 Def00032E
-S A$main$923 Def000321
-S A$main$914 Def000319
-S A$main$905 Def000310
+S C$main.c$80$2_0$180 Def00048D
+S G$DetectCollisions$0$0 Def0003EE
+S A$main$950 Def000333
+S A$main$932 Def000324
+S A$main$923 Def00031D
+S A$main$914 Def000315
+S A$main$851 Def0002DD
 S A$main$842 Def0002D8
 S A$main$815 Def0002C5
 S A$main$806 Def0002BE
@@ -631,17 +477,14 @@ S A$main$185 Def000061
 S A$main$176 Def000055
 S A$main$167 Def000048
 S A$main$149 Def000038
-S C$main.c$199$2_0$195 Def000743
-S C$main.c$73$1_0$180 Def0004EF
-S C$main.c$62$2_0$181 Def000472
-S C$main.c$33$1_0$175 Def000423
-S C$main.c$26$1_0$173 Def000406
-S A$main$960 Def000347
-S A$main$951 Def00033E
-S A$main$942 Def000337
-S A$main$924 Def000324
-S A$main$915 Def00031B
-S A$main$906 Def000311
+S C$main.c$81$2_0$180 Def000494
+S C$main.c$43$1_0$174 Def0003FC
+S C$main.c$28$1_0$171 Def0003BF
+S A$main$960 Def00033D
+S A$main$951 Def000334
+S A$main$915 Def000316
+S A$main$861 Def0002E4
+S A$main$852 Def0002DF
 S A$main$843 Def0002D9
 S A$main$816 Def0002C6
 S A$main$807 Def0002BF
@@ -685,16 +528,18 @@ S A$main$195 Def00006E
 S A$main$186 Def000063
 S A$main$177 Def000056
 S A$main$168 Def00004B
-S C$main.c$74$1_0$180 Def0004FA
-S C$main.c$41$1_0$177 Def000424
+S C$main.c$82$2_0$180 Def00049A
+S C$main.c$73$2_0$180 Def000464
+S C$main.c$37$1_0$172 Def0003DD
+S C$main.c$29$1_0$171 Def0003CF
 S XG$LoadSpriteFrame$0$0 Def0001A9
 S _SetSpriteFlip Def0001EF
-S _MovementPhysics Def00043A
-S A$main$925 Def000325
-S A$main$916 Def00031C
-S A$main$880 Def0002F6
-S A$main$871 Def0002ED
-S A$main$853 Def0002E0
+S _MovementPhysics Def000415
+S A$main$970 Def000346
+S A$main$952 Def000336
+S A$main$916 Def000318
+S A$main$907 Def00030B
+S A$main$862 Def0002E6
 S A$main$817 Def0002C7
 S A$main$808 Def0002C0
 S A$main$790 Def0002AE
@@ -732,15 +577,12 @@ S A$main$196 Def000071
 S A$main$187 Def000064
 S A$main$178 Def000058
 S A$main$169 Def00004C
-S C$main.c$66$1_0$180 Def000494
-S C$main.c$56$1_1$180 Def0004BE
-S A$main$980 Def000356
-S A$main$971 Def00034D
-S A$main$926 Def000326
-S A$main$917 Def00031D
-S A$main$881 Def0002F8
-S A$main$872 Def0002EF
-S A$main$863 Def0002E5
+S C$main.c$83$2_0$180 Def0004A1
+S C$main.c$38$1_0$172 Def0003ED
+S A$main$971 Def000347
+S A$main$953 Def000337
+S A$main$908 Def00030E
+S A$main$890 Def0002FB
 S A$main$827 Def0002CF
 S A$main$818 Def0002C8
 S A$main$809 Def0002C2
@@ -776,20 +618,16 @@ S A$main$269 Def0000C4
 S A$main$197 Def000072
 S A$main$188 Def000065
 S A$main$179 Def000059
-S C$main.c$67$1_0$180 Def0004A3
-S C$main.c$58$1_0$180 Def000464
-S C$main.c$36$1_0$175 Def000423
-S C$main.c$29$1_0$173 Def000416
+S C$main.c$60$1_0$178 Def000415
 S G$ScrollCharacter$0$0 Def0002A5
-S A$main$990 Def00035E
-S A$main$981 Def000357
-S A$main$972 Def00034F
-S A$main$936 Def00032F
-S A$main$927 Def000327
-S A$main$918 Def00031E
-S A$main$882 Def0002F9
-S A$main$873 Def0002F1
-S A$main$864 Def0002E6
+S A$main$981 Def00034D
+S A$main$972 Def000348
+S A$main$954 Def000339
+S A$main$945 Def00032D
+S A$main$936 Def000326
+S A$main$927 Def00031F
+S A$main$909 Def00030F
+S A$main$873 Def0002EE
 S A$main$828 Def0002D2
 S A$main$819 Def0002C9
 S A$main$792 Def0002B0
@@ -815,20 +653,22 @@ S A$main$297 Def0000E2
 S A$main$279 Def0000D1
 S A$main$198 Def000073
 S A$main$189 Def000066
-S XG$main$0$0 Def00074C
-S C$main.c$92$2_0$182 Def000521
-S C$main.c$77$1_0$180 Def00051A
-S C$main.c$67$1_1$180 Def000477
-S _SetupBackGround Def000423
-S A$main$991 Def00035F
-S A$main$982 Def000358
-S A$main$973 Def000350
-S A$main$955 Def000340
-S A$main$946 Def000339
-S A$main$937 Def000330
-S A$main$928 Def000329
-S A$main$919 Def000320
-S A$main$865 Def0002E8
+S XG$main$0$0 Def0005A3
+S C$main.c$85$2_0$180 Def0004A7
+S C$main.c$76$2_0$180 Def000475
+S C$main.c$70$1_0$178 Def000454
+S C$main.c$53$2_0$176 Def00040D
+S _SetupBackGround Def0003D0
+S A$main$991 Def000357
+S A$main$982 Def000350
+S A$main$973 Def000349
+S A$main$964 Def00033F
+S A$main$955 Def00033A
+S A$main$946 Def00032F
+S A$main$937 Def000328
+S A$main$928 Def000320
+S A$main$874 Def0002F0
+S A$main$856 Def0002E1
 S A$main$847 Def0002DA
 S A$main$829 Def0002D3
 S A$main$793 Def0002B1
@@ -850,17 +690,17 @@ S A$main$379 Def000141
 S A$main$298 Def0000E3
 S A$main$289 Def0000D8
 S A$main$199 Def000074
-S A$main$992 Def000361
-S A$main$983 Def000359
-S A$main$974 Def000351
-S A$main$965 Def000349
-S A$main$956 Def000342
-S A$main$947 Def00033A
-S A$main$938 Def000331
-S A$main$929 Def00032A
-S A$main$866 Def0002EA
+S C$main.c$77$2_0$180 Def00047A
+S C$main.c$46$2_0$175 Def000401
+S A$main$992 Def00035A
+S A$main$983 Def000351
+S A$main$974 Def00034A
+S A$main$965 Def000341
+S A$main$947 Def000330
+S A$main$938 Def000329
+S A$main$929 Def000321
+S A$main$866 Def0002E8
 S A$main$857 Def0002E2
-S A$main$848 Def0002DD
 S A$main$785 Def0002A7
 S A$main$767 Def0002A0
 S A$main$749 Def000295
@@ -873,639 +713,493 @@ S A$main$596 Def0001FE
 S A$main$398 Def00015A
 S A$main$389 Def000150
 S A$main$299 Def0000E5
-S C$main.c$44$2_0$178 Def00042E
-S XG$MoveCharacterWithJoypad$0$0 Def0003AA
-S A$main$993 Def000363
-S A$main$975 Def000352
-S A$main$966 Def00034A
-S A$main$957 Def000343
-S A$main$948 Def00033B
-S A$main$939 Def000333
-S A$main$867 Def0002EB
-S A$main$858 Def0002E3
-S A$main$849 Def0002DF
+S C$main.c$95$1_1$181 Def0004DD
+S C$main.c$90$1_0$178 Def0004B7
+S C$main.c$78$2_0$180 Def000480
+S C$main.c$63$1_0$178 Def00043F
+S C$main.c$58$1_0$174 Def000412
+S C$main.c$49$1_0$174 Def0003F5
+S XG$MoveCharacterWithJoypad$0$0 Def000363
+S A$main$993 Def00035B
+S A$main$984 Def000352
+S A$main$975 Def00034B
+S A$main$966 Def000342
+S A$main$948 Def000331
+S A$main$939 Def00032A
+S A$main$894 Def0002FD
+S A$main$867 Def0002EA
 S A$main$786 Def0002A8
 S A$main$768 Def0002A2
 S A$main$696 Def00025C
 S A$main$687 Def000254
 S A$main$669 Def000240
 S A$main$399 Def00015C
-S C$main.c$95$2_0$182 Def000525
-S C$main.c$88$1_1$180 Def00050E
-S C$main.c$38$1_0$177 Def000424
-S A$main$994 Def000364
-S A$main$967 Def00034B
-S A$main$958 Def000344
-S A$main$949 Def00033C
-S A$main$895 Def0002FF
-S A$main$886 Def0002FB
-S A$main$859 Def0002E4
+S C$main.c$91$1_0$178 Def0004BE
+S C$main.c$79$2_0$180 Def000487
+S C$main.c$63$1_1$178 Def00041B
+S C$main.c$56$2_0$176 Def000410
+S A$main$994 Def00035C
+S A$main$985 Def000353
+S A$main$976 Def00034C
+S A$main$967 Def000343
+S A$main$949 Def000332
+S A$main$895 Def000300
+S A$main$868 Def0002EC
 S A$main$787 Def0002A9
 S A$main$769 Def0002A3
 S A$main$697 Def00025D
 S A$main$688 Def000255
 S A$main$679 Def000249
+S C$main.c$92$1_0$178 Def0004D9
+S C$main.c$49$2_0$175 Def000404
 S G$LoadNextSpriteFrame$0$0 Def0001B3
-S A$main$995 Def000365
-S A$main$959 Def000345
-S A$main$896 Def000302
-S A$main$887 Def0002FD
-S A$main$878 Def0002F3
+S A$main$995 Def00035D
+S A$main$986 Def000355
+S A$main$968 Def000344
+S A$main$959 Def00033C
+S A$main$896 Def000301
+S A$main$887 Def0002F6
+S A$main$878 Def0002F2
 S A$main$797 Def0002B2
 S A$main$788 Def0002AC
 S A$main$698 Def00025E
-S C$main.c$49$1_0$177 Def000437
-S C$main.c$47$2_0$178 Def000431
-S A$main$996 Def000366
-S A$main$897 Def000303
+S C$main.c$98$1_1$181 Def0004FA
+S C$main.c$65$1_1$178 Def000434
+S A$main$996 Def00035F
+S A$main$987 Def000356
+S A$main$969 Def000345
+S A$main$897 Def000302
+S A$main$888 Def0002F8
 S A$main$879 Def0002F4
 S A$main$798 Def0002B3
 S A$main$789 Def0002AD
 S A$main$699 Def000260
-S G$showTitle$0$0 Def0003F9
-S A$main$997 Def000367
-S A$main$988 Def00035B
-S A$main$979 Def000354
-S A$main$898 Def000304
+S C$main.c$65$2_0$179 Def000445
+S G$showTitle$0$0 Def0003B2
+S A$main$997 Def000360
+S A$main$898 Def000303
+S A$main$889 Def0002FA
 S A$main$799 Def0002B5
-S _DetectCollisions Def000424
-S A$main$989 Def00035C
-S A$main$899 Def000306
-S C$main.c$88$3_0$184 Def00051E
-S XG$MovementPhysics$0$0 Def0006DE
-S C$main.c$97$3_0$185 Def00052A
+S C$main.c$66$2_0$179 Def00044D
+S _DetectCollisions Def0003EE
+S A$main$899 Def000305
+S XG$MovementPhysics$0$0 Def000530
 S G$RefreshSprite$0$0 Def0001AA
+S C$main.c$89$1_0$178 Def0004AB
+S C$main.c$89$1_1$178 Def0004BB
 S _ScrollCharacter Def0002A5
-S XG$SetupBackGround$0$0 Def000423
+S XG$SetupBackGround$0$0 Def0003ED
 S A$main$97 Def000000
 S A$main$98 Def000002
 S A$main$99 Def000004
 S _LoadNextSpriteFrame Def0001B3
 S C$Character.h$101$1_0$144 Def0001B9
-S _showTitle Def0003F9
+S _showTitle Def0003B2
 S C$Character.h$120$4_0$151 Def000220
 S C$Character.h$103$1_0$144 Def0001E4
 S C$Character.h$111$1_0$146 Def0001FF
 S C$Character.h$104$1_0$144 Def0001EE
-S C$Character.h$151$2_0$160 Def0002ED
+S C$Character.h$151$2_0$160 Def0002E8
 S C$Character.h$122$4_0$151 Def000296
 S C$Character.h$112$1_0$146 Def000202
 S _RefreshSprite Def0001AA
-S C$Character.h$200$1_0$159 Def000394
-S C$Character.h$201$1_0$159 Def00039E
+S C$Character.h$201$1_0$167 Def0003A9
+S C$Character.h$202$1_0$167 Def0003AD
 S C$Character.h$120$2_0$149 Def00029B
 S C$Character.h$106$1_0$146 Def0001EF
-S C$Character.h$210$1_0$169 Def0003C5
-S C$Character.h$202$1_0$159 Def0003AA
 S C$Character.h$131$2_0$148 Def0002A0
 S C$Character.h$122$2_0$148 Def000245
 S C$Character.h$114$1_0$148 Def000205
-S C$Character.h$211$1_0$169 Def0003CD
-S C$Character.h$170$2_0$164 Def000340
-S C$Character.h$155$2_0$161 Def0002FB
+S C$Character.h$170$2_0$164 Def000326
+S C$Character.h$155$2_0$161 Def0002F2
 S C$Character.h$125$5_0$152 Def000257
 S C$Character.h$108$1_0$146 Def0001F0
-S C$Character.h$212$1_0$169 Def0003D5
 S C$Character.h$141$1_0$159 Def0002D6
 S C$Character.h$133$2_0$157 Def0002A5
 S C$Character.h$109$1_0$146 Def0001F5
-S C$Character.h$213$1_0$169 Def0003DE
-S C$Character.h$180$2_0$165 Def000354
+S C$Character.h$180$2_0$165 Def00033F
 S C$Character.h$135$1_0$157 Def0002A7
 S C$Character.h$117$1_0$148 Def00020C
 S XG$LoadNextSpriteFrame$0$0 Def0001EE
-S C$Character.h$214$1_0$169 Def0003E4
-S C$Character.h$205$1_0$169 Def0003AB
-S C$Character.h$170$1_0$159 Def000321
-S C$Character.h$161$1_0$159 Def0002FF
+S C$Character.h$170$1_0$159 Def00030B
+S C$Character.h$161$1_0$159 Def0002F6
 S C$Character.h$136$1_0$157 Def0002B2
 S C$Character.h$118$1_0$148 Def000216
-S XG$showTitle$0$0 Def000422
-S C$Character.h$215$1_0$169 Def0003EA
-S C$Character.h$153$1_0$159 Def0002F3
+S XG$showTitle$0$0 Def0003CF
+S C$Character.h$153$1_0$159 Def0002EE
 S C$Character.h$144$1_0$159 Def0002DA
-S A$main$1000 Def000368
-S C$Character.h$207$1_0$169 Def0003AF
-S C$Character.h$190$1_0$159 Def000374
+S C$Character.h$191$1_0$167 Def000368
 S C$Character.h$138$1_0$157 Def0002C3
-S A$main$2000 Def00071B
-S A$main$1100 Def0003B9
-S A$main$1010 Def000371
-S A$main$1001 Def00036A
-S C$Character.h$217$1_0$169 Def0003F0
-S C$Character.h$208$1_0$169 Def0003BC
-S C$Character.h$146$1_0$159 Def0002E0
+S A$main$1001 Def000361
+S C$Character.h$192$1_0$167 Def000375
+S C$Character.h$146$1_0$159 Def0002DD
 S C$Character.h$139$1_0$157 Def0002CF
-S A$main$2001 Def00071D
-S A$main$1200 Def00040A
-S A$main$1101 Def0003BA
-S A$main$1020 Def000379
-S A$main$1011 Def000372
-S A$main$1002 Def00036B
-S C$Character.h$218$1_0$169 Def0003F4
-S C$Character.h$209$1_0$169 Def0003C0
-S G$SetupCharacter$0$0 Def0003AB
-S C$Character.h$174$1_0$159 Def000349
-S C$Character.h$147$1_0$159 Def0002E2
+S C$Character.h$193$1_0$167 Def000379
+S G$SetupCharacter$0$0 Def000364
+S C$Character.h$174$1_0$159 Def00032D
+S C$Character.h$147$1_0$159 Def0002E1
 S XG$RefreshSprite$0$0 Def0001B0
 S C$Character.h$70$1_0$130 Def000007
-S A$main$1300 Def000443
-S A$main$1210 Def000416
-S A$main$1201 Def00040D
-S A$main$1120 Def0003C6
-S A$main$1102 Def0003BB
-S A$main$1030 Def000383
-S A$main$1021 Def00037A
-S C$Character.h$193$2_0$167 Def000383
-S C$Character.h$184$1_0$159 Def00035B
-S C$Character.h$177$2_0$165 Def00034D
-S C$Character.h$169$2_0$164 Def000339
-S C$Character.h$166$1_0$159 Def00032F
-S A$main$2021 Def000730
-S A$main$1310 Def000450
-S A$main$1301 Def000444
-S A$main$1211 Def000418
-S A$main$1202 Def00040E
-S A$main$1130 Def0003CD
-S A$main$1121 Def0003C7
-S A$main$1112 Def0003C0
-S A$main$1040 Def00038C
-S A$main$1031 Def000384
-S A$main$1022 Def00037B
-S C$Character.h$186$2_0$166 Def00036D
-S C$Character.h$149$1_0$159 Def0002E5
-S A$main$1410 Def0004C1
-S A$main$1401 Def0004B8
-S A$main$1320 Def00045D
-S A$main$1311 Def000451
-S A$main$1302 Def000445
-S A$main$1212 Def00041A
-S A$main$1203 Def00040F
-S A$main$1140 Def0003D7
-S A$main$1131 Def0003D0
-S A$main$1122 Def0003C8
-S A$main$1113 Def0003C1
-S A$main$1041 Def00038D
-S A$main$1023 Def00037D
+S A$main$1120 Def0003B6
+S A$main$1102 Def0003AD
+S A$main$1030 Def000373
+S C$Character.h$194$1_0$167 Def00037E
+S C$Character.h$184$1_0$159 Def00034D
+S C$Character.h$177$2_0$165 Def00033C
+S C$Character.h$169$2_0$164 Def00031F
+S C$Character.h$166$1_0$159 Def000319
+S A$main$1310 Def000445
+S A$main$1220 Def000401
+S A$main$1130 Def0003C6
+S A$main$1121 Def0003B9
+S A$main$1103 Def0003AE
+S A$main$1031 Def000374
+S A$main$1022 Def000368
+S C$Character.h$195$1_0$167 Def000386
+S C$Character.h$185$1_0$159 Def000357
+S C$Character.h$149$1_0$159 Def0002E4
+S A$main$1500 Def0004FE
+S A$main$1410 Def0004A8
+S A$main$1401 Def0004A1
+S A$main$1311 Def000446
+S A$main$1221 Def000403
+S A$main$1131 Def0003C7
+S A$main$1122 Def0003BA
+S A$main$1104 Def0003AF
+S A$main$1050 Def000380
+S A$main$1041 Def000379
+S A$main$1023 Def00036B
+S C$Character.h$196$1_0$167 Def00038E
+S C$Character.h$186$1_0$159 Def000363
 S C$Character.h$80$2_1$130 Def0000D8
-S A$main$2032 Def00073B
-S A$main$2023 Def000732
-S A$main$2005 Def00071F
-S A$main$1501 Def00051E
-S A$main$1420 Def0004CB
-S A$main$1411 Def0004C2
-S A$main$1402 Def0004BA
-S A$main$1330 Def000467
-S A$main$1321 Def00045E
-S A$main$1312 Def000452
-S A$main$1303 Def000446
-S A$main$1204 Def000410
-S A$main$1150 Def0003DE
-S A$main$1141 Def0003D8
-S A$main$1132 Def0003D1
-S A$main$1123 Def0003C9
-S A$main$1114 Def0003C2
-S A$main$1042 Def00038E
-S A$main$1024 Def00037E
-S C$Character.h$196$2_0$167 Def000386
-S C$Character.h$169$1_0$159 Def000313
+S A$main$1510 Def00050B
+S A$main$1501 Def000500
+S A$main$1420 Def0004AF
+S A$main$1411 Def0004AA
+S A$main$1402 Def0004A2
+S A$main$1330 Def000457
+S A$main$1321 Def00044D
+S A$main$1312 Def000447
+S A$main$1303 Def00043F
+S A$main$1132 Def0003C8
+S A$main$1123 Def0003BD
+S A$main$1105 Def0003B1
+S A$main$1060 Def000389
+S A$main$1051 Def000381
+S A$main$1042 Def00037A
+S A$main$1024 Def00036C
+S A$main$1006 Def000363
+S C$Character.h$197$1_0$167 Def000397
+S C$Character.h$169$1_0$159 Def0002FD
 S C$Character.h$72$2_1$130 Def0000AF
 S C$Character.h$72$1_1$131 Def000014
 S G$LoadSpriteFrame$0$0 Def000000
-S A$main$2051 Def00074C
-S A$main$2033 Def00073D
-S A$main$2015 Def000725
-S A$main$2006 Def000721
-S A$main$1700 Def0005EC
-S A$main$1610 Def000589
-S A$main$1502 Def00051F
-S A$main$1421 Def0004CC
-S A$main$1412 Def0004C3
-S A$main$1403 Def0004BB
-S A$main$1331 Def000468
-S A$main$1322 Def000460
-S A$main$1313 Def000454
-S A$main$1304 Def000447
-S A$main$1205 Def000411
-S A$main$1151 Def0003E1
-S A$main$1142 Def0003D9
-S A$main$1133 Def0003D2
-S A$main$1124 Def0003CA
-S A$main$1115 Def0003C3
-S A$main$1106 Def0003BC
-S A$main$1052 Def000394
-S A$main$1043 Def00038F
-S A$main$1025 Def000380
-S A$main$1016 Def000374
-S A$main$1007 Def00036D
+S A$main$1610 Def00056D
+S A$main$1511 Def00050C
+S A$main$1502 Def000501
+S A$main$1421 Def0004B1
+S A$main$1403 Def0004A4
+S A$main$1331 Def000458
+S A$main$1322 Def000450
+S A$main$1313 Def000448
+S A$main$1304 Def000441
+S A$main$1250 Def000413
+S A$main$1232 Def000408
+S A$main$1214 Def0003FC
+S A$main$1205 Def0003F5
+S A$main$1160 Def0003D8
+S A$main$1133 Def0003C9
+S A$main$1070 Def000391
+S A$main$1061 Def00038A
+S A$main$1052 Def000382
+S A$main$1043 Def00037B
+S A$main$1025 Def00036D
+S A$main$1016 Def000364
+S C$main.c$101$1_1$181 Def000516
+S C$Character.h$198$1_0$167 Def00039D
+S C$Character.h$189$1_0$167 Def000364
 S C$Character.h$91$2_1$130 Def0001A9
-S A$main$2043 Def000749
-S A$main$2034 Def000740
-S A$main$2016 Def000728
-S A$main$2007 Def000723
-S A$main$1701 Def0005ED
-S A$main$1620 Def000595
-S A$main$1611 Def00058B
-S A$main$1602 Def00057E
-S A$main$1530 Def000534
-S A$main$1512 Def000525
-S A$main$1503 Def000520
-S A$main$1440 Def0004E2
-S A$main$1431 Def0004DA
-S A$main$1422 Def0004CD
-S A$main$1413 Def0004C4
-S A$main$1350 Def00047A
-S A$main$1332 Def00046A
-S A$main$1323 Def000461
-S A$main$1314 Def000455
-S A$main$1305 Def00044A
-S A$main$1260 Def000429
-S A$main$1206 Def000414
-S A$main$1152 Def0003E2
-S A$main$1143 Def0003DA
-S A$main$1134 Def0003D3
-S A$main$1125 Def0003CB
-S A$main$1107 Def0003BE
-S A$main$1062 Def00039E
-S A$main$1053 Def000397
-S A$main$1044 Def000390
-S A$main$1035 Def000386
-S A$main$1026 Def000381
-S A$main$1017 Def000376
-S A$main$1008 Def00036F
-S C$main.c$140$1_0$180 Def0005C3
-S C$main.c$101$2_0$182 Def00052F
+S A$main$1611 Def00056F
+S A$main$1530 Def000520
+S A$main$1521 Def000516
+S A$main$1512 Def00050D
+S A$main$1503 Def000502
+S A$main$1440 Def0004BE
+S A$main$1422 Def0004B3
+S A$main$1404 Def0004A5
+S A$main$1332 Def000459
+S A$main$1323 Def000452
+S A$main$1314 Def000449
+S A$main$1305 Def000442
+S A$main$1251 Def000414
+S A$main$1233 Def000409
+S A$main$1215 Def0003FD
+S A$main$1206 Def0003F6
+S A$main$1170 Def0003E6
+S A$main$1161 Def0003DB
+S A$main$1143 Def0003CF
+S A$main$1134 Def0003CA
+S A$main$1080 Def00039A
+S A$main$1071 Def000392
+S A$main$1062 Def00038B
+S A$main$1053 Def000383
+S A$main$1044 Def00037C
+S A$main$1035 Def000375
+S A$main$1026 Def00036E
+S A$main$1017 Def000365
+S C$Character.h$199$1_0$167 Def0003A3
 S G$MoveCharacter$0$0 Def000205
 S C$Character.h$68$0_0$130 Def000000
-S A$main$2017 Def00072A
-S A$main$1900 Def0006B9
-S A$main$1810 Def000653
-S A$main$1801 Def00064C
-S A$main$1702 Def0005EE
-S A$main$1630 Def0005A0
-S A$main$1621 Def000597
-S A$main$1612 Def00058C
-S A$main$1603 Def000580
-S A$main$1540 Def00053D
-S A$main$1531 Def000536
-S A$main$1513 Def000526
-S A$main$1441 Def0004E3
-S A$main$1432 Def0004DC
-S A$main$1423 Def0004CE
-S A$main$1351 Def00047B
-S A$main$1333 Def00046B
-S A$main$1324 Def000462
-S A$main$1315 Def000456
-S A$main$1306 Def00044B
-S A$main$1261 Def00042A
-S A$main$1243 Def000423
-S A$main$1216 Def00041C
-S A$main$1162 Def0003EA
-S A$main$1144 Def0003DB
-S A$main$1126 Def0003CC
-S A$main$1108 Def0003BF
-S A$main$1072 Def0003A8
-S A$main$1063 Def0003A1
-S A$main$1054 Def000398
-S A$main$1045 Def000391
-S A$main$1036 Def000388
-S A$main$1018 Def000377
-S A$main$1009 Def000370
-S G$main$0$0 Def0006DF
+S A$main$1603 Def000565
+S A$main$1540 Def00052A
+S A$main$1531 Def000521
+S A$main$1522 Def000517
+S A$main$1513 Def00050F
+S A$main$1504 Def000503
+S A$main$1450 Def0004CD
+S A$main$1441 Def0004BF
+S A$main$1423 Def0004B5
+S A$main$1360 Def00047B
+S A$main$1342 Def000464
+S A$main$1333 Def00045C
+S A$main$1315 Def00044A
+S A$main$1306 Def000443
+S A$main$1270 Def00041D
+S A$main$1261 Def000415
+S A$main$1243 Def000410
+S A$main$1234 Def00040B
+S A$main$1225 Def000404
+S A$main$1216 Def0003FF
+S A$main$1207 Def0003F8
+S A$main$1171 Def0003E7
+S A$main$1135 Def0003CD
+S A$main$1081 Def00039B
+S A$main$1072 Def000393
+S A$main$1063 Def00038C
+S A$main$1054 Def000384
+S A$main$1036 Def000377
+S A$main$1027 Def000370
+S A$main$1018 Def000367
+S C$main.c$111$1_0$183 Def000534
+S G$main$0$0 Def000531
 S C$Character.h$75$2_1$130 Def00003E
-S A$main$2027 Def000735
-S A$main$2018 Def00072C
-S A$main$1910 Def0006C4
-S A$main$1820 Def000663
-S A$main$1811 Def000654
-S A$main$1802 Def00064E
-S A$main$1730 Def00060A
-S A$main$1703 Def0005F0
-S A$main$1631 Def0005A1
-S A$main$1613 Def00058D
-S A$main$1604 Def000581
-S A$main$1550 Def000547
-S A$main$1541 Def00053F
-S A$main$1514 Def000528
-S A$main$1442 Def0004E4
-S A$main$1433 Def0004DE
-S A$main$1424 Def0004CF
-S A$main$1361 Def000489
-S A$main$1352 Def00047C
-S A$main$1343 Def000472
-S A$main$1316 Def000457
-S A$main$1307 Def00044C
-S A$main$1280 Def000439
-S A$main$1271 Def000431
-S A$main$1262 Def00042C
-S A$main$1226 Def000422
-S A$main$1217 Def00041E
-S A$main$1190 Def0003FC
-S A$main$1163 Def0003ED
-S A$main$1145 Def0003DC
-S A$main$1064 Def0003A2
-S A$main$1055 Def000399
-S A$main$1046 Def000392
-S A$main$1037 Def000389
-S A$main$1019 Def000378
-S C$main.c$160$1_0$180 Def000647
-S C$main.c$133$1_0$180 Def0005AA
+S A$main$1631 Def000582
+S A$main$1604 Def000567
+S A$main$1550 Def000530
+S A$main$1541 Def00052B
+S A$main$1532 Def000522
+S A$main$1523 Def000518
+S A$main$1514 Def000510
+S A$main$1505 Def000506
+S A$main$1451 Def0004CF
+S A$main$1442 Def0004C0
+S A$main$1361 Def00047D
+S A$main$1343 Def000467
+S A$main$1334 Def00045D
+S A$main$1316 Def00044B
+S A$main$1280 Def00042A
+S A$main$1271 Def00041E
+S A$main$1262 Def000417
+S A$main$1244 Def000411
+S A$main$1226 Def000405
+S A$main$1208 Def0003F9
+S A$main$1181 Def0003ED
+S A$main$1172 Def0003E8
+S A$main$1127 Def0003BF
+S A$main$1118 Def0003B2
+S A$main$1091 Def0003A3
+S A$main$1073 Def000394
+S A$main$1055 Def000385
+S A$main$1037 Def000378
+S A$main$1028 Def000371
+S C$main.c$121$1_0$183 Def000577
+S C$main.c$104$1_1$181 Def000525
 S C$Character.h$76$2_1$130 Def0000AB
-S A$main$2028 Def000738
-S A$main$2019 Def00072E
-S A$main$1920 Def0006CE
-S A$main$1911 Def0006C5
-S A$main$1821 Def000664
-S A$main$1812 Def000656
-S A$main$1803 Def00064F
-S A$main$1740 Def000614
-S A$main$1731 Def00060B
-S A$main$1713 Def0005F8
-S A$main$1650 Def0005B1
-S A$main$1641 Def0005AA
-S A$main$1632 Def0005A2
-S A$main$1614 Def00058E
-S A$main$1605 Def000582
-S A$main$1560 Def000555
-S A$main$1551 Def00054A
-S A$main$1542 Def000540
-S A$main$1524 Def00052F
-S A$main$1461 Def0004FA
-S A$main$1443 Def0004E5
-S A$main$1425 Def0004D1
-S A$main$1380 Def0004A0
-S A$main$1362 Def00048B
-S A$main$1353 Def00047D
-S A$main$1344 Def000475
-S A$main$1317 Def000458
-S A$main$1308 Def00044D
-S A$main$1290 Def00043A
-S A$main$1272 Def000434
-S A$main$1218 Def000420
-S A$main$1191 Def0003FD
-S A$main$1173 Def0003F4
-S A$main$1164 Def0003EE
-S A$main$1146 Def0003DD
-S A$main$1119 Def0003C5
-S A$main$1065 Def0003A3
-S A$main$1056 Def00039A
-S A$main$1047 Def000393
-S A$main$1038 Def00038A
-S C$main.c$161$1_0$180 Def000652
-S C$main.c$133$1_1$180 Def00057E
-S C$main.c$104$2_0$182 Def000533
+S A$main$1605 Def000569
+S A$main$1524 Def00051A
+S A$main$1515 Def000511
+S A$main$1506 Def000507
+S A$main$1470 Def0004DF
+S A$main$1452 Def0004D0
+S A$main$1443 Def0004C2
+S A$main$1434 Def0004BB
+S A$main$1416 Def0004AB
+S A$main$1362 Def00047E
+S A$main$1353 Def000475
+S A$main$1344 Def000468
+S A$main$1335 Def00045E
+S A$main$1317 Def00044C
+S A$main$1281 Def00042B
+S A$main$1272 Def00041F
+S A$main$1263 Def000419
+S A$main$1227 Def000406
+S A$main$1209 Def0003FB
+S A$main$1173 Def0003EB
+S A$main$1128 Def0003C2
+S A$main$1119 Def0003B5
+S A$main$1092 Def0003A6
+S A$main$1074 Def000395
+S A$main$1029 Def000372
+S C$main.c$131$1_0$183 Def0005A3
+S C$main.c$113$1_0$183 Def000541
 S G$MoveCharacterWithJoypad$0$0 Def0002D6
 S C$Character.h$75$2_1$132 Def0001A1
-S A$main$2038 Def000743
-S A$main$1930 Def0006D8
-S A$main$1921 Def0006CF
-S A$main$1912 Def0006C6
-S A$main$1840 Def000674
-S A$main$1831 Def00066D
-S A$main$1813 Def000657
-S A$main$1804 Def000650
-S A$main$1750 Def00061F
-S A$main$1741 Def000616
-S A$main$1732 Def00060C
-S A$main$1723 Def000601
-S A$main$1714 Def0005FA
-S A$main$1660 Def0005BB
-S A$main$1651 Def0005B2
-S A$main$1642 Def0005AB
-S A$main$1633 Def0005A3
-S A$main$1615 Def000590
-S A$main$1606 Def000583
-S A$main$1570 Def000562
-S A$main$1561 Def000558
-S A$main$1552 Def00054B
-S A$main$1543 Def000541
-S A$main$1525 Def000532
-S A$main$1507 Def000521
-S A$main$1462 Def0004FB
-S A$main$1453 Def0004EF
-S A$main$1444 Def0004E7
-S A$main$1435 Def0004DF
-S A$main$1426 Def0004D3
-S A$main$1417 Def0004C5
-S A$main$1408 Def0004BE
-S A$main$1390 Def0004AA
-S A$main$1381 Def0004A1
-S A$main$1372 Def000494
-S A$main$1363 Def00048D
-S A$main$1354 Def00047E
-S A$main$1318 Def000459
-S A$main$1309 Def00044F
-S A$main$1291 Def00043C
-S A$main$1273 Def000435
-S A$main$1192 Def000400
-S A$main$1174 Def0003F5
-S A$main$1156 Def0003E4
-S A$main$1138 Def0003D5
-S A$main$1093 Def0003AF
-S A$main$1066 Def0003A4
-S A$main$1057 Def00039C
-S A$main$1039 Def00038B
-S C$main.c$202$1_0$194 Def00074C
-S C$main.c$200$2_0$195 Def000749
-S C$main.c$162$1_0$180 Def00066D
-S C$main.c$150$2_0$191 Def000611
+S A$main$1651 Def00059B
+S A$main$1642 Def00058D
+S A$main$1633 Def000584
+S A$main$1615 Def000571
+S A$main$1570 Def00053B
+S A$main$1525 Def00051B
+S A$main$1516 Def000512
+S A$main$1507 Def000508
+S A$main$1480 Def0004EC
+S A$main$1471 Def0004E0
+S A$main$1462 Def0004D9
+S A$main$1444 Def0004C3
+S A$main$1435 Def0004BC
+S A$main$1417 Def0004AC
+S A$main$1390 Def000498
+S A$main$1381 Def00048D
+S A$main$1354 Def000476
+S A$main$1345 Def00046A
+S A$main$1336 Def00045F
+S A$main$1291 Def000434
+S A$main$1282 Def00042D
+S A$main$1273 Def000420
+S A$main$1264 Def00041A
+S A$main$1165 Def0003DD
+S A$main$1156 Def0003D0
+S A$main$1129 Def0003C3
+S A$main$1093 Def0003A7
+S A$main$1075 Def000396
+S A$main$1048 Def00037E
 S C$Character.h$95$1_0$142 Def0001AA
 S C$Character.h$93$2_1$142 Def0001AA
-S A$main$2039 Def000746
-S A$main$1940 Def0006DE
-S A$main$1931 Def0006D9
-S A$main$1922 Def0006D0
-S A$main$1913 Def0006C7
-S A$main$1904 Def0006BC
-S A$main$1850 Def000682
-S A$main$1841 Def000676
-S A$main$1832 Def00066F
-S A$main$1823 Def000666
-S A$main$1814 Def000659
-S A$main$1805 Def000651
-S A$main$1733 Def00060D
-S A$main$1724 Def000604
-S A$main$1715 Def0005FB
-S A$main$1670 Def0005C3
-S A$main$1661 Def0005BD
-S A$main$1652 Def0005B3
-S A$main$1643 Def0005AC
-S A$main$1634 Def0005A5
-S A$main$1625 Def000598
-S A$main$1616 Def000591
-S A$main$1607 Def000586
-S A$main$1571 Def000563
-S A$main$1553 Def00054D
-S A$main$1544 Def000542
-S A$main$1535 Def000538
-S A$main$1508 Def000524
-S A$main$1490 Def000518
-S A$main$1463 Def0004FC
-S A$main$1454 Def0004F2
-S A$main$1445 Def0004E8
-S A$main$1427 Def0004D5
-S A$main$1418 Def0004C7
-S A$main$1409 Def0004C0
-S A$main$1391 Def0004AC
-S A$main$1373 Def000497
-S A$main$1355 Def000480
-S A$main$1319 Def00045A
-S A$main$1292 Def00043E
-S A$main$1256 Def000424
-S A$main$1193 Def000401
-S A$main$1175 Def0003F6
-S A$main$1157 Def0003E7
-S A$main$1139 Def0003D6
-S A$main$1094 Def0003B2
-S A$main$1067 Def0003A6
-S A$main$1058 Def00039D
-S C$main.c$151$2_0$191 Def000618
-S C$main.c$135$1_1$180 Def000598
+S A$main$1652 Def00059D
+S A$main$1643 Def00058F
+S A$main$1625 Def000577
+S A$main$1616 Def000573
+S A$main$1580 Def000548
+S A$main$1571 Def00053C
+S A$main$1526 Def00051C
+S A$main$1517 Def000515
+S A$main$1508 Def000509
+S A$main$1490 Def0004F6
+S A$main$1481 Def0004ED
+S A$main$1472 Def0004E1
+S A$main$1463 Def0004DA
+S A$main$1454 Def0004D2
+S A$main$1445 Def0004C5
+S A$main$1436 Def0004BD
+S A$main$1427 Def0004B7
+S A$main$1418 Def0004AD
+S A$main$1409 Def0004A7
+S A$main$1382 Def000490
+S A$main$1373 Def000487
+S A$main$1355 Def000478
+S A$main$1346 Def00046B
+S A$main$1337 Def000460
+S A$main$1328 Def000454
+S A$main$1292 Def000435
+S A$main$1283 Def00042E
+S A$main$1274 Def000423
+S A$main$1238 Def00040D
+S A$main$1166 Def0003E0
+S A$main$1157 Def0003D3
+S A$main$1085 Def00039D
+S A$main$1067 Def00038E
+S A$main$1049 Def00037F
+S C$main.c$115$1_0$183 Def000559
 S C$Character.h$96$1_0$142 Def0001B0
 S C$Character.h$79$2_1$130 Def0000BE
-S A$main$1905 Def0006BE
-S A$main$1851 Def000683
-S A$main$1842 Def000677
-S A$main$1833 Def000670
-S A$main$1824 Def000668
-S A$main$1815 Def00065A
-S A$main$1761 Def000628
-S A$main$1734 Def00060F
-S A$main$1725 Def000606
-S A$main$1716 Def0005FC
-S A$main$1707 Def0005F1
-S A$main$1680 Def0005D1
-S A$main$1671 Def0005C5
-S A$main$1662 Def0005BE
-S A$main$1653 Def0005B4
-S A$main$1644 Def0005AD
-S A$main$1635 Def0005A6
-S A$main$1626 Def00059A
-S A$main$1617 Def000592
-S A$main$1608 Def000587
-S A$main$1581 Def00056D
-S A$main$1572 Def000565
-S A$main$1554 Def000550
-S A$main$1545 Def000545
-S A$main$1536 Def00053B
-S A$main$1518 Def00052A
-S A$main$1491 Def000519
-S A$main$1464 Def0004FD
-S A$main$1455 Def0004F4
-S A$main$1446 Def0004E9
-S A$main$1428 Def0004D7
-S A$main$1419 Def0004C9
-S A$main$1392 Def0004AD
-S A$main$1374 Def000498
-S A$main$1365 Def00048E
-S A$main$1356 Def000482
-S A$main$1338 Def00046D
-S A$main$1329 Def000464
-S A$main$1293 Def00043F
-S A$main$1266 Def00042E
-S A$main$1257 Def000426
-S A$main$1194 Def000404
-S A$main$1176 Def0003F8
-S A$main$1158 Def0003E8
-S A$main$1095 Def0003B3
-S A$main$1077 Def0003AA
-S A$main$1068 Def0003A7
-S C$main.c$152$2_0$191 Def000621
-S C$main.c$143$2_0$191 Def0005D3
-S C$main.c$135$2_0$190 Def0005B0
+S A$main$1653 Def00059E
+S A$main$1644 Def000592
+S A$main$1626 Def00057A
+S A$main$1617 Def000575
+S A$main$1590 Def000556
+S A$main$1581 Def000549
+S A$main$1572 Def00053F
+S A$main$1563 Def000531
+S A$main$1545 Def00052E
+S A$main$1536 Def000525
+S A$main$1527 Def00051D
+S A$main$1509 Def00050A
+S A$main$1491 Def0004F7
+S A$main$1482 Def0004EE
+S A$main$1473 Def0004E2
+S A$main$1464 Def0004DC
+S A$main$1455 Def0004D4
+S A$main$1446 Def0004C6
+S A$main$1428 Def0004B8
+S A$main$1419 Def0004AE
+S A$main$1383 Def000492
+S A$main$1374 Def000488
+S A$main$1347 Def00046E
+S A$main$1338 Def000462
+S A$main$1329 Def000456
+S A$main$1293 Def000436
+S A$main$1284 Def00042F
+S A$main$1275 Def000424
+S A$main$1239 Def00040F
+S A$main$1194 Def0003EE
+S A$main$1167 Def0003E1
+S A$main$1158 Def0003D4
+S A$main$1086 Def0003A0
+S A$main$1068 Def00038F
+S A$main$1059 Def000386
+S C$main.c$123$2_0$184 Def000577
 S C$Character.h$83$4_1$134 Def0000F6
 S C$Character.h$76$3_1$133 Def00019B
-S _SetupCharacter Def0003AB
-S A$main$1960 Def0006E9
-S A$main$1906 Def0006BF
-S A$main$1870 Def000697
-S A$main$1852 Def000684
-S A$main$1843 Def000678
-S A$main$1834 Def000671
-S A$main$1825 Def00066A
-S A$main$1816 Def00065B
-S A$main$1780 Def000638
-S A$main$1771 Def000631
-S A$main$1762 Def00062A
-S A$main$1717 Def0005FD
-S A$main$1708 Def0005F4
-S A$main$1690 Def0005DD
-S A$main$1672 Def0005C6
-S A$main$1663 Def0005BF
-S A$main$1654 Def0005B5
-S A$main$1645 Def0005AE
-S A$main$1636 Def0005A7
-S A$main$1627 Def00059B
-S A$main$1618 Def000593
-S A$main$1609 Def000588
-S A$main$1582 Def00056E
-S A$main$1573 Def000566
-S A$main$1555 Def000552
-S A$main$1519 Def00052D
-S A$main$1483 Def00050E
-S A$main$1474 Def000507
-S A$main$1465 Def0004FF
-S A$main$1456 Def0004F6
-S A$main$1447 Def0004EA
-S A$main$1429 Def0004D8
-S A$main$1393 Def0004AE
-S A$main$1375 Def00049A
-S A$main$1366 Def000490
-S A$main$1357 Def000484
-S A$main$1339 Def000470
-S A$main$1294 Def000440
-S A$main$1267 Def000430
-S A$main$1258 Def000427
-S A$main$1168 Def0003F0
-S A$main$1096 Def0003B4
-S A$main$1087 Def0003AB
-S C$main.c$153$2_0$191 Def000628
-S A$main$1970 Def0006F6
-S A$main$1961 Def0006EA
-S A$main$1907 Def0006C0
-S A$main$1880 Def0006A2
-S A$main$1871 Def000698
-S A$main$1862 Def00068C
-S A$main$1853 Def000685
-S A$main$1844 Def000679
-S A$main$1835 Def000672
-S A$main$1817 Def00065D
-S A$main$1781 Def00063A
-S A$main$1772 Def000633
-S A$main$1763 Def00062B
-S A$main$1745 Def000618
-S A$main$1718 Def0005FF
-S A$main$1709 Def0005F6
-S A$main$1691 Def0005DE
-S A$main$1673 Def0005C7
-S A$main$1664 Def0005C0
-S A$main$1655 Def0005B6
-S A$main$1637 Def0005A8
-S A$main$1628 Def00059C
-S A$main$1619 Def000594
-S A$main$1583 Def000570
-S A$main$1574 Def000567
-S A$main$1565 Def000559
-S A$main$1556 Def000553
-S A$main$1529 Def000533
-S A$main$1484 Def000510
-S A$main$1475 Def000509
-S A$main$1466 Def000501
-S A$main$1457 Def0004F8
-S A$main$1448 Def0004ED
-S A$main$1439 Def0004E1
-S A$main$1394 Def0004AF
-S A$main$1385 Def0004A3
-S A$main$1376 Def00049C
-S A$main$1367 Def000491
-S A$main$1358 Def000486
-S A$main$1349 Def000477
-S A$main$1295 Def000441
-S A$main$1259 Def000428
-S A$main$1169 Def0003F1
-S A$main$1097 Def0003B5
-S A$main$1088 Def0003AC
+S _SetupCharacter Def000364
+S A$main$1627 Def00057C
+S A$main$1609 Def00056B
+S A$main$1582 Def00054A
+S A$main$1537 Def000527
+S A$main$1528 Def00051E
+S A$main$1492 Def0004F8
+S A$main$1483 Def0004EF
+S A$main$1474 Def0004E5
+S A$main$1456 Def0004D6
+S A$main$1447 Def0004C7
+S A$main$1429 Def0004BA
+S A$main$1375 Def00048A
+S A$main$1348 Def000471
+S A$main$1294 Def000437
+S A$main$1285 Def000430
+S A$main$1276 Def000425
+S A$main$1249 Def000412
+S A$main$1195 Def0003F0
+S A$main$1168 Def0003E4
+S A$main$1159 Def0003D7
+S A$main$1087 Def0003A1
+S A$main$1069 Def000390
+S C$main.c$124$2_0$184 Def000587
+S C$main.c$117$1_0$183 Def000565
+S C$main.c$107$1_1$183 Def000531
+S A$main$1637 Def000587
+S A$main$1628 Def00057E
+S A$main$1583 Def00054B
+S A$main$1538 Def000528
+S A$main$1529 Def00051F
+S A$main$1493 Def0004F9
+S A$main$1484 Def0004F0
+S A$main$1475 Def0004E6
+S A$main$1448 Def0004C9
+S A$main$1376 Def00048B
+S A$main$1367 Def000480
+S A$main$1349 Def000474
+S A$main$1295 Def000438
+S A$main$1286 Def000431
+S A$main$1277 Def000426
+S A$main$1268 Def00041B
+S A$main$1196 Def0003F1
+S A$main$1169 Def0003E5
+S A$main$1097 Def0003A9
+S A$main$1079 Def000397
 S A$main$100 Def000005
+S C$main.c$125$2_0$184 Def00058D
+S C$main.c$118$1_0$183 Def00056B
+S C$main.c$109$1_0$183 Def000531
 A _DATA size 13 flags 0 addr 0
 S _player Def000000
 S G$player$0_0$0 Def000000
@@ -1573,7 +1267,7 @@ R 00 00 00 00
 T 27 00 00 56 21 02 00 19 E5 7D F8 04 77 E1 7C F8
 R 00 00 00 00
 T 34 00 00 03 32 2A 5F 56 1A 6F C5 5D 79 CD 00 00
-R 00 00 00 00 02 0E 02 00
+R 00 00 00 00 02 0E 05 00
 T 41 00 00 F1 47 F8 13 2A 5F 56 21 0A 00 19 E5 7D
 R 00 00 00 00
 T 4E 00 00 F8 06 77 E1 7C F8 05 77 F8 13 2A 5F 56
@@ -1583,7 +1277,7 @@ R 00 00 00 00
 T 68 00 00 77 F8 13 2A 5F 56 21 11 00 19 E5 7D F8
 R 00 00 00 00
 T 75 00 00 0A 77 E1 7C F8 09 77 59 78 CD 00 00 F8
-R 00 00 00 00 02 0D 02 00
+R 00 00 00 00 02 0D 05 00
 T 82 00 00 0A 79 22 70 F8 13 2A 5F 56 21 05 00 19
 R 00 00 00 00
 T 8F 00 00 E5 7D F8 0E 77 E1 7C F8 0D 77 F8 15 36
@@ -1625,7 +1319,7 @@ R 00 00 00 00
 T F5 00 00 47 F8 13 2A 5F 56 1A 81 4F C5 F8 12 5E
 R 00 00 00 00
 T 02 01 00 78 CD 00 00 79 C1 81 F8 0E 77 F8 11 7E
-R 00 00 00 00 02 05 02 00
+R 00 00 00 00 02 05 05 00
 T 0F 01 00 B7 28 09 2B 2B 3E 20 22 AF 77 18 05
 R 00 00 00 00
 T 1B 01 00
@@ -1647,19 +1341,19 @@ R 00 00 00 00
 T 33 01 00 F8 0F 2A 23 4E B1 5F F8 0E 4E 06 00 CB
 R 00 00 00 00
 T 40 01 00 21 CB 10 CB 21 CB 10 21 01 00 09 23 23
-R 00 00 00 00 02 0B 03 00
+R 00 00 00 00 02 0B 06 00
 T 4D 01 00 73 F8 08 2A 5F 56 1A F8 0F 22 13 1A 77
 R 00 00 00 00
 T 5A 01 00 F8 16 7E F8 11 22 36 00 D1 D5 1A 6F C5
 R 00 00 00 00
 T 67 01 00 5D F8 17 7E CD 00 00 59 50 C1 F8 11 2A
-R 00 00 00 00 02 08 02 00
+R 00 00 00 00 02 08 05 00
 T 74 01 00 66 6F 19 5D 54 F8 0A 2A 66 6F 19 5D 54
 R 00 00 00 00
 T 81 01 00 F8 0F 2A 66 6F 19 5D 54 1A F8 0C 5E 23
 R 00 00 00 00
 T 8E 01 00 56 F5 1A 6F F1 85 5F 21 01 00 09 23 73
-R 00 00 00 00 02 0B 03 00
+R 00 00 00 00 02 0B 06 00
 T 9B 01 00 F8 16 34 C3 AF 00
 R 00 00 00 00 00 07 00 00
 T A1 01 00
@@ -1683,7 +1377,7 @@ R 00 00 00 00
 T CC 01 00 F8 02 2A 4F 46 03 03 03 0A 4F 06 00 D5
 R 00 00 00 00
 T D9 01 00 F8 02 2A 5F 56 CD 00 00 D1 79 12 F8 02
-R 00 00 00 00 02 09 0B 00
+R 00 00 00 00 02 09 0E 00
 T E6 01 00 2A 5F 56 CD AA 01 E8 04 C9
 R 00 00 00 00 00 07 00 00
 T EF 01 00
@@ -1715,13 +1409,13 @@ R 00 00 00 00
 T 56 02 00 44 0A F8 07 86 57 C5 D5 F8 08 2A 23 5F
 R 00 00 00 00
 T 63 02 00 7E CD 00 00 79 D1 C1 82 5F F8 06 7E 87
-R 00 00 00 00 02 05 02 00
+R 00 00 00 00 02 05 05 00
 T 70 02 00 87 87 F8 0A 56 82 57 F8 07 3A 2B 87 87
 R 00 00 00 00
 T 7D 02 00 87 6E 85 F8 04 77 26 00 6B 29 29 D5 11
 R 00 00 00 00
 T 8A 02 00 00 00 19 D1 7A 22 5D 54 F8 04 7E 12 F8
-R 00 00 00 00 02 03 03 00
+R 00 00 00 00 02 03 06 00
 T 97 02 00 07 34 18 AE
 R 00 00 00 00
 T 9B 02 00
@@ -1744,320 +1438,198 @@ T CC 02 00 5E 23 56 CD 05 02 E1 E1 33 E9
 R 00 00 00 00 00 07 00 00
 T D6 02 00
 R 00 00 00 00
-T D6 02 00 E8 F8 4B 42 CD 00 00 F8 07 77 F8 00 AF
-R 00 00 00 00 02 08 05 00
-T E3 02 00 22 77 E5 F8 09 CB 4E E1 28 06 F8 00 36
+T D6 02 00 E8 F8 4B 42 CD 00 00 F8 00 36 00 23 36
+R 00 00 00 00 02 08 08 00
+T E3 02 00 00 CB 4F 28 06 F8 00 36 FF 18 08
 R 00 00 00 00
-T F0 02 00 FF 18 0C
+T EE 02 00
 R 00 00 00 00
-T F3 02 00
+T EE 02 00 CB 47 28 04 F8 00 36 01
 R 00 00 00 00
-T F3 02 00 E5 F8 09 CB 46 E1 28 04 F8 00 36 01
+T F6 02 00
 R 00 00 00 00
-T FF 02 00
+T F6 02 00 E6 10 F8 02 22 36 00 21 0F 00 09 E5 7D
 R 00 00 00 00
-T FF 02 00 21 0E 00 09 7E E6 01 5F 16 00 F8 07 7E
+T 03 03 00 F8 06 77 E1 7C F8 05 77 21 10 00 09 E5
 R 00 00 00 00
-T 0C 03 00 E6 10 F8 02 22 36 00 21 0F 00 09 E5 7D
+T 10 03 00 7D F8 08 77 E1 7C F8 07 77 AF F8 02 B6
 R 00 00 00 00
-T 19 03 00 F8 06 77 E1 7C F8 05 77 21 10 00 09 E5
+T 1D 03 00 28 0E 23 23 2A 66 6F 36 01 F8 06 2A 66
 R 00 00 00 00
-T 26 03 00 7D F8 08 77 E1 7C F8 07 77 7A B3 28 16
+T 2A 03 00 6F 36 00
 R 00 00 00 00
-T 33 03 00 AF F8 02 B6 28 10 23 23 2A 66 6F 36 01
+T 2D 03 00
 R 00 00 00 00
-T 40 03 00 F8 06 2A 66 6F 36 00 18 12
+T 2D 03 00 F8 04 2A 5F 56 1A B7 28 17 AF F8 02 B6
 R 00 00 00 00
-T 49 03 00
+T 3A 03 00 28 11 2B 36 FF F8 06 2A 5F 3A 57 1A 3C
 R 00 00 00 00
-T 49 03 00 7A B3 28 0E F8 06 2A 66 6F 36 00 F8 04
+T 47 03 00 F5 2A 66 6F F1 77
 R 00 00 00 00
-T 56 03 00 2A 66 6F 36 00
+T 4D 03 00
 R 00 00 00 00
-T 5B 03 00
+T 4D 03 00 21 0C 00 09 5D 54 F8 00 7E 12 21 0D 00
 R 00 00 00 00
-T 5B 03 00 AF F8 02 B6 28 0C F8 06 2A 5F 56 1A 6F
+T 5A 03 00 09 4D 44 F8 01 7E 02 E8 08 C9
 R 00 00 00 00
-T 68 03 00 3E 0F 95 30 07
+T 64 03 00
 R 00 00 00 00
-T 6D 03 00
+T 64 03 00 3B F8 00 77 21 11 00 19 4D 44 F8 07 2A
 R 00 00 00 00
-T 6D 03 00 F8 04 2A 66 6F 36 00
+T 71 03 00 02 03 7E 02 F8 00 7E 12 4B 42 03 F8 03
 R 00 00 00 00
-T 74 03 00
+T 7E 03 00 2A 02 4B 42 03 03 7E 02 21 05 00 19 4D
 R 00 00 00 00
-T 74 03 00 F8 04 2A 5F 56 1A B7 28 17 AF F8 02 B6
+T 8B 03 00 44 F8 05 2A 02 4B 42 03 03 03 7E 02 21
 R 00 00 00 00
-T 81 03 00 28 11 2B 36 FF F8 06 2A 5F 3A 57 1A 3C
+T 98 03 00 0E 00 19 36 00 21 10 00 19 36 00 21
 R 00 00 00 00
-T 8E 03 00 F5 2A 66 6F F1 77
-R 00 00 00 00
-T 94 03 00
-R 00 00 00 00
-T 94 03 00 21 0C 00 09 5D 54 F8 00 7E 12 21 0D 00
-R 00 00 00 00
-T A1 03 00 09 4D 44 F8 01 7E 02 E8 08 C9
-R 00 00 00 00
-T AB 03 00
-R 00 00 00 00
-T AB 03 00 3B F8 00 77 21 11 00 19 4D 44 F8 07 2A
-R 00 00 00 00
-T B8 03 00 02 03 7E 02 F8 00 7E 12 4B 42 03 F8 03
-R 00 00 00 00
-T C5 03 00 2A 02 4B 42 03 03 7E 02 21 05 00 19 4D
-R 00 00 00 00
-T D2 03 00 44 F8 05 2A 02 4B 42 03 03 03 7E 02 21
-R 00 00 00 00
-T DF 03 00 0E 00 19 36 00 21 10 00 19 36 00 21
-R 00 00 00 00
-T EB 03 00 0F 00 19 36 00 AF CD 00 00 33 E1 E8 06
+T A4 03 00 0F 00 19 36 00 AF CD 00 00 33 E1 E8 06
 R 00 00 00 00 00 0A 00 00
-T F8 03 00 E9
+T B1 03 00 E9
 R 00 00 00 00
-T F9 03 00
+T B2 03 00
 R 00 00 00 00
-T F9 03 00 11 00 00 D5 21 00 C8 E5 CD 00 00 E8 04
-R 00 00 00 00 02 04 0A 00 02 0C 09 00
-T 06 04 00 11 00 00 D5 21 14 12 E5 AF 0F F5 CD
-R 00 00 00 00 02 04 06 00
-T 12 04 00 00 00 E8 06 F0 00 00 00 F6 01 E0
-R 00 00 00 00 02 03 0D 00 0B 08 08 00
-T 1B 04 00 00 00 00 F0 00 00 00 F6 80 E0 00 00 00
-R 00 00 00 00 0B 03 08 00 0B 07 08 00 0B 0D 08 00
-T 22 04 00 C9
+T B2 03 00 11 00 00 D5 21 00 C8 E5 CD 00 00 E8 04
+R 00 00 00 00 02 04 0D 00 02 0C 0C 00
+T BF 03 00 11 00 00 D5 21 14 12 E5 AF 0F F5 CD
+R 00 00 00 00 02 04 09 00
+T CB 03 00 00 00 E8 06 C9
+R 00 00 00 00 02 03 10 00
+T D0 03 00
 R 00 00 00 00
-T 23 04 00
+T D0 03 00 11 00 00 D5 21 00 35 E5 CD 00 00 E8 04
+R 00 00 00 00 02 04 02 00 02 0C 0C 00
+T DD 03 00 11 00 00 D5 21 28 12 E5 AF 0F F5 CD
+R 00 00 00 00 02 04 00 00
+T E9 03 00 00 00 E8 06 C9
+R 00 00 00 00 02 03 10 00
+T EE 03 00
 R 00 00 00 00
-T 23 04 00 C9
+T EE 03 00 F8 02 2A 4F 46 0A 6F 7B C6 09 5F 30 01
 R 00 00 00 00
-T 24 04 00
+T FB 03 00 14
 R 00 00 00 00
-T 24 04 00 F8 02 2A 4F 46 0A D6 78 38 09 3E 78 02
+T FC 03 00
 R 00 00 00 00
-T 31 04 00 21 09 00 19 36 00
+T FC 03 00 7D D6 82 38 07 3E 82 02 AF 12 18 0A
 R 00 00 00 00
-T 37 04 00
+T 08 04 00
 R 00 00 00 00
-T 37 04 00 E1 F1 E9
+T 08 04 00 7D D6 08 30 05 3E 08 02 AF 12
 R 00 00 00 00
-T 3A 04 00
+T 12 04 00
 R 00 00 00 00
-T 3A 04 00 E8 F1 F8 0D 73 23 72 2B 2B 22 2A 5F 56
+T 12 04 00 E1 F1 E9
 R 00 00 00 00
-T 47 04 00 21 0C 00 19 E5 7D F8 06 77 E1 7C F8 05
+T 15 04 00
 R 00 00 00 00
-T 54 04 00 32 2A 5F 56 1A 4F FA 03 00 B7 28 04 79
-R 00 00 00 00 00 0A 02 00
-T 61 04 00 B7 28 09
+T 15 04 00 E8 F7 F8 07 7B 22 7A 32 2A 5F 56 21
 R 00 00 00 00
-T 64 04 00
+T 21 04 00 0D 00 19 E5 7D F8 04 77 E1 7C F8 03 32
 R 00 00 00 00
-T 64 04 00 FA 03 00 B7 20 0D B1 28 0A
-R 00 00 00 00 00 04 02 00
-T 6D 04 00
+T 2E 04 00 2A 5F 56 1A F8 06 22 2A 5F 56 21 09 00
 R 00 00 00 00
-T 6D 04 00 21 00 00 36 00 21 01 00 36 00
-R 00 00 00 00 00 04 02 00 00 09 02 00
-T 77 04 00
+T 3B 04 00 19 33 33 E5 F8 06 7E B7 28 0F D1 D5 1A
 R 00 00 00 00
-T 77 04 00 21 03 00 5E AF 57 96 CB 7B 28 07 CB 7A
-R 00 00 00 00 00 04 02 00
-T 84 04 00 20 08 BF 18 05
+T 48 04 00 86 4F E1 E5 71 21 02 00 36 00 18 57
+R 00 00 00 00 00 09 02 00
+T 54 04 00
 R 00 00 00 00
-T 89 04 00
+T 54 04 00 F8 07 2A 5F 56 21 0E 00 19 4D 44 0A CB
 R 00 00 00 00
-T 89 04 00 CB 7A 28 01 37
-R 00 00 00 00
-T 8E 04 00
-R 00 00 00 00
-T 8E 04 00 3E 00 17 F8 09 77 FA 03 00 B7 28 24 F8
-R 00 00 00 00 00 0A 02 00
-T 9B 04 00 04 2A 5F 56 1A B7 20 1B F8 09 7E B7 28
-R 00 00 00 00
-T A8 04 00 08 23 3E 01 22 AF 77 18 07
-R 00 00 00 00
-T B1 04 00
-R 00 00 00 00
-T B1 04 00 F8 0A 3E FF 22 36 FF
-R 00 00 00 00
-T B8 04 00
-R 00 00 00 00
-T B8 04 00 F8 0A 7E EA 05 00
+T 61 04 00 4F 28 47 21 02 00 5E 16 00 13 01 78 00
 R 00 00 00 00 00 07 02 00
-T BE 04 00
+T 6E 04 00 CD 00 00 21 02 00 71 7E D6 03 30 06 E1
+R 00 00 00 00 02 04 0E 00 00 07 02 00
+T 7B 04 00 36 FE E5 18 2B
 R 00 00 00 00
-T BE 04 00 F8 04 2A 5F 56 1A 4F F8 09 CB 46 20 24
+T 80 04 00
 R 00 00 00 00
-T CB 04 00 59 AF 57 91 CB 7B 28 07 CB 7A 20 08 BF
-R 00 00 00 00
-T D8 04 00 18 05
-R 00 00 00 00
-T DA 04 00
-R 00 00 00 00
-T DA 04 00 CB 7A 28 01 37
-R 00 00 00 00
-T DF 04 00
-R 00 00 00 00
-T DF 04 00 30 0E AF F5 33 AF F8 0E 5E 23 56 CD
-R 00 00 00 00
-T EB 04 00 EF 01 18 18
-R 00 00 00 00 00 03 00 00
-T EF 04 00
-R 00 00 00 00
-T EF 04 00 FA 03 00 CB 7F 20 11 CB 79 28 0D AF F5
+T 80 04 00 FA 02 00 D6 0A 30 06 E1 36 FF E5 18 1E
 R 00 00 00 00 00 04 02 00
-T FC 04 00 33 3E 01 F8 0E 5E 23 56 CD EF 01
-R 00 00 00 00 00 0C 00 00
-T 07 05 00
+T 8D 04 00
 R 00 00 00 00
-T 07 05 00 F8 04 2A 5F 56 1A 4F F8 0D 2A 5F 56 21
-R 00 00 00 00
-T 14 05 00 08 00 19 33 33 E5 79 B7 28 29 E1 E5 71
-R 00 00 00 00
-T 21 05 00 21 00 00 34 7E D6 08 20 05 21 00 00 36
-R 00 00 00 00 00 04 02 00 00 0D 02 00
-T 2E 05 00 00
-R 00 00 00 00
-T 2F 05 00
-R 00 00 00 00
-T 2F 05 00 21 01 00 34 7E D6 08 20 46 21 01 00 36
-R 00 00 00 00 00 04 02 00 00 0D 02 00
-T 3C 05 00 00 F8 0D 2A 5F 56 CD B3 01 18 37
-R 00 00 00 00 00 0A 00 00
-T 47 05 00
-R 00 00 00 00
-T 47 05 00 FA 05 00 B7 28 31 FA 00 00 F8 0C 96 30
-R 00 00 00 00 00 04 02 00 00 0A 02 00
-T 54 05 00 29 21 00 00 34 F8 0C 4E 06 00 0B 21
-R 00 00 00 00 00 05 02 00
-T 60 05 00 00 00 5E 16 00 7B 91 20 0F 7A 90 20 0B
-R 00 00 00 00 00 03 02 00
-T 6D 05 00 E1 36 00 E5 21 05 00 36 00 18 06
-R 00 00 00 00 00 08 02 00
-T 78 05 00
-R 00 00 00 00
-T 78 05 00 D1 D5 FA 05 00 12
-R 00 00 00 00 00 06 02 00
-T 7E 05 00
-R 00 00 00 00
-T 7E 05 00 F8 0D 2A 5F 56 21 0D 00 19 E5 7D F8 08
-R 00 00 00 00
-T 8B 05 00 77 E1 7C F8 07 32 2A 5F 56 1A F8 0B 77
-R 00 00 00 00
-T 98 05 00 F8 0D 2A 5F 56 21 09 00 19 E5 7D F8 0A
-R 00 00 00 00
-T A5 05 00 77 E1 7C F8 09 22 23 7E B7 28 13 2B 2B
-R 00 00 00 00
-T B2 05 00 2B 2A 5F 2A 23 57 1A 86 4F F8 08 2A 66
-R 00 00 00 00
-T BF 05 00 6F 71 18 75
-R 00 00 00 00
-T C3 05 00
-R 00 00 00 00
-T C3 05 00 F8 0D 2A 5F 56 21 0E 00 19 4D 44 0A CB
-R 00 00 00 00
-T D0 05 00 4F 28 65 21 02 00 4E 06 00 03 F8 0A 79
-R 00 00 00 00 00 07 02 00
-T DD 05 00 22 78 32 01 3C 00 2A 5F 56 CD 00 00 F8
-R 00 00 00 00 02 0D 0B 00
-T EA 05 00 0A 79 22 70 F8 0A 7E EA 02 00 D6 05 30
-R 00 00 00 00 00 0B 02 00
-T F7 05 00 09 F8 08 2A 66 6F 36 FE 18 37
-R 00 00 00 00
-T 01 06 00
-R 00 00 00 00
-T 01 06 00 FA 02 00 D6 0A 30 09 F8 08 2A 66 6F 36
+T 8D 04 00 FA 02 00 D6 0E 30 06 E1 36 00 E5 18 11
 R 00 00 00 00 00 04 02 00
-T 0E 06 00 FF 18 27
+T 9A 04 00
 R 00 00 00 00
-T 11 06 00
-R 00 00 00 00
-T 11 06 00 FA 02 00 D6 0E 30 09 F8 08 2A 66 6F 36
+T 9A 04 00 FA 02 00 D6 14 30 06 E1 36 01 E5 18 04
 R 00 00 00 00 00 04 02 00
-T 1E 06 00 00 18 17
+T A7 04 00
 R 00 00 00 00
-T 21 06 00
+T A7 04 00 E1 36 02 E5
 R 00 00 00 00
-T 21 06 00 FA 02 00 D6 14 30 09 F8 08 2A 66 6F 36
-R 00 00 00 00 00 04 02 00
-T 2E 06 00 01 18 07
+T AB 04 00
 R 00 00 00 00
-T 31 06 00
+T AB 04 00 D1 D5 1A B7 28 0A EE 80 D6 7D 30 04 E1
 R 00 00 00 00
-T 31 06 00 F8 08 2A 66 6F 36 02
+T B8 04 00 36 FD E5
 R 00 00 00 00
-T 38 06 00
+T BB 04 00
 R 00 00 00 00
-T 38 06 00 F8 08 2A 5F 56 1A B7 28 0B EE 80 D6 7D
+T BB 04 00 D1 D5 1A 4F B7 28 1B 59 3E 03 57 91 CB
 R 00 00 00 00
-T 45 06 00 30 05 3A 6E 67 36 FD
+T C8 04 00 7B 28 07 CB 7A 20 08 BF 18 05
 R 00 00 00 00
-T 4C 06 00
+T D2 04 00
 R 00 00 00 00
-T 4C 06 00 F8 08 2A 5F 56 1A 4F B7 28 1E 59 3E 03
+T D2 04 00 CB 7A 28 01 37
 R 00 00 00 00
-T 59 06 00 57 91 CB 7B 28 07 CB 7A 20 08 BF 18 05
+T D7 04 00
 R 00 00 00 00
-T 66 06 00
+T D7 04 00 30 04 E1 36 03 E5
 R 00 00 00 00
-T 66 06 00 CB 7A 28 01 37
+T DD 04 00
 R 00 00 00 00
-T 6B 06 00
+T DD 04 00 F8 07 2A 5F 56 21 07 00 19 4D 44 0A F8
 R 00 00 00 00
-T 6B 06 00 30 07 F8 08 2A 66 6F 36 03
+T EA 04 00 06 32 2B D1 D5 1A 22 23 3A 2B 86 23 23
 R 00 00 00 00
-T 74 06 00
+T F7 04 00 77 3A 77 F8 05 4D 44 F8 07 2A 5F 56 21
 R 00 00 00 00
-T 74 06 00 F8 0D 2A 5F 56 21 06 00 19 4D 44 0A F8
+T 04 05 00 06 00 19 5D 54 D5 C5 4B 42 F8 0B 2A 5F
 R 00 00 00 00
-T 81 06 00 0B 32 D1 D5 1A 22 3A 86 F8 02 77 F8 0D
-R 00 00 00 00
-T 8E 06 00 2A 5F 56 21 07 00 19 4D 44 0A F8 0A 32
-R 00 00 00 00
-T 9B 06 00 2B 2A 5F 2A 23 57 1A 32 2A 86 77 F8 03
-R 00 00 00 00
-T A8 06 00 77 21 03 00 39 E5 21 04 00 39 4D 44 F8
-R 00 00 00 00
-T B5 06 00 0F 2A 5F 56 CD 24 04 F8 03 3A F5 33 7E
+T 11 05 00 56 CD EE 03 D1 1A 4F F8 05 2A 23 F5 33
+R 00 00 00 00 00 05 00 00
+T 1E 05 00 79 5E 23 56 CD 05 02 F8 02 2A 5F 56 1A
 R 00 00 00 00 00 08 00 00
-T C2 06 00 F8 0E 5E 23 56 CD 05 02 F8 04 2A 5F 56
-R 00 00 00 00 00 09 00 00
-T CF 06 00 1A EA 03 00 F8 06 2A 5F 56 1A EA 04 00
-R 00 00 00 00 00 05 02 00 00 0E 02 00
-T DC 06 00 E8 0F C9
+T 2B 05 00 EA 04 00 E8 09 C9
+R 00 00 00 00 00 04 02 00
+T 31 05 00
 R 00 00 00 00
-T DF 06 00
-R 00 00 00 00
-T DF 06 00 CD 23 04 11 00 00 D5 21 00 26 E5 CD
-R 00 00 00 00 00 04 00 00 02 07 07 00
-T EB 06 00 00 00 E8 04 11 00 00 D5 3E 08 F5 33 AF
-R 00 00 00 00 02 03 00 00 02 08 04 00
-T F8 06 00 67 2E 02 E5 3E 02 F5 33 AF 11 00 00 CD
+T 31 05 00 CD D0 03 11 00 00 D5 21 00 26 E5 CD
+R 00 00 00 00 00 04 00 00 02 07 0A 00
+T 3D 05 00 00 00 E8 04 11 00 00 D5 3E 08 F5 33 AF
+R 00 00 00 00 02 03 03 00 02 08 07 00
+T 4A 05 00 67 2E 02 E5 3E 02 F5 33 AF 11 00 00 CD
 R 00 00 00 00 00 0D 01 00
-T 05 07 00 AB 03 3E 38 F5 33 3E 08 11 00 00 CD
+T 57 05 00 64 03 3E 38 F5 33 3E 10 11 00 00 CD
 R 00 00 00 00 00 03 00 00 00 0C 01 00
-T 11 07 00 05 02 F0 00 00 00 F6 01 E0 00 00 00 F0
-R 00 00 00 00 00 03 00 00 0B 06 08 00 0B 0C 08 00
-T 1A 07 00 00 00 00 F6 02 E0 00 00 00 F0 00 00 00
-R 00 00 00 00 0B 03 08 00 0B 09 08 00 0B 0D 08 00
-T 21 07 00 F6 80 E0 00 00 00
-R 00 00 00 00 0B 06 08 00
-T 25 07 00
+T 63 05 00 05 02 F0 00 00 00 F6 01 E0 00 00 00 F0
+R 00 00 00 00 00 03 00 00 0B 06 0B 00 0B 0C 0B 00
+T 6C 05 00 00 00 00 F6 02 E0 00 00 00 F0 00 00 00
+R 00 00 00 00 0B 03 0B 00 0B 09 0B 00 0B 0D 0B 00
+T 73 05 00 F6 80 E0 00 00 00
+R 00 00 00 00 0B 06 0B 00
+T 77 05 00
 R 00 00 00 00
-T 25 07 00 FA 07 00 D6 78 38 04 3E 01 18 02
+T 77 05 00 FA 07 00 D6 82 38 04 3E 01 18 02
 R 00 00 00 00 00 04 01 00
-T 30 07 00
+T 82 05 00
 R 00 00 00 00
-T 30 07 00 3E 02
+T 82 05 00 3E 02
 R 00 00 00 00
-T 32 07 00
+T 84 05 00
 R 00 00 00 00
-T 32 07 00 EA 0E 00 11 00 00 CD D6 02 3E 03 11
+T 84 05 00 EA 0E 00 11 00 00 CD D6 02 3E 03 11
 R 00 00 00 00 00 04 01 00 00 07 01 00 00 0A 00 00
-T 3E 07 00 00 00 CD 3A 04 11 00 00 CD
+T 90 05 00 00 00 CD 15 04 11 00 00 CD
 R 00 00 00 00 00 03 01 00 00 06 00 00 00 09 01 00
-T 47 07 00 B3 01 CD 00 00 18 D7
-R 00 00 00 00 00 03 00 00 02 06 0C 00
+T 99 05 00 B3 01 F0 00 00 00 3C E0 00 00 00 CD
+R 00 00 00 00 00 03 00 00 0B 06 01 00 0B 0B 01 00
+T A1 05 00 00 00 18 D2
+R 00 00 00 00 02 03 0F 00
 T 00 00 00
 R 00 00 07 00
 T 00 00 00 00

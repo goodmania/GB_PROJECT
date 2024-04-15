@@ -1,5 +1,6 @@
 #include "Character.h"
 #include "SplashScreenSprite.h"
+#include "BackGroundSprite.h"
 #include "BirdSprite.h"
 
 // prototype
@@ -16,6 +17,7 @@ int8_t lastMovementY = 0;
 int8_t slowingX = 0;
 
 #define PLAYER_ANIMATION_FRAMES 8
+#define GLOUND_LEVEL 130
 
 void showTitle(void)
 {
@@ -24,24 +26,31 @@ void showTitle(void)
 
     // Fill screen with map
     set_bkg_tiles(0, 0, 20, 18, SplashScreenSprite_tilemap);
-
-    // show background
-    SHOW_BKG;
-    DISPLAY_ON;
 }
 
 void SetupBackGround()
 {
+     // Load tileset into GB memory
+    set_bkg_data(0, BackGroundSprite_tileset_size, BackGroundSprite_tileset);
 
+    // Fill screen with map
+    set_bkg_tiles(0, 0, 40, 18, BackGroundSprite_tilemap);
 }
 
 void DetectCollisions(Character *character, uint8_t *predictedX, uint8_t *predictedY)
 {
      // If we hit ground...
-     if (*predictedY >= 120)
+     if (*predictedY >= GLOUND_LEVEL)
      {
           // Snap to ground
-          *predictedY = 120; 
+          *predictedY = GLOUND_LEVEL; 
+
+          // Remove velocity
+          character->velocityY = 0;
+     }else if(*predictedY < 8)
+     {
+          // Snap to ground
+          *predictedY = 8; 
 
           // Remove velocity
           character->velocityY = 0;
@@ -50,100 +59,21 @@ void DetectCollisions(Character *character, uint8_t *predictedX, uint8_t *predic
 
 void MovementPhysics(Character *character, uint8_t slowDownFrames)
 {
-     // Reset frame every time we start and stop moving...
-     if (
-          // Stopped
-          (lastMovementX != 0 && character->movementForceX == 0) ||
-          // Or started
-          (lastMovementX == 0 && character->movementForceX != 0))
-          {
-               // Reset frame count
-               movementFrameCount = 0;
-               animationFrameCount = 0;
-          }
-
-     // Flag true when we release from movement...
-     if (lastMovementX != 0 && character->movementForceX == 0)
-          slowingX = lastMovementX > 0 ? 1 : -1;
-
-     // Sprite flip for moving right
-     if (lastMovementX <= 0 && character->movementForceX > 0)
-          SetSpriteFlip(character, 0, 0);
-     // Sprite flip for moving left
-     else if (lastMovementX >= 0 && character->movementForceX < 0)
-          SetSpriteFlip(character, 1, 0);
-
-     // While moving...
-     if (character->movementForceX != 0)
-     {
-          // Compare movement to animation frames...
-          if (0) // movementFrameCount == 2 || movementFrameCount == 6)
-          {
-               // Don't move during this frame
-               character->velocityX = 0;
-          }
-          else
-          {
-               // Move character by movement force
-               character->velocityX = character->movementForceX;
-          }
-
-          // Progress movement counter
-          movementFrameCount++;
-          
-          // Roll around after max frame
-          if (movementFrameCount == PLAYER_ANIMATION_FRAMES)
-          {
-               movementFrameCount = 0;
-          }
-          
-          // Progress animation counter
-          animationFrameCount++;
-          
-          // Roll around after max frame
-          if (animationFrameCount == PLAYER_ANIMATION_FRAMES)
-          {
-               animationFrameCount = 0;
-
-               // Move to next animation
-               LoadNextSpriteFrame(character);
-          }
-
-     }
-     // When no longer moving
-     else
-     {
-          if (slowingX && movementFrameCount < slowDownFrames)
-          {
-               movementFrameCount++;
-
-               // Allow character to move one frame before stopping
-               if (movementFrameCount == slowDownFrames - 1)
-               {
-                    character->velocityX = 0;
-                    slowingX = 0;
-               }
-               else
-                    // Continue to move in the direction we were
-                    character->velocityX = slowingX;
-          }
-     }
-
      // While jumping...
      if (character->movementForceY != 0)
      {
           character->velocityY += character->movementForceY;
-
-          // jumpFrameCount = 0;
+          jumpFrameCount = 0;
      }
+
      // Otherwise, if in the air...
      else if (character->underfootState & FOOT_IN_AIR)
      {
           // Jump frame count from 0 to 60
-          jumpFrameCount = (jumpFrameCount + 1) % 60;
+          jumpFrameCount = (jumpFrameCount + 1) % 120;
 
           // Apply gravity
-          if (jumpFrameCount < 5)
+          if (jumpFrameCount < 3)
                character->velocityY = -2;
           else if (jumpFrameCount < 10)
                character->velocityY = -1;
@@ -162,17 +92,15 @@ void MovementPhysics(Character *character, uint8_t slowDownFrames)
           character->velocityY = 3;
      
      // Calculate future position
-     uint8_t predictedX = character->x + character->velocityX;
      uint8_t predictedY = character->y + character->velocityY;
 
      // Update predictions based on collision
-     DetectCollisions(character, &predictedX, &predictedY);
+     DetectCollisions(character, &character->x, &predictedY);
 
      // Move character to new position
-     MoveCharacter(character, predictedX, predictedY);
+     MoveCharacter(character, character->x, predictedY);
 
      // Which way were we moving
-     lastMovementX = character->movementForceX;
      lastMovementY = character->movementForceY;
 }
 
@@ -184,7 +112,7 @@ void main(void)
 
     SetupCharacter(&player, 0, 2, 2, 0, 8, BirdSprite_tilemap);
 
-    MoveCharacter(&player, 8, 56);
+    MoveCharacter(&player, 16, 56);
 
     SHOW_BKG;
     SHOW_SPRITES;
@@ -192,11 +120,12 @@ void main(void)
 
     while(1)
     {
-        // TODO: Level interaction
-        player.underfootState = player.y >= 120 ? FOOT_ON_LAND : FOOT_IN_AIR;
+        player.underfootState = player.y >= GLOUND_LEVEL ? FOOT_ON_LAND : FOOT_IN_AIR;
         MoveCharacterWithJoypad(&player);
         MovementPhysics(&player, 3);
         LoadNextSpriteFrame(&player);
+
+        scroll_bkg(1, 0);
         wait_vbl_done();
     }
 }

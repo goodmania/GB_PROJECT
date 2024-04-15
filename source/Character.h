@@ -163,27 +163,11 @@ void MoveCharacterWithJoypad(Character *character)
     }
     
     // Have we jumped?
-    if ((character->underfootState & FOOT_ON_LAND) && (buttons & J_A))
+    if ((buttons & J_A))
     {
         // Mark character as jumped
         character->hasJumped = 1;
         character->jumpedFrames = 0;
-    }
-
-    // If we are on land again after jumping...
-    else if (character->underfootState & FOOT_ON_LAND)
-    {
-        // Reset jump height
-        character->jumpedFrames = 0;
-
-        // Reset has jumped
-        character->hasJumped = 0;
-    }
-
-    // End jumping if not pressing A or gone above frames
-    if (!(buttons & J_A) || character->jumpedFrames > MAX_JUMP_FRAMES)
-    {
-        character->hasJumped = 0;
     }
 
     // If we have jumped and still have button pressed...

@@ -8,816 +8,514 @@ Symbol Table
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
   0 A$main$100                                                     000005 GR
-  0 A$main$1000                                                    000368 GR
-  0 A$main$1001                                                    00036A GR
-  0 A$main$1002                                                    00036B GR
-  0 A$main$1007                                                    00036D GR
-  0 A$main$1008                                                    00036F GR
-  0 A$main$1009                                                    000370 GR
+  0 A$main$1001                                                    000361 GR
+  0 A$main$1006                                                    000363 GR
   0 A$main$101                                                     000006 GR
-  0 A$main$1010                                                    000371 GR
-  0 A$main$1011                                                    000372 GR
-  0 A$main$1016                                                    000374 GR
-  0 A$main$1017                                                    000376 GR
-  0 A$main$1018                                                    000377 GR
-  0 A$main$1019                                                    000378 GR
-  0 A$main$1020                                                    000379 GR
-  0 A$main$1021                                                    00037A GR
-  0 A$main$1022                                                    00037B GR
-  0 A$main$1023                                                    00037D GR
-  0 A$main$1024                                                    00037E GR
-  0 A$main$1025                                                    000380 GR
-  0 A$main$1026                                                    000381 GR
-  0 A$main$1030                                                    000383 GR
-  0 A$main$1031                                                    000384 GR
-  0 A$main$1035                                                    000386 GR
-  0 A$main$1036                                                    000388 GR
-  0 A$main$1037                                                    000389 GR
-  0 A$main$1038                                                    00038A GR
-  0 A$main$1039                                                    00038B GR
-  0 A$main$1040                                                    00038C GR
-  0 A$main$1041                                                    00038D GR
-  0 A$main$1042                                                    00038E GR
-  0 A$main$1043                                                    00038F GR
-  0 A$main$1044                                                    000390 GR
-  0 A$main$1045                                                    000391 GR
-  0 A$main$1046                                                    000392 GR
-  0 A$main$1047                                                    000393 GR
+  0 A$main$1016                                                    000364 GR
+  0 A$main$1017                                                    000365 GR
+  0 A$main$1018                                                    000367 GR
+  0 A$main$1022                                                    000368 GR
+  0 A$main$1023                                                    00036B GR
+  0 A$main$1024                                                    00036C GR
+  0 A$main$1025                                                    00036D GR
+  0 A$main$1026                                                    00036E GR
+  0 A$main$1027                                                    000370 GR
+  0 A$main$1028                                                    000371 GR
+  0 A$main$1029                                                    000372 GR
+  0 A$main$1030                                                    000373 GR
+  0 A$main$1031                                                    000374 GR
+  0 A$main$1035                                                    000375 GR
+  0 A$main$1036                                                    000377 GR
+  0 A$main$1037                                                    000378 GR
+  0 A$main$1041                                                    000379 GR
+  0 A$main$1042                                                    00037A GR
+  0 A$main$1043                                                    00037B GR
+  0 A$main$1044                                                    00037C GR
+  0 A$main$1048                                                    00037E GR
+  0 A$main$1049                                                    00037F GR
   0 A$main$105                                                     000007 GR
-  0 A$main$1052                                                    000394 GR
-  0 A$main$1053                                                    000397 GR
-  0 A$main$1054                                                    000398 GR
-  0 A$main$1055                                                    000399 GR
-  0 A$main$1056                                                    00039A GR
-  0 A$main$1057                                                    00039C GR
-  0 A$main$1058                                                    00039D GR
+  0 A$main$1050                                                    000380 GR
+  0 A$main$1051                                                    000381 GR
+  0 A$main$1052                                                    000382 GR
+  0 A$main$1053                                                    000383 GR
+  0 A$main$1054                                                    000384 GR
+  0 A$main$1055                                                    000385 GR
+  0 A$main$1059                                                    000386 GR
   0 A$main$106                                                     000008 GR
-  0 A$main$1062                                                    00039E GR
-  0 A$main$1063                                                    0003A1 GR
-  0 A$main$1064                                                    0003A2 GR
-  0 A$main$1065                                                    0003A3 GR
-  0 A$main$1066                                                    0003A4 GR
-  0 A$main$1067                                                    0003A6 GR
+  0 A$main$1060                                                    000389 GR
+  0 A$main$1061                                                    00038A GR
+  0 A$main$1062                                                    00038B GR
+  0 A$main$1063                                                    00038C GR
+  0 A$main$1067                                                    00038E GR
+  0 A$main$1068                                                    00038F GR
+  0 A$main$1069                                                    000390 GR
+  0 A$main$107                                                     000009 GR
+  0 A$main$1070                                                    000391 GR
+  0 A$main$1071                                                    000392 GR
+  0 A$main$1072                                                    000393 GR
+  0 A$main$1073                                                    000394 GR
+  0 A$main$1074                                                    000395 GR
+  0 A$main$1075                                                    000396 GR
+  0 A$main$1079                                                    000397 GR
+  0 A$main$108                                                     00000A GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$1068                                                    0003A7 GR
-  0 A$main$107                                                     000009 GR
-  0 A$main$1072                                                    0003A8 GR
-  0 A$main$1077                                                    0003AA GR
-  0 A$main$108                                                     00000A GR
-  0 A$main$1087                                                    0003AB GR
-  0 A$main$1088                                                    0003AC GR
-  0 A$main$1089                                                    0003AE GR
+  0 A$main$1080                                                    00039A GR
+  0 A$main$1081                                                    00039B GR
+  0 A$main$1085                                                    00039D GR
+  0 A$main$1086                                                    0003A0 GR
+  0 A$main$1087                                                    0003A1 GR
   0 A$main$109                                                     00000B GR
-  0 A$main$1093                                                    0003AF GR
-  0 A$main$1094                                                    0003B2 GR
-  0 A$main$1095                                                    0003B3 GR
-  0 A$main$1096                                                    0003B4 GR
-  0 A$main$1097                                                    0003B5 GR
-  0 A$main$1098                                                    0003B7 GR
-  0 A$main$1099                                                    0003B8 GR
+  0 A$main$1091                                                    0003A3 GR
+  0 A$main$1092                                                    0003A6 GR
+  0 A$main$1093                                                    0003A7 GR
+  0 A$main$1097                                                    0003A9 GR
+  0 A$main$1098                                                    0003AA GR
   0 A$main$110                                                     00000C GR
-  0 A$main$1100                                                    0003B9 GR
-  0 A$main$1101                                                    0003BA GR
-  0 A$main$1102                                                    0003BB GR
-  0 A$main$1106                                                    0003BC GR
-  0 A$main$1107                                                    0003BE GR
-  0 A$main$1108                                                    0003BF GR
+  0 A$main$1102                                                    0003AD GR
+  0 A$main$1103                                                    0003AE GR
+  0 A$main$1104                                                    0003AF GR
+  0 A$main$1105                                                    0003B1 GR
   0 A$main$111                                                     00000F GR
-  0 A$main$1112                                                    0003C0 GR
-  0 A$main$1113                                                    0003C1 GR
-  0 A$main$1114                                                    0003C2 GR
-  0 A$main$1115                                                    0003C3 GR
-  0 A$main$1119                                                    0003C5 GR
+  0 A$main$1118                                                    0003B2 GR
+  0 A$main$1119                                                    0003B5 GR
   0 A$main$112                                                     000010 GR
-  0 A$main$1120                                                    0003C6 GR
-  0 A$main$1121                                                    0003C7 GR
-  0 A$main$1122                                                    0003C8 GR
-  0 A$main$1123                                                    0003C9 GR
-  0 A$main$1124                                                    0003CA GR
-  0 A$main$1125                                                    0003CB GR
-  0 A$main$1126                                                    0003CC GR
+  0 A$main$1120                                                    0003B6 GR
+  0 A$main$1121                                                    0003B9 GR
+  0 A$main$1122                                                    0003BA GR
+  0 A$main$1123                                                    0003BD GR
+  0 A$main$1127                                                    0003BF GR
+  0 A$main$1128                                                    0003C2 GR
+  0 A$main$1129                                                    0003C3 GR
   0 A$main$113                                                     000011 GR
-  0 A$main$1130                                                    0003CD GR
-  0 A$main$1131                                                    0003D0 GR
-  0 A$main$1132                                                    0003D1 GR
-  0 A$main$1133                                                    0003D2 GR
-  0 A$main$1134                                                    0003D3 GR
-  0 A$main$1138                                                    0003D5 GR
-  0 A$main$1139                                                    0003D6 GR
+  0 A$main$1130                                                    0003C6 GR
+  0 A$main$1131                                                    0003C7 GR
+  0 A$main$1132                                                    0003C8 GR
+  0 A$main$1133                                                    0003C9 GR
+  0 A$main$1134                                                    0003CA GR
+  0 A$main$1135                                                    0003CD GR
   0 A$main$114                                                     000012 GR
-  0 A$main$1140                                                    0003D7 GR
-  0 A$main$1141                                                    0003D8 GR
-  0 A$main$1142                                                    0003D9 GR
-  0 A$main$1143                                                    0003DA GR
-  0 A$main$1144                                                    0003DB GR
-  0 A$main$1145                                                    0003DC GR
-  0 A$main$1146                                                    0003DD GR
+  0 A$main$1143                                                    0003CF GR
   0 A$main$115                                                     000013 GR
-  0 A$main$1150                                                    0003DE GR
+  0 A$main$1156                                                    0003D0 GR
+  0 A$main$1157                                                    0003D3 GR
+  0 A$main$1158                                                    0003D4 GR
+  0 A$main$1159                                                    0003D7 GR
+  0 A$main$1160                                                    0003D8 GR
+  0 A$main$1161                                                    0003DB GR
+  0 A$main$1165                                                    0003DD GR
+  0 A$main$1166                                                    0003E0 GR
+  0 A$main$1167                                                    0003E1 GR
+  0 A$main$1168                                                    0003E4 GR
+  0 A$main$1169                                                    0003E5 GR
+  0 A$main$1170                                                    0003E6 GR
+  0 A$main$1171                                                    0003E7 GR
+  0 A$main$1172                                                    0003E8 GR
+  0 A$main$1173                                                    0003EB GR
+  0 A$main$1181                                                    0003ED GR
+  0 A$main$119                                                     000014 GR
+  0 A$main$1194                                                    0003EE GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$1151                                                    0003E1 GR
-  0 A$main$1152                                                    0003E2 GR
-  0 A$main$1156                                                    0003E4 GR
-  0 A$main$1157                                                    0003E7 GR
-  0 A$main$1158                                                    0003E8 GR
-  0 A$main$1162                                                    0003EA GR
-  0 A$main$1163                                                    0003ED GR
-  0 A$main$1164                                                    0003EE GR
-  0 A$main$1168                                                    0003F0 GR
-  0 A$main$1169                                                    0003F1 GR
-  0 A$main$1173                                                    0003F4 GR
-  0 A$main$1174                                                    0003F5 GR
-  0 A$main$1175                                                    0003F6 GR
-  0 A$main$1176                                                    0003F8 GR
-  0 A$main$1189                                                    0003F9 GR
-  0 A$main$119                                                     000014 GR
-  0 A$main$1190                                                    0003FC GR
-  0 A$main$1191                                                    0003FD GR
-  0 A$main$1192                                                    000400 GR
-  0 A$main$1193                                                    000401 GR
-  0 A$main$1194                                                    000404 GR
-  0 A$main$1198                                                    000406 GR
-  0 A$main$1199                                                    000409 GR
+  0 A$main$1195                                                    0003F0 GR
+  0 A$main$1196                                                    0003F1 GR
+  0 A$main$1197                                                    0003F2 GR
+  0 A$main$1198                                                    0003F3 GR
+  0 A$main$1199                                                    0003F4 GR
   0 A$main$120                                                     000016 GR
-  0 A$main$1200                                                    00040A GR
-  0 A$main$1201                                                    00040D GR
-  0 A$main$1202                                                    00040E GR
-  0 A$main$1203                                                    00040F GR
-  0 A$main$1204                                                    000410 GR
-  0 A$main$1205                                                    000411 GR
-  0 A$main$1206                                                    000414 GR
+  0 A$main$1205                                                    0003F5 GR
+  0 A$main$1206                                                    0003F6 GR
+  0 A$main$1207                                                    0003F8 GR
+  0 A$main$1208                                                    0003F9 GR
+  0 A$main$1209                                                    0003FB GR
   0 A$main$121                                                     000017 GR
-  0 A$main$1210                                                    000416 GR
-  0 A$main$1211                                                    000418 GR
-  0 A$main$1212                                                    00041A GR
-  0 A$main$1216                                                    00041C GR
-  0 A$main$1217                                                    00041E GR
-  0 A$main$1218                                                    000420 GR
+  0 A$main$1214                                                    0003FC GR
+  0 A$main$1215                                                    0003FD GR
+  0 A$main$1216                                                    0003FF GR
   0 A$main$122                                                     000018 GR
-  0 A$main$1226                                                    000422 GR
+  0 A$main$1220                                                    000401 GR
+  0 A$main$1221                                                    000403 GR
+  0 A$main$1225                                                    000404 GR
+  0 A$main$1226                                                    000405 GR
+  0 A$main$1227                                                    000406 GR
   0 A$main$123                                                     000019 GR
+  0 A$main$1232                                                    000408 GR
+  0 A$main$1233                                                    000409 GR
+  0 A$main$1234                                                    00040B GR
+  0 A$main$1238                                                    00040D GR
+  0 A$main$1239                                                    00040F GR
   0 A$main$124                                                     00001A GR
-  0 A$main$1243                                                    000423 GR
+  0 A$main$1243                                                    000410 GR
+  0 A$main$1244                                                    000411 GR
+  0 A$main$1249                                                    000412 GR
   0 A$main$125                                                     00001B GR
-  0 A$main$1256                                                    000424 GR
-  0 A$main$1257                                                    000426 GR
-  0 A$main$1258                                                    000427 GR
-  0 A$main$1259                                                    000428 GR
+  0 A$main$1250                                                    000413 GR
+  0 A$main$1251                                                    000414 GR
   0 A$main$126                                                     00001C GR
-  0 A$main$1260                                                    000429 GR
-  0 A$main$1261                                                    00042A GR
-  0 A$main$1262                                                    00042C GR
-  0 A$main$1266                                                    00042E GR
-  0 A$main$1267                                                    000430 GR
+  0 A$main$1261                                                    000415 GR
+  0 A$main$1262                                                    000417 GR
+  0 A$main$1263                                                    000419 GR
+  0 A$main$1264                                                    00041A GR
+  0 A$main$1268                                                    00041B GR
+  0 A$main$1269                                                    00041C GR
   0 A$main$127                                                     00001D GR
+  0 A$main$1270                                                    00041D GR
+  0 A$main$1271                                                    00041E GR
+  0 A$main$1272                                                    00041F GR
+  0 A$main$1273                                                    000420 GR
+  0 A$main$1274                                                    000423 GR
+  0 A$main$1275                                                    000424 GR
+  0 A$main$1276                                                    000425 GR
+  0 A$main$1277                                                    000426 GR
+  0 A$main$1278                                                    000428 GR
+  0 A$main$1279                                                    000429 GR
+  0 A$main$128                                                     00001E GR
+  0 A$main$1280                                                    00042A GR
+  0 A$main$1281                                                    00042B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$1271                                                    000431 GR
-  0 A$main$1272                                                    000434 GR
-  0 A$main$1273                                                    000435 GR
-  0 A$main$1278                                                    000437 GR
-  0 A$main$1279                                                    000438 GR
-  0 A$main$128                                                     00001E GR
-  0 A$main$1280                                                    000439 GR
+  0 A$main$1282                                                    00042D GR
+  0 A$main$1283                                                    00042E GR
+  0 A$main$1284                                                    00042F GR
+  0 A$main$1285                                                    000430 GR
+  0 A$main$1286                                                    000431 GR
+  0 A$main$1287                                                    000432 GR
   0 A$main$129                                                     00001F GR
-  0 A$main$1290                                                    00043A GR
-  0 A$main$1291                                                    00043C GR
-  0 A$main$1292                                                    00043E GR
-  0 A$main$1293                                                    00043F GR
-  0 A$main$1294                                                    000440 GR
-  0 A$main$1295                                                    000441 GR
-  0 A$main$1296                                                    000442 GR
+  0 A$main$1291                                                    000434 GR
+  0 A$main$1292                                                    000435 GR
+  0 A$main$1293                                                    000436 GR
+  0 A$main$1294                                                    000437 GR
+  0 A$main$1295                                                    000438 GR
+  0 A$main$1296                                                    00043B GR
+  0 A$main$1297                                                    00043C GR
+  0 A$main$1298                                                    00043D GR
+  0 A$main$1299                                                    00043E GR
   0 A$main$130                                                     000020 GR
-  0 A$main$1300                                                    000443 GR
-  0 A$main$1301                                                    000444 GR
-  0 A$main$1302                                                    000445 GR
-  0 A$main$1303                                                    000446 GR
-  0 A$main$1304                                                    000447 GR
-  0 A$main$1305                                                    00044A GR
-  0 A$main$1306                                                    00044B GR
-  0 A$main$1307                                                    00044C GR
-  0 A$main$1308                                                    00044D GR
-  0 A$main$1309                                                    00044F GR
+  0 A$main$1303                                                    00043F GR
+  0 A$main$1304                                                    000441 GR
+  0 A$main$1305                                                    000442 GR
+  0 A$main$1306                                                    000443 GR
   0 A$main$131                                                     000021 GR
-  0 A$main$1310                                                    000450 GR
-  0 A$main$1311                                                    000451 GR
-  0 A$main$1312                                                    000452 GR
-  0 A$main$1313                                                    000454 GR
-  0 A$main$1314                                                    000455 GR
-  0 A$main$1315                                                    000456 GR
-  0 A$main$1316                                                    000457 GR
-  0 A$main$1317                                                    000458 GR
-  0 A$main$1318                                                    000459 GR
-  0 A$main$1319                                                    00045A GR
+  0 A$main$1310                                                    000445 GR
+  0 A$main$1311                                                    000446 GR
+  0 A$main$1312                                                    000447 GR
+  0 A$main$1313                                                    000448 GR
+  0 A$main$1314                                                    000449 GR
+  0 A$main$1315                                                    00044A GR
+  0 A$main$1316                                                    00044B GR
+  0 A$main$1317                                                    00044C GR
   0 A$main$132                                                     000022 GR
-  0 A$main$1320                                                    00045D GR
-  0 A$main$1321                                                    00045E GR
-  0 A$main$1322                                                    000460 GR
-  0 A$main$1323                                                    000461 GR
-  0 A$main$1324                                                    000462 GR
-  0 A$main$1329                                                    000464 GR
+  0 A$main$1321                                                    00044D GR
+  0 A$main$1322                                                    000450 GR
+  0 A$main$1323                                                    000452 GR
+  0 A$main$1328                                                    000454 GR
+  0 A$main$1329                                                    000456 GR
   0 A$main$133                                                     000023 GR
-  0 A$main$1330                                                    000467 GR
-  0 A$main$1331                                                    000468 GR
-  0 A$main$1332                                                    00046A GR
-  0 A$main$1333                                                    00046B GR
-  0 A$main$1338                                                    00046D GR
-  0 A$main$1339                                                    000470 GR
+  0 A$main$1330                                                    000457 GR
+  0 A$main$1331                                                    000458 GR
+  0 A$main$1332                                                    000459 GR
+  0 A$main$1333                                                    00045C GR
+  0 A$main$1334                                                    00045D GR
+  0 A$main$1335                                                    00045E GR
+  0 A$main$1336                                                    00045F GR
+  0 A$main$1337                                                    000460 GR
+  0 A$main$1338                                                    000462 GR
   0 A$main$134                                                     000025 GR
-  0 A$main$1343                                                    000472 GR
-  0 A$main$1344                                                    000475 GR
-  0 A$main$1349                                                    000477 GR
+  0 A$main$1342                                                    000464 GR
+  0 A$main$1343                                                    000467 GR
+  0 A$main$1344                                                    000468 GR
+  0 A$main$1345                                                    00046A GR
+  0 A$main$1346                                                    00046B GR
+  0 A$main$1347                                                    00046E GR
+  0 A$main$1348                                                    000471 GR
+  0 A$main$1349                                                    000474 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
 Hexadecimal [24-Bits]
 
 Symbol Table
 
   0 A$main$135                                                     000026 GR
-  0 A$main$1350                                                    00047A GR
-  0 A$main$1351                                                    00047B GR
-  0 A$main$1352                                                    00047C GR
-  0 A$main$1353                                                    00047D GR
-  0 A$main$1354                                                    00047E GR
-  0 A$main$1355                                                    000480 GR
-  0 A$main$1356                                                    000482 GR
-  0 A$main$1357                                                    000484 GR
-  0 A$main$1358                                                    000486 GR
-  0 A$main$1359                                                    000487 GR
+  0 A$main$1353                                                    000475 GR
+  0 A$main$1354                                                    000476 GR
+  0 A$main$1355                                                    000478 GR
+  0 A$main$1359                                                    00047A GR
   0 A$main$136                                                     000027 GR
-  0 A$main$1361                                                    000489 GR
-  0 A$main$1362                                                    00048B GR
-  0 A$main$1363                                                    00048D GR
-  0 A$main$1365                                                    00048E GR
-  0 A$main$1366                                                    000490 GR
-  0 A$main$1367                                                    000491 GR
-  0 A$main$1368                                                    000493 GR
+  0 A$main$1360                                                    00047B GR
+  0 A$main$1361                                                    00047D GR
+  0 A$main$1362                                                    00047E GR
+  0 A$main$1367                                                    000480 GR
+  0 A$main$1368                                                    000483 GR
+  0 A$main$1369                                                    000485 GR
   0 A$main$137                                                     000028 GR
-  0 A$main$1372                                                    000494 GR
-  0 A$main$1373                                                    000497 GR
-  0 A$main$1374                                                    000498 GR
-  0 A$main$1375                                                    00049A GR
-  0 A$main$1376                                                    00049C GR
-  0 A$main$1377                                                    00049D GR
-  0 A$main$1378                                                    00049E GR
-  0 A$main$1379                                                    00049F GR
+  0 A$main$1373                                                    000487 GR
+  0 A$main$1374                                                    000488 GR
+  0 A$main$1375                                                    00048A GR
+  0 A$main$1376                                                    00048B GR
   0 A$main$138                                                     00002B GR
-  0 A$main$1380                                                    0004A0 GR
-  0 A$main$1381                                                    0004A1 GR
-  0 A$main$1385                                                    0004A3 GR
-  0 A$main$1386                                                    0004A5 GR
-  0 A$main$1387                                                    0004A6 GR
-  0 A$main$1388                                                    0004A7 GR
-  0 A$main$1389                                                    0004A9 GR
+  0 A$main$1381                                                    00048D GR
+  0 A$main$1382                                                    000490 GR
+  0 A$main$1383                                                    000492 GR
+  0 A$main$1387                                                    000494 GR
+  0 A$main$1388                                                    000495 GR
+  0 A$main$1389                                                    000497 GR
   0 A$main$139                                                     00002C GR
-  0 A$main$1390                                                    0004AA GR
-  0 A$main$1391                                                    0004AC GR
-  0 A$main$1392                                                    0004AD GR
-  0 A$main$1393                                                    0004AE GR
-  0 A$main$1394                                                    0004AF GR
-  0 A$main$1396                                                    0004B1 GR
-  0 A$main$1397                                                    0004B3 GR
-  0 A$main$1398                                                    0004B5 GR
-  0 A$main$1399                                                    0004B6 GR
+  0 A$main$1390                                                    000498 GR
+  0 A$main$1395                                                    00049A GR
+  0 A$main$1396                                                    00049D GR
+  0 A$main$1397                                                    00049F GR
   0 A$main$140                                                     00002D GR
-  0 A$main$1401                                                    0004B8 GR
-  0 A$main$1402                                                    0004BA GR
-  0 A$main$1403                                                    0004BB GR
-  0 A$main$1408                                                    0004BE GR
-  0 A$main$1409                                                    0004C0 GR
+  0 A$main$1401                                                    0004A1 GR
+  0 A$main$1402                                                    0004A2 GR
+  0 A$main$1403                                                    0004A4 GR
+  0 A$main$1404                                                    0004A5 GR
+  0 A$main$1409                                                    0004A7 GR
   0 A$main$141                                                     00002E GR
-  0 A$main$1410                                                    0004C1 GR
-  0 A$main$1411                                                    0004C2 GR
+  0 A$main$1410                                                    0004A8 GR
+  0 A$main$1411                                                    0004AA GR
+  0 A$main$1416                                                    0004AB GR
+  0 A$main$1417                                                    0004AC GR
+  0 A$main$1418                                                    0004AD GR
+  0 A$main$1419                                                    0004AE GR
+  0 A$main$142                                                     000030 GR
+  0 A$main$1420                                                    0004AF GR
+  0 A$main$1421                                                    0004B1 GR
+  0 A$main$1422                                                    0004B3 GR
+  0 A$main$1423                                                    0004B5 GR
+  0 A$main$1427                                                    0004B7 GR
+  0 A$main$1428                                                    0004B8 GR
+  0 A$main$1429                                                    0004BA GR
+  0 A$main$143                                                     000031 GR
+  0 A$main$1434                                                    0004BB GR
+  0 A$main$1435                                                    0004BC GR
+  0 A$main$1436                                                    0004BD GR
+  0 A$main$144                                                     000032 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$1412                                                    0004C3 GR
-  0 A$main$1413                                                    0004C4 GR
-  0 A$main$1417                                                    0004C5 GR
-  0 A$main$1418                                                    0004C7 GR
-  0 A$main$1419                                                    0004C9 GR
-  0 A$main$142                                                     000030 GR
-  0 A$main$1420                                                    0004CB GR
-  0 A$main$1421                                                    0004CC GR
-  0 A$main$1422                                                    0004CD GR
-  0 A$main$1423                                                    0004CE GR
-  0 A$main$1424                                                    0004CF GR
-  0 A$main$1425                                                    0004D1 GR
-  0 A$main$1426                                                    0004D3 GR
-  0 A$main$1427                                                    0004D5 GR
-  0 A$main$1428                                                    0004D7 GR
-  0 A$main$1429                                                    0004D8 GR
-  0 A$main$143                                                     000031 GR
-  0 A$main$1431                                                    0004DA GR
-  0 A$main$1432                                                    0004DC GR
-  0 A$main$1433                                                    0004DE GR
-  0 A$main$1435                                                    0004DF GR
-  0 A$main$1439                                                    0004E1 GR
-  0 A$main$144                                                     000032 GR
-  0 A$main$1440                                                    0004E2 GR
-  0 A$main$1441                                                    0004E3 GR
-  0 A$main$1442                                                    0004E4 GR
-  0 A$main$1443                                                    0004E5 GR
-  0 A$main$1444                                                    0004E7 GR
-  0 A$main$1445                                                    0004E8 GR
-  0 A$main$1446                                                    0004E9 GR
-  0 A$main$1447                                                    0004EA GR
-  0 A$main$1448                                                    0004ED GR
+  0 A$main$1440                                                    0004BE GR
+  0 A$main$1441                                                    0004BF GR
+  0 A$main$1442                                                    0004C0 GR
+  0 A$main$1443                                                    0004C2 GR
+  0 A$main$1444                                                    0004C3 GR
+  0 A$main$1445                                                    0004C5 GR
+  0 A$main$1446                                                    0004C6 GR
+  0 A$main$1447                                                    0004C7 GR
+  0 A$main$1448                                                    0004C9 GR
+  0 A$main$1449                                                    0004CB GR
   0 A$main$145                                                     000033 GR
-  0 A$main$1453                                                    0004EF GR
-  0 A$main$1454                                                    0004F2 GR
-  0 A$main$1455                                                    0004F4 GR
-  0 A$main$1456                                                    0004F6 GR
-  0 A$main$1457                                                    0004F8 GR
+  0 A$main$1450                                                    0004CD GR
+  0 A$main$1451                                                    0004CF GR
+  0 A$main$1452                                                    0004D0 GR
+  0 A$main$1454                                                    0004D2 GR
+  0 A$main$1455                                                    0004D4 GR
+  0 A$main$1456                                                    0004D6 GR
+  0 A$main$1458                                                    0004D7 GR
   0 A$main$146                                                     000035 GR
-  0 A$main$1461                                                    0004FA GR
-  0 A$main$1462                                                    0004FB GR
-  0 A$main$1463                                                    0004FC GR
-  0 A$main$1464                                                    0004FD GR
-  0 A$main$1465                                                    0004FF GR
-  0 A$main$1466                                                    000501 GR
-  0 A$main$1467                                                    000502 GR
-  0 A$main$1468                                                    000503 GR
-  0 A$main$1469                                                    000504 GR
+  0 A$main$1462                                                    0004D9 GR
+  0 A$main$1463                                                    0004DA GR
+  0 A$main$1464                                                    0004DC GR
+  0 A$main$1469                                                    0004DD GR
   0 A$main$147                                                     000036 GR
-  0 A$main$1474                                                    000507 GR
-  0 A$main$1475                                                    000509 GR
-  0 A$main$1476                                                    00050A GR
-  0 A$main$1477                                                    00050B GR
-  0 A$main$1478                                                    00050C GR
-  0 A$main$1479                                                    00050D GR
+  0 A$main$1470                                                    0004DF GR
+  0 A$main$1471                                                    0004E0 GR
+  0 A$main$1472                                                    0004E1 GR
+  0 A$main$1473                                                    0004E2 GR
+  0 A$main$1474                                                    0004E5 GR
+  0 A$main$1475                                                    0004E6 GR
+  0 A$main$1476                                                    0004E7 GR
+  0 A$main$1477                                                    0004E8 GR
+  0 A$main$1478                                                    0004E9 GR
+  0 A$main$1479                                                    0004EB GR
+  0 A$main$148                                                     000037 GR
+  0 A$main$1480                                                    0004EC GR
+  0 A$main$1481                                                    0004ED GR
+  0 A$main$1482                                                    0004EE GR
+  0 A$main$1483                                                    0004EF GR
+  0 A$main$1484                                                    0004F0 GR
+  0 A$main$1485                                                    0004F1 GR
+  0 A$main$1486                                                    0004F2 GR
+  0 A$main$1487                                                    0004F3 GR
+  0 A$main$1488                                                    0004F4 GR
+  0 A$main$1489                                                    0004F5 GR
+  0 A$main$149                                                     000038 GR
+  0 A$main$1490                                                    0004F6 GR
+  0 A$main$1491                                                    0004F7 GR
+  0 A$main$1492                                                    0004F8 GR
+  0 A$main$1493                                                    0004F9 GR
+  0 A$main$1497                                                    0004FA GR
+  0 A$main$1498                                                    0004FC GR
+  0 A$main$1499                                                    0004FD GR
+  0 A$main$150                                                     000039 GR
+  0 A$main$1500                                                    0004FE GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$148                                                     000037 GR
-  0 A$main$1483                                                    00050E GR
-  0 A$main$1484                                                    000510 GR
-  0 A$main$1485                                                    000511 GR
-  0 A$main$1486                                                    000512 GR
-  0 A$main$1487                                                    000513 GR
-  0 A$main$1488                                                    000516 GR
-  0 A$main$1489                                                    000517 GR
-  0 A$main$149                                                     000038 GR
-  0 A$main$1490                                                    000518 GR
-  0 A$main$1491                                                    000519 GR
-  0 A$main$1495                                                    00051A GR
-  0 A$main$1496                                                    00051B GR
-  0 A$main$1497                                                    00051C GR
-  0 A$main$150                                                     000039 GR
-  0 A$main$1501                                                    00051E GR
-  0 A$main$1502                                                    00051F GR
-  0 A$main$1503                                                    000520 GR
-  0 A$main$1507                                                    000521 GR
-  0 A$main$1508                                                    000524 GR
+  0 A$main$1501                                                    000500 GR
+  0 A$main$1502                                                    000501 GR
+  0 A$main$1503                                                    000502 GR
+  0 A$main$1504                                                    000503 GR
+  0 A$main$1505                                                    000506 GR
+  0 A$main$1506                                                    000507 GR
+  0 A$main$1507                                                    000508 GR
+  0 A$main$1508                                                    000509 GR
+  0 A$main$1509                                                    00050A GR
   0 A$main$151                                                     00003A GR
-  0 A$main$1512                                                    000525 GR
-  0 A$main$1513                                                    000526 GR
-  0 A$main$1514                                                    000528 GR
-  0 A$main$1518                                                    00052A GR
-  0 A$main$1519                                                    00052D GR
-  0 A$main$1524                                                    00052F GR
-  0 A$main$1525                                                    000532 GR
-  0 A$main$1529                                                    000533 GR
-  0 A$main$1530                                                    000534 GR
-  0 A$main$1531                                                    000536 GR
-  0 A$main$1535                                                    000538 GR
-  0 A$main$1536                                                    00053B GR
+  0 A$main$1510                                                    00050B GR
+  0 A$main$1511                                                    00050C GR
+  0 A$main$1512                                                    00050D GR
+  0 A$main$1513                                                    00050F GR
+  0 A$main$1514                                                    000510 GR
+  0 A$main$1515                                                    000511 GR
+  0 A$main$1516                                                    000512 GR
+  0 A$main$1517                                                    000515 GR
+  0 A$main$1521                                                    000516 GR
+  0 A$main$1522                                                    000517 GR
+  0 A$main$1523                                                    000518 GR
+  0 A$main$1524                                                    00051A GR
+  0 A$main$1525                                                    00051B GR
+  0 A$main$1526                                                    00051C GR
+  0 A$main$1527                                                    00051D GR
+  0 A$main$1528                                                    00051E GR
+  0 A$main$1529                                                    00051F GR
+  0 A$main$1530                                                    000520 GR
+  0 A$main$1531                                                    000521 GR
+  0 A$main$1532                                                    000522 GR
+  0 A$main$1536                                                    000525 GR
+  0 A$main$1537                                                    000527 GR
+  0 A$main$1538                                                    000528 GR
+  0 A$main$1539                                                    000529 GR
   0 A$main$154                                                     00003B GR
-  0 A$main$1540                                                    00053D GR
-  0 A$main$1541                                                    00053F GR
-  0 A$main$1542                                                    000540 GR
-  0 A$main$1543                                                    000541 GR
-  0 A$main$1544                                                    000542 GR
-  0 A$main$1545                                                    000545 GR
+  0 A$main$1540                                                    00052A GR
+  0 A$main$1541                                                    00052B GR
+  0 A$main$1545                                                    00052E GR
   0 A$main$155                                                     00003C GR
-  0 A$main$1550                                                    000547 GR
-  0 A$main$1551                                                    00054A GR
-  0 A$main$1552                                                    00054B GR
-  0 A$main$1553                                                    00054D GR
-  0 A$main$1554                                                    000550 GR
-  0 A$main$1555                                                    000552 GR
-  0 A$main$1556                                                    000553 GR
+  0 A$main$1550                                                    000530 GR
   0 A$main$156                                                     00003D GR
-  0 A$main$1560                                                    000555 GR
-  0 A$main$1561                                                    000558 GR
-  0 A$main$1565                                                    000559 GR
-  0 A$main$1566                                                    00055B GR
-  0 A$main$1567                                                    00055C GR
-  0 A$main$1568                                                    00055E GR
+  0 A$main$1563                                                    000531 GR
+  0 A$main$1567                                                    000534 GR
+  0 A$main$1568                                                    000537 GR
+  0 A$main$1569                                                    000538 GR
+  0 A$main$1570                                                    00053B GR
+  0 A$main$1571                                                    00053C GR
+  0 A$main$1572                                                    00053F GR
+  0 A$main$1576                                                    000541 GR
+  0 A$main$1577                                                    000544 GR
+  0 A$main$1578                                                    000545 GR
+  0 A$main$1579                                                    000547 GR
+  0 A$main$1580                                                    000548 GR
+  0 A$main$1581                                                    000549 GR
+  0 A$main$1582                                                    00054A GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$1569                                                    00055F GR
-  0 A$main$1570                                                    000562 GR
-  0 A$main$1571                                                    000563 GR
-  0 A$main$1572                                                    000565 GR
-  0 A$main$1573                                                    000566 GR
-  0 A$main$1574                                                    000567 GR
-  0 A$main$1575                                                    000569 GR
-  0 A$main$1576                                                    00056A GR
-  0 A$main$1577                                                    00056B GR
-  0 A$main$1581                                                    00056D GR
-  0 A$main$1582                                                    00056E GR
-  0 A$main$1583                                                    000570 GR
-  0 A$main$1587                                                    000571 GR
-  0 A$main$1588                                                    000574 GR
-  0 A$main$1589                                                    000576 GR
-  0 A$main$1594                                                    000578 GR
-  0 A$main$1595                                                    000579 GR
-  0 A$main$1596                                                    00057A GR
-  0 A$main$1597                                                    00057D GR
+  0 A$main$1583                                                    00054B GR
+  0 A$main$1584                                                    00054D GR
+  0 A$main$1585                                                    00054E GR
+  0 A$main$1586                                                    000550 GR
+  0 A$main$1587                                                    000551 GR
+  0 A$main$1588                                                    000552 GR
+  0 A$main$1589                                                    000553 GR
+  0 A$main$1590                                                    000556 GR
+  0 A$main$1594                                                    000559 GR
+  0 A$main$1595                                                    00055B GR
+  0 A$main$1596                                                    00055C GR
+  0 A$main$1597                                                    00055D GR
+  0 A$main$1598                                                    00055F GR
+  0 A$main$1599                                                    000562 GR
   0 A$main$160                                                     00003E GR
-  0 A$main$1602                                                    00057E GR
-  0 A$main$1603                                                    000580 GR
-  0 A$main$1604                                                    000581 GR
-  0 A$main$1605                                                    000582 GR
-  0 A$main$1606                                                    000583 GR
-  0 A$main$1607                                                    000586 GR
-  0 A$main$1608                                                    000587 GR
-  0 A$main$1609                                                    000588 GR
+  0 A$main$1603                                                    000565 GR
+  0 A$main$1604                                                    000567 GR
+  0 A$main$1605                                                    000569 GR
+  0 A$main$1609                                                    00056B GR
   0 A$main$161                                                     000041 GR
-  0 A$main$1610                                                    000589 GR
-  0 A$main$1611                                                    00058B GR
-  0 A$main$1612                                                    00058C GR
-  0 A$main$1613                                                    00058D GR
-  0 A$main$1614                                                    00058E GR
-  0 A$main$1615                                                    000590 GR
-  0 A$main$1616                                                    000591 GR
-  0 A$main$1617                                                    000592 GR
-  0 A$main$1618                                                    000593 GR
-  0 A$main$1619                                                    000594 GR
+  0 A$main$1610                                                    00056D GR
+  0 A$main$1611                                                    00056F GR
+  0 A$main$1615                                                    000571 GR
+  0 A$main$1616                                                    000573 GR
+  0 A$main$1617                                                    000575 GR
   0 A$main$162                                                     000042 GR
-  0 A$main$1620                                                    000595 GR
-  0 A$main$1621                                                    000597 GR
-  0 A$main$1625                                                    000598 GR
-  0 A$main$1626                                                    00059A GR
-  0 A$main$1627                                                    00059B GR
-  0 A$main$1628                                                    00059C GR
-  0 A$main$1629                                                    00059D GR
+  0 A$main$1625                                                    000577 GR
+  0 A$main$1626                                                    00057A GR
+  0 A$main$1627                                                    00057C GR
+  0 A$main$1628                                                    00057E GR
+  0 A$main$1629                                                    000580 GR
   0 A$main$163                                                     000043 GR
-  0 A$main$1630                                                    0005A0 GR
-  0 A$main$1631                                                    0005A1 GR
-  0 A$main$1632                                                    0005A2 GR
-  0 A$main$1633                                                    0005A3 GR
-  0 A$main$1634                                                    0005A5 GR
-  0 A$main$1635                                                    0005A6 GR
-  0 A$main$1636                                                    0005A7 GR
+  0 A$main$1631                                                    000582 GR
+  0 A$main$1633                                                    000584 GR
+  0 A$main$1637                                                    000587 GR
+  0 A$main$1638                                                    00058A GR
+  0 A$main$164                                                     000045 GR
+  0 A$main$1642                                                    00058D GR
+  0 A$main$1643                                                    00058F GR
+  0 A$main$1644                                                    000592 GR
+  0 A$main$1648                                                    000595 GR
+  0 A$main$1649                                                    000598 GR
+  0 A$main$165                                                     000046 GR
+  0 A$main$1651                                                    00059B GR
+  0 A$main$1652                                                    00059D GR
+  0 A$main$1653                                                    00059E GR
+  0 A$main$1657                                                    0005A0 GR
+  0 A$main$166                                                     000047 GR
+  0 A$main$1665                                                    0005A3 GR
+  0 A$main$167                                                     000048 GR
+  0 A$main$168                                                     00004B GR
+  0 A$main$169                                                     00004C GR
+  0 A$main$170                                                     00004D GR
+  0 A$main$171                                                     00004E GR
+  0 A$main$172                                                     000050 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 9
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$1637                                                    0005A8 GR
-  0 A$main$164                                                     000045 GR
-  0 A$main$1641                                                    0005AA GR
-  0 A$main$1642                                                    0005AB GR
-  0 A$main$1643                                                    0005AC GR
-  0 A$main$1644                                                    0005AD GR
-  0 A$main$1645                                                    0005AE GR
-  0 A$main$1649                                                    0005B0 GR
-  0 A$main$165                                                     000046 GR
-  0 A$main$1650                                                    0005B1 GR
-  0 A$main$1651                                                    0005B2 GR
-  0 A$main$1652                                                    0005B3 GR
-  0 A$main$1653                                                    0005B4 GR
-  0 A$main$1654                                                    0005B5 GR
-  0 A$main$1655                                                    0005B6 GR
-  0 A$main$1656                                                    0005B7 GR
-  0 A$main$1657                                                    0005B8 GR
-  0 A$main$1658                                                    0005B9 GR
-  0 A$main$1659                                                    0005BA GR
-  0 A$main$166                                                     000047 GR
-  0 A$main$1660                                                    0005BB GR
-  0 A$main$1661                                                    0005BD GR
-  0 A$main$1662                                                    0005BE GR
-  0 A$main$1663                                                    0005BF GR
-  0 A$main$1664                                                    0005C0 GR
-  0 A$main$1665                                                    0005C1 GR
-  0 A$main$167                                                     000048 GR
-  0 A$main$1670                                                    0005C3 GR
-  0 A$main$1671                                                    0005C5 GR
-  0 A$main$1672                                                    0005C6 GR
-  0 A$main$1673                                                    0005C7 GR
-  0 A$main$1674                                                    0005C8 GR
-  0 A$main$1675                                                    0005CB GR
-  0 A$main$1676                                                    0005CC GR
-  0 A$main$1677                                                    0005CD GR
-  0 A$main$1678                                                    0005CE GR
-  0 A$main$1679                                                    0005CF GR
-  0 A$main$168                                                     00004B GR
-  0 A$main$1680                                                    0005D1 GR
-  0 A$main$1684                                                    0005D3 GR
-  0 A$main$1685                                                    0005D6 GR
-  0 A$main$1686                                                    0005D7 GR
-  0 A$main$1687                                                    0005D9 GR
-  0 A$main$1688                                                    0005DA GR
-  0 A$main$1689                                                    0005DC GR
-  0 A$main$169                                                     00004C GR
-  0 A$main$1690                                                    0005DD GR
-  0 A$main$1691                                                    0005DE GR
-  0 A$main$1692                                                    0005DF GR
-  0 A$main$1693                                                    0005E0 GR
-  0 A$main$1694                                                    0005E3 GR
-  0 A$main$1695                                                    0005E4 GR
-  0 A$main$1696                                                    0005E5 GR
-  0 A$main$1697                                                    0005E6 GR
-  0 A$main$1698                                                    0005E9 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 10
-Hexadecimal [24-Bits]
-
-Symbol Table
-
-  0 A$main$1699                                                    0005EB GR
-  0 A$main$170                                                     00004D GR
-  0 A$main$1700                                                    0005EC GR
-  0 A$main$1701                                                    0005ED GR
-  0 A$main$1702                                                    0005EE GR
-  0 A$main$1703                                                    0005F0 GR
-  0 A$main$1707                                                    0005F1 GR
-  0 A$main$1708                                                    0005F4 GR
-  0 A$main$1709                                                    0005F6 GR
-  0 A$main$171                                                     00004E GR
-  0 A$main$1713                                                    0005F8 GR
-  0 A$main$1714                                                    0005FA GR
-  0 A$main$1715                                                    0005FB GR
-  0 A$main$1716                                                    0005FC GR
-  0 A$main$1717                                                    0005FD GR
-  0 A$main$1718                                                    0005FF GR
-  0 A$main$172                                                     000050 GR
-  0 A$main$1723                                                    000601 GR
-  0 A$main$1724                                                    000604 GR
-  0 A$main$1725                                                    000606 GR
-  0 A$main$1729                                                    000608 GR
   0 A$main$173                                                     000051 GR
-  0 A$main$1730                                                    00060A GR
-  0 A$main$1731                                                    00060B GR
-  0 A$main$1732                                                    00060C GR
-  0 A$main$1733                                                    00060D GR
-  0 A$main$1734                                                    00060F GR
-  0 A$main$1739                                                    000611 GR
   0 A$main$174                                                     000052 GR
-  0 A$main$1740                                                    000614 GR
-  0 A$main$1741                                                    000616 GR
-  0 A$main$1745                                                    000618 GR
-  0 A$main$1746                                                    00061A GR
-  0 A$main$1747                                                    00061B GR
-  0 A$main$1748                                                    00061C GR
-  0 A$main$1749                                                    00061D GR
   0 A$main$175                                                     000053 GR
-  0 A$main$1750                                                    00061F GR
-  0 A$main$1755                                                    000621 GR
-  0 A$main$1756                                                    000624 GR
-  0 A$main$1757                                                    000626 GR
   0 A$main$176                                                     000055 GR
-  0 A$main$1761                                                    000628 GR
-  0 A$main$1762                                                    00062A GR
-  0 A$main$1763                                                    00062B GR
-  0 A$main$1764                                                    00062C GR
-  0 A$main$1765                                                    00062D GR
-  0 A$main$1766                                                    00062F GR
   0 A$main$177                                                     000056 GR
-  0 A$main$1771                                                    000631 GR
-  0 A$main$1772                                                    000633 GR
-  0 A$main$1773                                                    000634 GR
-  0 A$main$1774                                                    000635 GR
-  0 A$main$1775                                                    000636 GR
   0 A$main$178                                                     000058 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 11
-Hexadecimal [24-Bits]
-
-Symbol Table
-
-  0 A$main$1780                                                    000638 GR
-  0 A$main$1781                                                    00063A GR
-  0 A$main$1782                                                    00063B GR
-  0 A$main$1783                                                    00063C GR
-  0 A$main$1784                                                    00063D GR
-  0 A$main$1785                                                    00063E GR
-  0 A$main$1786                                                    00063F GR
-  0 A$main$1787                                                    000641 GR
-  0 A$main$1788                                                    000643 GR
-  0 A$main$1789                                                    000645 GR
   0 A$main$179                                                     000059 GR
-  0 A$main$1793                                                    000647 GR
-  0 A$main$1794                                                    000648 GR
-  0 A$main$1795                                                    000649 GR
-  0 A$main$1796                                                    00064A GR
   0 A$main$180                                                     00005A GR
-  0 A$main$1801                                                    00064C GR
-  0 A$main$1802                                                    00064E GR
-  0 A$main$1803                                                    00064F GR
-  0 A$main$1804                                                    000650 GR
-  0 A$main$1805                                                    000651 GR
-  0 A$main$1809                                                    000652 GR
   0 A$main$181                                                     00005B GR
-  0 A$main$1810                                                    000653 GR
-  0 A$main$1811                                                    000654 GR
-  0 A$main$1812                                                    000656 GR
-  0 A$main$1813                                                    000657 GR
-  0 A$main$1814                                                    000659 GR
-  0 A$main$1815                                                    00065A GR
-  0 A$main$1816                                                    00065B GR
-  0 A$main$1817                                                    00065D GR
-  0 A$main$1818                                                    00065F GR
-  0 A$main$1819                                                    000661 GR
   0 A$main$182                                                     00005E GR
-  0 A$main$1820                                                    000663 GR
-  0 A$main$1821                                                    000664 GR
-  0 A$main$1823                                                    000666 GR
-  0 A$main$1824                                                    000668 GR
-  0 A$main$1825                                                    00066A GR
-  0 A$main$1827                                                    00066B GR
   0 A$main$183                                                     00005F GR
-  0 A$main$1831                                                    00066D GR
-  0 A$main$1832                                                    00066F GR
-  0 A$main$1833                                                    000670 GR
-  0 A$main$1834                                                    000671 GR
-  0 A$main$1835                                                    000672 GR
   0 A$main$184                                                     000060 GR
-  0 A$main$1840                                                    000674 GR
-  0 A$main$1841                                                    000676 GR
-  0 A$main$1842                                                    000677 GR
-  0 A$main$1843                                                    000678 GR
-  0 A$main$1844                                                    000679 GR
-  0 A$main$1845                                                    00067C GR
-  0 A$main$1846                                                    00067D GR
-  0 A$main$1847                                                    00067E GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 12
-Hexadecimal [24-Bits]
-
-Symbol Table
-
-  0 A$main$1848                                                    00067F GR
-  0 A$main$1849                                                    000680 GR
   0 A$main$185                                                     000061 GR
-  0 A$main$1850                                                    000682 GR
-  0 A$main$1851                                                    000683 GR
-  0 A$main$1852                                                    000684 GR
-  0 A$main$1853                                                    000685 GR
-  0 A$main$1854                                                    000686 GR
-  0 A$main$1855                                                    000687 GR
-  0 A$main$1856                                                    000688 GR
-  0 A$main$1857                                                    000689 GR
-  0 A$main$1858                                                    00068B GR
   0 A$main$186                                                     000063 GR
-  0 A$main$1862                                                    00068C GR
-  0 A$main$1863                                                    00068E GR
-  0 A$main$1864                                                    00068F GR
-  0 A$main$1865                                                    000690 GR
-  0 A$main$1866                                                    000691 GR
-  0 A$main$1867                                                    000694 GR
-  0 A$main$1868                                                    000695 GR
-  0 A$main$1869                                                    000696 GR
   0 A$main$187                                                     000064 GR
-  0 A$main$1870                                                    000697 GR
-  0 A$main$1871                                                    000698 GR
-  0 A$main$1872                                                    00069A GR
-  0 A$main$1873                                                    00069B GR
-  0 A$main$1874                                                    00069C GR
-  0 A$main$1875                                                    00069D GR
-  0 A$main$1876                                                    00069E GR
-  0 A$main$1877                                                    00069F GR
-  0 A$main$1878                                                    0006A0 GR
-  0 A$main$1879                                                    0006A1 GR
   0 A$main$188                                                     000065 GR
-  0 A$main$1880                                                    0006A2 GR
-  0 A$main$1881                                                    0006A3 GR
-  0 A$main$1882                                                    0006A4 GR
-  0 A$main$1883                                                    0006A5 GR
-  0 A$main$1884                                                    0006A6 GR
-  0 A$main$1885                                                    0006A8 GR
-  0 A$main$1889                                                    0006A9 GR
   0 A$main$189                                                     000066 GR
-  0 A$main$1890                                                    0006AC GR
-  0 A$main$1891                                                    0006AD GR
-  0 A$main$1892                                                    0006AE GR
-  0 A$main$1893                                                    0006B1 GR
-  0 A$main$1894                                                    0006B2 GR
-  0 A$main$1895                                                    0006B3 GR
-  0 A$main$1896                                                    0006B4 GR
-  0 A$main$1897                                                    0006B6 GR
-  0 A$main$1898                                                    0006B7 GR
-  0 A$main$1899                                                    0006B8 GR
   0 A$main$190                                                     000068 GR
-  0 A$main$1900                                                    0006B9 GR
-  0 A$main$1904                                                    0006BC GR
-  0 A$main$1905                                                    0006BE GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 13
-Hexadecimal [24-Bits]
-
-Symbol Table
-
-  0 A$main$1906                                                    0006BF GR
-  0 A$main$1907                                                    0006C0 GR
-  0 A$main$1908                                                    0006C1 GR
-  0 A$main$1909                                                    0006C2 GR
   0 A$main$191                                                     000069 GR
-  0 A$main$1910                                                    0006C4 GR
-  0 A$main$1911                                                    0006C5 GR
-  0 A$main$1912                                                    0006C6 GR
-  0 A$main$1913                                                    0006C7 GR
-  0 A$main$1917                                                    0006CA GR
-  0 A$main$1918                                                    0006CC GR
-  0 A$main$1919                                                    0006CD GR
   0 A$main$192                                                     00006B GR
-  0 A$main$1920                                                    0006CE GR
-  0 A$main$1921                                                    0006CF GR
-  0 A$main$1922                                                    0006D0 GR
-  0 A$main$1926                                                    0006D3 GR
-  0 A$main$1927                                                    0006D5 GR
-  0 A$main$1928                                                    0006D6 GR
-  0 A$main$1929                                                    0006D7 GR
   0 A$main$193                                                     00006C GR
-  0 A$main$1930                                                    0006D8 GR
-  0 A$main$1931                                                    0006D9 GR
-  0 A$main$1935                                                    0006DC GR
   0 A$main$194                                                     00006D GR
-  0 A$main$1940                                                    0006DE GR
   0 A$main$195                                                     00006E GR
-  0 A$main$1953                                                    0006DF GR
-  0 A$main$1957                                                    0006E2 GR
-  0 A$main$1958                                                    0006E5 GR
-  0 A$main$1959                                                    0006E6 GR
   0 A$main$196                                                     000071 GR
-  0 A$main$1960                                                    0006E9 GR
-  0 A$main$1961                                                    0006EA GR
-  0 A$main$1962                                                    0006ED GR
-  0 A$main$1966                                                    0006EF GR
-  0 A$main$1967                                                    0006F2 GR
-  0 A$main$1968                                                    0006F3 GR
-  0 A$main$1969                                                    0006F5 GR
   0 A$main$197                                                     000072 GR
-  0 A$main$1970                                                    0006F6 GR
-  0 A$main$1971                                                    0006F7 GR
-  0 A$main$1972                                                    0006F8 GR
-  0 A$main$1973                                                    0006F9 GR
-  0 A$main$1974                                                    0006FB GR
-  0 A$main$1975                                                    0006FC GR
-  0 A$main$1976                                                    0006FE GR
-  0 A$main$1977                                                    0006FF GR
-  0 A$main$1978                                                    000700 GR
-  0 A$main$1979                                                    000701 GR
   0 A$main$198                                                     000073 GR
-  0 A$main$1980                                                    000704 GR
-  0 A$main$1984                                                    000707 GR
-  0 A$main$1985                                                    000709 GR
-  0 A$main$1986                                                    00070A GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 14
-Hexadecimal [24-Bits]
-
-Symbol Table
-
-  0 A$main$1987                                                    00070B GR
-  0 A$main$1988                                                    00070D GR
-  0 A$main$1989                                                    000710 GR
   0 A$main$199                                                     000074 GR
-  0 A$main$1993                                                    000713 GR
-  0 A$main$1994                                                    000715 GR
-  0 A$main$1995                                                    000717 GR
-  0 A$main$1999                                                    000719 GR
   0 A$main$200                                                     000076 GR
-  0 A$main$2000                                                    00071B GR
-  0 A$main$2001                                                    00071D GR
-  0 A$main$2005                                                    00071F GR
-  0 A$main$2006                                                    000721 GR
-  0 A$main$2007                                                    000723 GR
   0 A$main$201                                                     000077 GR
-  0 A$main$2015                                                    000725 GR
-  0 A$main$2016                                                    000728 GR
-  0 A$main$2017                                                    00072A GR
-  0 A$main$2018                                                    00072C GR
-  0 A$main$2019                                                    00072E GR
   0 A$main$202                                                     000078 GR
-  0 A$main$2021                                                    000730 GR
-  0 A$main$2023                                                    000732 GR
-  0 A$main$2027                                                    000735 GR
-  0 A$main$2028                                                    000738 GR
   0 A$main$203                                                     000079 GR
-  0 A$main$2032                                                    00073B GR
-  0 A$main$2033                                                    00073D GR
-  0 A$main$2034                                                    000740 GR
-  0 A$main$2038                                                    000743 GR
-  0 A$main$2039                                                    000746 GR
   0 A$main$204                                                     00007B GR
-  0 A$main$2043                                                    000749 GR
   0 A$main$205                                                     00007C GR
-  0 A$main$2051                                                    00074C GR
   0 A$main$206                                                     00007D GR
   0 A$main$207                                                     00007E GR
   0 A$main$208                                                     000081 GR
@@ -838,13 +536,13 @@ Symbol Table
   0 A$main$223                                                     000095 GR
   0 A$main$224                                                     000096 GR
   0 A$main$225                                                     000098 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 15
+  0 A$main$226                                                     000099 GR
+  0 A$main$227                                                     00009B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 10
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$226                                                     000099 GR
-  0 A$main$227                                                     00009B GR
   0 A$main$229                                                     00009D GR
   0 A$main$230                                                     00009F GR
   0 A$main$231                                                     0000A0 GR
@@ -898,13 +596,13 @@ Symbol Table
   0 A$main$297                                                     0000E2 GR
   0 A$main$298                                                     0000E3 GR
   0 A$main$299                                                     0000E5 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 16
+  0 A$main$300                                                     0000E7 GR
+  0 A$main$301                                                     0000E8 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 11
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$300                                                     0000E7 GR
-  0 A$main$301                                                     0000E8 GR
   0 A$main$302                                                     0000E9 GR
   0 A$main$303                                                     0000EA GR
   0 A$main$304                                                     0000EB GR
@@ -958,13 +656,13 @@ Symbol Table
   0 A$main$360                                                     00012B GR
   0 A$main$361                                                     00012C GR
   0 A$main$363                                                     00012E GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 17
+  0 A$main$364                                                     00012F GR
+  0 A$main$365                                                     000131 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 12
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$364                                                     00012F GR
-  0 A$main$365                                                     000131 GR
   0 A$main$366                                                     000132 GR
   0 A$main$368                                                     000133 GR
   0 A$main$369                                                     000135 GR
@@ -1018,13 +716,13 @@ Symbol Table
   0 A$main$421                                                     000176 GR
   0 A$main$422                                                     000177 GR
   0 A$main$423                                                     000178 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 18
+  0 A$main$424                                                     000179 GR
+  0 A$main$425                                                     00017B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 13
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$424                                                     000179 GR
-  0 A$main$425                                                     00017B GR
   0 A$main$426                                                     00017C GR
   0 A$main$427                                                     00017D GR
   0 A$main$428                                                     00017E GR
@@ -1078,13 +776,13 @@ Symbol Table
   0 A$main$525                                                     0001C1 GR
   0 A$main$526                                                     0001C2 GR
   0 A$main$527                                                     0001C3 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 19
+  0 A$main$528                                                     0001C4 GR
+  0 A$main$529                                                     0001C5 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 14
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$528                                                     0001C4 GR
-  0 A$main$529                                                     0001C5 GR
   0 A$main$530                                                     0001C6 GR
   0 A$main$531                                                     0001C8 GR
   0 A$main$532                                                     0001C9 GR
@@ -1138,13 +836,13 @@ Symbol Table
   0 A$main$620                                                     00020B GR
   0 A$main$624                                                     00020C GR
   0 A$main$625                                                     00020F GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 20
+  0 A$main$626                                                     000210 GR
+  0 A$main$627                                                     000211 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 15
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$626                                                     000210 GR
-  0 A$main$627                                                     000211 GR
   0 A$main$628                                                     000212 GR
   0 A$main$629                                                     000214 GR
   0 A$main$630                                                     000215 GR
@@ -1198,13 +896,13 @@ Symbol Table
   0 A$main$692                                                     000257 GR
   0 A$main$693                                                     000258 GR
   0 A$main$694                                                     00025A GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 21
+  0 A$main$695                                                     00025B GR
+  0 A$main$696                                                     00025C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 16
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$695                                                     00025B GR
-  0 A$main$696                                                     00025C GR
   0 A$main$697                                                     00025D GR
   0 A$main$698                                                     00025E GR
   0 A$main$699                                                     000260 GR
@@ -1258,13 +956,13 @@ Symbol Table
   0 A$main$761                                                     00029D GR
   0 A$main$762                                                     00029E GR
   0 A$main$767                                                     0002A0 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 22
+  0 A$main$768                                                     0002A2 GR
+  0 A$main$769                                                     0002A3 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 17
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$768                                                     0002A2 GR
-  0 A$main$769                                                     0002A3 GR
   0 A$main$770                                                     0002A4 GR
   0 A$main$780                                                     0002A5 GR
   0 A$main$781                                                     0002A6 GR
@@ -1310,114 +1008,111 @@ Symbol Table
   0 A$main$842                                                     0002D8 GR
   0 A$main$843                                                     0002D9 GR
   0 A$main$847                                                     0002DA GR
-  0 A$main$848                                                     0002DD GR
-  0 A$main$849                                                     0002DF GR
-  0 A$main$853                                                     0002E0 GR
+  0 A$main$851                                                     0002DD GR
+  0 A$main$852                                                     0002DF GR
+  0 A$main$856                                                     0002E1 GR
   0 A$main$857                                                     0002E2 GR
-  0 A$main$858                                                     0002E3 GR
-  0 A$main$859                                                     0002E4 GR
-  0 A$main$863                                                     0002E5 GR
-  0 A$main$864                                                     0002E6 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 23
+  0 A$main$861                                                     0002E4 GR
+  0 A$main$862                                                     0002E6 GR
+  0 A$main$866                                                     0002E8 GR
+  0 A$main$867                                                     0002EA GR
+  0 A$main$868                                                     0002EC GR
+  0 A$main$873                                                     0002EE GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 18
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$865                                                     0002E8 GR
-  0 A$main$866                                                     0002EA GR
-  0 A$main$867                                                     0002EB GR
-  0 A$main$871                                                     0002ED GR
-  0 A$main$872                                                     0002EF GR
-  0 A$main$873                                                     0002F1 GR
-  0 A$main$878                                                     0002F3 GR
+  0 A$main$874                                                     0002F0 GR
+  0 A$main$878                                                     0002F2 GR
   0 A$main$879                                                     0002F4 GR
-  0 A$main$880                                                     0002F6 GR
-  0 A$main$881                                                     0002F8 GR
-  0 A$main$882                                                     0002F9 GR
-  0 A$main$886                                                     0002FB GR
-  0 A$main$887                                                     0002FD GR
-  0 A$main$895                                                     0002FF GR
-  0 A$main$896                                                     000302 GR
-  0 A$main$897                                                     000303 GR
-  0 A$main$898                                                     000304 GR
-  0 A$main$899                                                     000306 GR
-  0 A$main$900                                                     000307 GR
-  0 A$main$901                                                     000309 GR
-  0 A$main$902                                                     00030B GR
-  0 A$main$903                                                     00030C GR
-  0 A$main$904                                                     00030E GR
-  0 A$main$905                                                     000310 GR
-  0 A$main$906                                                     000311 GR
-  0 A$main$910                                                     000313 GR
-  0 A$main$911                                                     000316 GR
-  0 A$main$912                                                     000317 GR
-  0 A$main$913                                                     000318 GR
-  0 A$main$914                                                     000319 GR
-  0 A$main$915                                                     00031B GR
-  0 A$main$916                                                     00031C GR
-  0 A$main$917                                                     00031D GR
-  0 A$main$918                                                     00031E GR
-  0 A$main$919                                                     000320 GR
-  0 A$main$923                                                     000321 GR
-  0 A$main$924                                                     000324 GR
-  0 A$main$925                                                     000325 GR
-  0 A$main$926                                                     000326 GR
-  0 A$main$927                                                     000327 GR
-  0 A$main$928                                                     000329 GR
-  0 A$main$929                                                     00032A GR
-  0 A$main$930                                                     00032B GR
-  0 A$main$931                                                     00032C GR
-  0 A$main$932                                                     00032E GR
-  0 A$main$936                                                     00032F GR
-  0 A$main$937                                                     000330 GR
-  0 A$main$938                                                     000331 GR
-  0 A$main$939                                                     000333 GR
-  0 A$main$940                                                     000334 GR
-  0 A$main$941                                                     000336 GR
-  0 A$main$942                                                     000337 GR
-  0 A$main$946                                                     000339 GR
-  0 A$main$947                                                     00033A GR
-  0 A$main$948                                                     00033B GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 24
+  0 A$main$887                                                     0002F6 GR
+  0 A$main$888                                                     0002F8 GR
+  0 A$main$889                                                     0002FA GR
+  0 A$main$890                                                     0002FB GR
+  0 A$main$894                                                     0002FD GR
+  0 A$main$895                                                     000300 GR
+  0 A$main$896                                                     000301 GR
+  0 A$main$897                                                     000302 GR
+  0 A$main$898                                                     000303 GR
+  0 A$main$899                                                     000305 GR
+  0 A$main$900                                                     000306 GR
+  0 A$main$901                                                     000307 GR
+  0 A$main$902                                                     000308 GR
+  0 A$main$903                                                     00030A GR
+  0 A$main$907                                                     00030B GR
+  0 A$main$908                                                     00030E GR
+  0 A$main$909                                                     00030F GR
+  0 A$main$910                                                     000310 GR
+  0 A$main$911                                                     000311 GR
+  0 A$main$912                                                     000313 GR
+  0 A$main$913                                                     000314 GR
+  0 A$main$914                                                     000315 GR
+  0 A$main$915                                                     000316 GR
+  0 A$main$916                                                     000318 GR
+  0 A$main$920                                                     000319 GR
+  0 A$main$921                                                     00031A GR
+  0 A$main$922                                                     00031C GR
+  0 A$main$923                                                     00031D GR
+  0 A$main$927                                                     00031F GR
+  0 A$main$928                                                     000320 GR
+  0 A$main$929                                                     000321 GR
+  0 A$main$930                                                     000322 GR
+  0 A$main$931                                                     000323 GR
+  0 A$main$932                                                     000324 GR
+  0 A$main$936                                                     000326 GR
+  0 A$main$937                                                     000328 GR
+  0 A$main$938                                                     000329 GR
+  0 A$main$939                                                     00032A GR
+  0 A$main$940                                                     00032B GR
+  0 A$main$945                                                     00032D GR
+  0 A$main$946                                                     00032F GR
+  0 A$main$947                                                     000330 GR
+  0 A$main$948                                                     000331 GR
+  0 A$main$949                                                     000332 GR
+  0 A$main$950                                                     000333 GR
+  0 A$main$951                                                     000334 GR
+  0 A$main$952                                                     000336 GR
+  0 A$main$953                                                     000337 GR
+  0 A$main$954                                                     000339 GR
+  0 A$main$955                                                     00033A GR
+  0 A$main$959                                                     00033C GR
+  0 A$main$960                                                     00033D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 19
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$main$949                                                     00033C GR
-  0 A$main$950                                                     00033D GR
-  0 A$main$951                                                     00033E GR
-  0 A$main$955                                                     000340 GR
-  0 A$main$956                                                     000342 GR
-  0 A$main$957                                                     000343 GR
-  0 A$main$958                                                     000344 GR
-  0 A$main$959                                                     000345 GR
-  0 A$main$960                                                     000347 GR
-  0 A$main$965                                                     000349 GR
-  0 A$main$966                                                     00034A GR
-  0 A$main$967                                                     00034B GR
+  0 A$main$964                                                     00033F GR
+  0 A$main$965                                                     000341 GR
+  0 A$main$966                                                     000342 GR
+  0 A$main$967                                                     000343 GR
+  0 A$main$968                                                     000344 GR
+  0 A$main$969                                                     000345 GR
   0 A$main$97                                                      000000 GR
-  0 A$main$971                                                     00034D GR
-  0 A$main$972                                                     00034F GR
-  0 A$main$973                                                     000350 GR
-  0 A$main$974                                                     000351 GR
-  0 A$main$975                                                     000352 GR
-  0 A$main$979                                                     000354 GR
+  0 A$main$970                                                     000346 GR
+  0 A$main$971                                                     000347 GR
+  0 A$main$972                                                     000348 GR
+  0 A$main$973                                                     000349 GR
+  0 A$main$974                                                     00034A GR
+  0 A$main$975                                                     00034B GR
+  0 A$main$976                                                     00034C GR
   0 A$main$98                                                      000002 GR
-  0 A$main$980                                                     000356 GR
-  0 A$main$981                                                     000357 GR
-  0 A$main$982                                                     000358 GR
-  0 A$main$983                                                     000359 GR
-  0 A$main$988                                                     00035B GR
-  0 A$main$989                                                     00035C GR
+  0 A$main$981                                                     00034D GR
+  0 A$main$982                                                     000350 GR
+  0 A$main$983                                                     000351 GR
+  0 A$main$984                                                     000352 GR
+  0 A$main$985                                                     000353 GR
+  0 A$main$986                                                     000355 GR
+  0 A$main$987                                                     000356 GR
   0 A$main$99                                                      000004 GR
-  0 A$main$990                                                     00035E GR
-  0 A$main$991                                                     00035F GR
-  0 A$main$992                                                     000361 GR
-  0 A$main$993                                                     000363 GR
-  0 A$main$994                                                     000364 GR
-  0 A$main$995                                                     000365 GR
-  0 A$main$996                                                     000366 GR
-  0 A$main$997                                                     000367 GR
+  0 A$main$991                                                     000357 GR
+  0 A$main$992                                                     00035A GR
+  0 A$main$993                                                     00035B GR
+  0 A$main$994                                                     00035C GR
+  0 A$main$995                                                     00035D GR
+  0 A$main$996                                                     00035F GR
+  0 A$main$997                                                     000360 GR
   0 C$Character.h$101$1_0$144                                   =  0001B9 GR
   0 C$Character.h$103$1_0$144                                   =  0001E4 GR
   0 C$Character.h$104$1_0$144                                   =  0001EE GR
@@ -1438,50 +1133,45 @@ Symbol Table
   0 C$Character.h$133$2_0$157                                   =  0002A5 GR
   0 C$Character.h$135$1_0$157                                   =  0002A7 GR
   0 C$Character.h$136$1_0$157                                   =  0002B2 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 25
-Hexadecimal [24-Bits]
-
-Symbol Table
-
   0 C$Character.h$138$1_0$157                                   =  0002C3 GR
   0 C$Character.h$139$1_0$157                                   =  0002CF GR
   0 C$Character.h$141$1_0$159                                   =  0002D6 GR
   0 C$Character.h$144$1_0$159                                   =  0002DA GR
-  0 C$Character.h$146$1_0$159                                   =  0002E0 GR
-  0 C$Character.h$147$1_0$159                                   =  0002E2 GR
-  0 C$Character.h$149$1_0$159                                   =  0002E5 GR
-  0 C$Character.h$151$2_0$160                                   =  0002ED GR
-  0 C$Character.h$153$1_0$159                                   =  0002F3 GR
-  0 C$Character.h$155$2_0$161                                   =  0002FB GR
-  0 C$Character.h$161$1_0$159                                   =  0002FF GR
-  0 C$Character.h$166$1_0$159                                   =  00032F GR
-  0 C$Character.h$169$1_0$159                                   =  000313 GR
-  0 C$Character.h$169$2_0$164                                   =  000339 GR
-  0 C$Character.h$170$1_0$159                                   =  000321 GR
-  0 C$Character.h$170$2_0$164                                   =  000340 GR
-  0 C$Character.h$174$1_0$159                                   =  000349 GR
-  0 C$Character.h$177$2_0$165                                   =  00034D GR
-  0 C$Character.h$180$2_0$165                                   =  000354 GR
-  0 C$Character.h$184$1_0$159                                   =  00035B GR
-  0 C$Character.h$186$2_0$166                                   =  00036D GR
-  0 C$Character.h$190$1_0$159                                   =  000374 GR
-  0 C$Character.h$193$2_0$167                                   =  000383 GR
-  0 C$Character.h$196$2_0$167                                   =  000386 GR
-  0 C$Character.h$200$1_0$159                                   =  000394 GR
-  0 C$Character.h$201$1_0$159                                   =  00039E GR
-  0 C$Character.h$202$1_0$159                                   =  0003AA GR
-  0 C$Character.h$205$1_0$169                                   =  0003AB GR
-  0 C$Character.h$207$1_0$169                                   =  0003AF GR
-  0 C$Character.h$208$1_0$169                                   =  0003BC GR
-  0 C$Character.h$209$1_0$169                                   =  0003C0 GR
-  0 C$Character.h$210$1_0$169                                   =  0003C5 GR
-  0 C$Character.h$211$1_0$169                                   =  0003CD GR
-  0 C$Character.h$212$1_0$169                                   =  0003D5 GR
-  0 C$Character.h$213$1_0$169                                   =  0003DE GR
-  0 C$Character.h$214$1_0$169                                   =  0003E4 GR
-  0 C$Character.h$215$1_0$169                                   =  0003EA GR
-  0 C$Character.h$217$1_0$169                                   =  0003F0 GR
-  0 C$Character.h$218$1_0$169                                   =  0003F4 GR
+  0 C$Character.h$146$1_0$159                                   =  0002DD GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 20
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 C$Character.h$147$1_0$159                                   =  0002E1 GR
+  0 C$Character.h$149$1_0$159                                   =  0002E4 GR
+  0 C$Character.h$151$2_0$160                                   =  0002E8 GR
+  0 C$Character.h$153$1_0$159                                   =  0002EE GR
+  0 C$Character.h$155$2_0$161                                   =  0002F2 GR
+  0 C$Character.h$161$1_0$159                                   =  0002F6 GR
+  0 C$Character.h$166$1_0$159                                   =  000319 GR
+  0 C$Character.h$169$1_0$159                                   =  0002FD GR
+  0 C$Character.h$169$2_0$164                                   =  00031F GR
+  0 C$Character.h$170$1_0$159                                   =  00030B GR
+  0 C$Character.h$170$2_0$164                                   =  000326 GR
+  0 C$Character.h$174$1_0$159                                   =  00032D GR
+  0 C$Character.h$177$2_0$165                                   =  00033C GR
+  0 C$Character.h$180$2_0$165                                   =  00033F GR
+  0 C$Character.h$184$1_0$159                                   =  00034D GR
+  0 C$Character.h$185$1_0$159                                   =  000357 GR
+  0 C$Character.h$186$1_0$159                                   =  000363 GR
+  0 C$Character.h$189$1_0$167                                   =  000364 GR
+  0 C$Character.h$191$1_0$167                                   =  000368 GR
+  0 C$Character.h$192$1_0$167                                   =  000375 GR
+  0 C$Character.h$193$1_0$167                                   =  000379 GR
+  0 C$Character.h$194$1_0$167                                   =  00037E GR
+  0 C$Character.h$195$1_0$167                                   =  000386 GR
+  0 C$Character.h$196$1_0$167                                   =  00038E GR
+  0 C$Character.h$197$1_0$167                                   =  000397 GR
+  0 C$Character.h$198$1_0$167                                   =  00039D GR
+  0 C$Character.h$199$1_0$167                                   =  0003A3 GR
+  0 C$Character.h$201$1_0$167                                   =  0003A9 GR
+  0 C$Character.h$202$1_0$167                                   =  0003AD GR
   0 C$Character.h$68$0_0$130                                    =  000000 GR
   0 C$Character.h$70$1_0$130                                    =  000007 GR
   0 C$Character.h$72$1_1$131                                    =  000014 GR
@@ -1498,152 +1188,126 @@ Symbol Table
   0 C$Character.h$95$1_0$142                                    =  0001AA GR
   0 C$Character.h$96$1_0$142                                    =  0001B0 GR
   0 C$Character.h$98$1_0$144                                    =  0001B3 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 26
+  0 C$main.c$101$1_1$181                                        =  000516 GR
+  0 C$main.c$104$1_1$181                                        =  000525 GR
+  0 C$main.c$105$1_1$178                                        =  000530 GR
+  0 C$main.c$107$1_1$183                                        =  000531 GR
+  0 C$main.c$109$1_0$183                                        =  000531 GR
+  0 C$main.c$111$1_0$183                                        =  000534 GR
+  0 C$main.c$113$1_0$183                                        =  000541 GR
+  0 C$main.c$115$1_0$183                                        =  000559 GR
+  0 C$main.c$117$1_0$183                                        =  000565 GR
+  0 C$main.c$118$1_0$183                                        =  00056B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 21
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 C$main.c$101$2_0$182                                        =  00052F GR
-  0 C$main.c$104$2_0$182                                        =  000533 GR
-  0 C$main.c$106$3_0$186                                        =  000538 GR
-  0 C$main.c$109$3_0$186                                        =  00053D GR
-  0 C$main.c$116$2_0$187                                        =  000547 GR
-  0 C$main.c$118$3_0$188                                        =  000555 GR
-  0 C$main.c$121$3_0$188                                        =  000559 GR
-  0 C$main.c$123$4_0$189                                        =  00056D GR
-  0 C$main.c$124$4_0$189                                        =  000571 GR
-  0 C$main.c$128$3_0$188                                        =  000578 GR
-  0 C$main.c$133$1_0$180                                        =  0005AA GR
-  0 C$main.c$133$1_1$180                                        =  00057E GR
-  0 C$main.c$135$1_1$180                                        =  000598 GR
-  0 C$main.c$135$2_0$190                                        =  0005B0 GR
-  0 C$main.c$140$1_0$180                                        =  0005C3 GR
-  0 C$main.c$143$2_0$191                                        =  0005D3 GR
-  0 C$main.c$146$2_0$191                                        =  0005F1 GR
-  0 C$main.c$147$2_0$191                                        =  0005F8 GR
-  0 C$main.c$148$2_0$191                                        =  000601 GR
-  0 C$main.c$149$2_0$191                                        =  000608 GR
-  0 C$main.c$150$2_0$191                                        =  000611 GR
-  0 C$main.c$151$2_0$191                                        =  000618 GR
-  0 C$main.c$152$2_0$191                                        =  000621 GR
-  0 C$main.c$153$2_0$191                                        =  000628 GR
-  0 C$main.c$155$2_0$191                                        =  000631 GR
-  0 C$main.c$159$1_0$180                                        =  000638 GR
-  0 C$main.c$159$1_1$180                                        =  00064C GR
-  0 C$main.c$160$1_0$180                                        =  000647 GR
-  0 C$main.c$161$1_0$180                                        =  000652 GR
-  0 C$main.c$162$1_0$180                                        =  00066D GR
-  0 C$main.c$165$1_1$192                                        =  000674 GR
-  0 C$main.c$166$1_1$192                                        =  00068C GR
-  0 C$main.c$169$1_1$192                                        =  0006A9 GR
-  0 C$main.c$172$1_1$192                                        =  0006BC GR
-  0 C$main.c$175$1_1$192                                        =  0006CA GR
-  0 C$main.c$176$1_1$192                                        =  0006D3 GR
-  0 C$main.c$177$1_1$180                                        =  0006DE GR
-  0 C$main.c$179$1_1$194                                        =  0006DF GR
-  0 C$main.c$181$1_0$194                                        =  0006DF GR
-  0 C$main.c$183$1_0$194                                        =  0006E2 GR
-  0 C$main.c$185$1_0$194                                        =  0006EF GR
-  0 C$main.c$187$1_0$194                                        =  000707 GR
-  0 C$main.c$189$1_0$194                                        =  000713 GR
-  0 C$main.c$190$1_0$194                                        =  000719 GR
-  0 C$main.c$191$1_0$194                                        =  00071F GR
-  0 C$main.c$193$1_0$194                                        =  000725 GR
-  0 C$main.c$196$2_0$195                                        =  000725 GR
-  0 C$main.c$197$2_0$195                                        =  000735 GR
-  0 C$main.c$198$2_0$195                                        =  00073B GR
-  0 C$main.c$199$2_0$195                                        =  000743 GR
-  0 C$main.c$20$1_0$173                                         =  0003F9 GR
-  0 C$main.c$200$2_0$195                                        =  000749 GR
-  0 C$main.c$202$1_0$194                                        =  00074C GR
-  0 C$main.c$23$1_0$173                                         =  0003F9 GR
-  0 C$main.c$26$1_0$173                                         =  000406 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 27
-Hexadecimal [24-Bits]
-
-Symbol Table
-
-  0 C$main.c$29$1_0$173                                         =  000416 GR
-  0 C$main.c$30$1_0$173                                         =  00041C GR
-  0 C$main.c$31$1_0$173                                         =  000422 GR
-  0 C$main.c$33$1_0$175                                         =  000423 GR
-  0 C$main.c$36$1_0$175                                         =  000423 GR
-  0 C$main.c$38$1_0$177                                         =  000424 GR
-  0 C$main.c$41$1_0$177                                         =  000424 GR
-  0 C$main.c$44$2_0$178                                         =  00042E GR
-  0 C$main.c$47$2_0$178                                         =  000431 GR
-  0 C$main.c$49$1_0$177                                         =  000437 GR
-  0 C$main.c$51$1_0$180                                         =  00043A GR
-  0 C$main.c$56$1_1$180                                         =  0004BE GR
-  0 C$main.c$58$1_0$180                                         =  000464 GR
-  0 C$main.c$61$2_0$181                                         =  00046D GR
-  0 C$main.c$62$2_0$181                                         =  000472 GR
-  0 C$main.c$66$1_0$180                                         =  000494 GR
-  0 C$main.c$67$1_0$180                                         =  0004A3 GR
-  0 C$main.c$67$1_1$180                                         =  000477 GR
-  0 C$main.c$70$1_0$180                                         =  0004C5 GR
-  0 C$main.c$71$1_0$180                                         =  0004E1 GR
-  0 C$main.c$73$1_0$180                                         =  0004EF GR
-  0 C$main.c$74$1_0$180                                         =  0004FA GR
-  0 C$main.c$77$1_0$180                                         =  00051A GR
-  0 C$main.c$88$1_1$180                                         =  00050E GR
-  0 C$main.c$88$3_0$184                                         =  00051E GR
-  0 C$main.c$92$2_0$182                                         =  000521 GR
-  0 C$main.c$95$2_0$182                                         =  000525 GR
-  0 C$main.c$97$3_0$185                                         =  00052A GR
+  0 C$main.c$119$1_0$183                                        =  000571 GR
+  0 C$main.c$121$1_0$183                                        =  000577 GR
+  0 C$main.c$123$2_0$184                                        =  000577 GR
+  0 C$main.c$124$2_0$184                                        =  000587 GR
+  0 C$main.c$125$2_0$184                                        =  00058D GR
+  0 C$main.c$126$2_0$184                                        =  000595 GR
+  0 C$main.c$129$2_0$184                                        =  0005A0 GR
+  0 C$main.c$131$1_0$183                                        =  0005A3 GR
+  0 C$main.c$22$1_0$171                                         =  0003B2 GR
+  0 C$main.c$25$1_0$171                                         =  0003B2 GR
+  0 C$main.c$28$1_0$171                                         =  0003BF GR
+  0 C$main.c$29$1_0$171                                         =  0003CF GR
+  0 C$main.c$31$1_0$172                                         =  0003D0 GR
+  0 C$main.c$34$1_0$172                                         =  0003D0 GR
+  0 C$main.c$37$1_0$172                                         =  0003DD GR
+  0 C$main.c$38$1_0$172                                         =  0003ED GR
+  0 C$main.c$40$1_0$174                                         =  0003EE GR
+  0 C$main.c$43$1_0$174                                         =  0003FC GR
+  0 C$main.c$46$2_0$175                                         =  000401 GR
+  0 C$main.c$49$1_0$174                                         =  0003F5 GR
+  0 C$main.c$49$2_0$175                                         =  000404 GR
+  0 C$main.c$50$1_0$174                                         =  000408 GR
+  0 C$main.c$53$2_0$176                                         =  00040D GR
+  0 C$main.c$56$2_0$176                                         =  000410 GR
+  0 C$main.c$58$1_0$174                                         =  000412 GR
+  0 C$main.c$60$1_0$178                                         =  000415 GR
+  0 C$main.c$63$1_0$178                                         =  00043F GR
+  0 C$main.c$63$1_1$178                                         =  00041B GR
+  0 C$main.c$65$1_1$178                                         =  000434 GR
+  0 C$main.c$65$2_0$179                                         =  000445 GR
+  0 C$main.c$66$2_0$179                                         =  00044D GR
+  0 C$main.c$70$1_0$178                                         =  000454 GR
+  0 C$main.c$73$2_0$180                                         =  000464 GR
+  0 C$main.c$76$2_0$180                                         =  000475 GR
+  0 C$main.c$77$2_0$180                                         =  00047A GR
+  0 C$main.c$78$2_0$180                                         =  000480 GR
+  0 C$main.c$79$2_0$180                                         =  000487 GR
+  0 C$main.c$80$2_0$180                                         =  00048D GR
+  0 C$main.c$81$2_0$180                                         =  000494 GR
+  0 C$main.c$82$2_0$180                                         =  00049A GR
+  0 C$main.c$83$2_0$180                                         =  0004A1 GR
+  0 C$main.c$85$2_0$180                                         =  0004A7 GR
+  0 C$main.c$89$1_0$178                                         =  0004AB GR
+  0 C$main.c$89$1_1$178                                         =  0004BB GR
+  0 C$main.c$90$1_0$178                                         =  0004B7 GR
+  0 C$main.c$91$1_0$178                                         =  0004BE GR
+  0 C$main.c$92$1_0$178                                         =  0004D9 GR
+  0 C$main.c$95$1_1$181                                         =  0004DD GR
+  0 C$main.c$98$1_1$181                                         =  0004FA GR
   7 Fmain$__xinit_animationFrameCount$0_0$0                     =  000001 GR
   7 Fmain$__xinit_jumpFrameCount$0_0$0                          =  000002 GR
   7 Fmain$__xinit_lastMovementX$0_0$0                           =  000003 GR
   7 Fmain$__xinit_lastMovementY$0_0$0                           =  000004 GR
   7 Fmain$__xinit_movementFrameCount$0_0$0                      =  000000 GR
   7 Fmain$__xinit_slowingX$0_0$0                                =  000005 GR
-  0 G$DetectCollisions$0$0                                      =  000424 GR
-  0 G$LoadNextSpriteFrame$0$0                                   =  0001B3 GR
-  0 G$LoadSpriteFrame$0$0                                       =  000000 GR
-  0 G$MoveCharacter$0$0                                         =  000205 GR
-  0 G$MoveCharacterWithJoypad$0$0                               =  0002D6 GR
-  0 G$MovementPhysics$0$0                                       =  00043A GR
-  0 G$RefreshSprite$0$0                                         =  0001AA GR
-  0 G$ScrollCharacter$0$0                                       =  0002A5 GR
-  0 G$SetSpriteFlip$0$0                                         =  0001EF GR
-  0 G$SetupBackGround$0$0                                       =  000423 GR
-  0 G$SetupCharacter$0$0                                        =  0003AB GR
-  2 G$animationFrameCount$0_0$0                                 =  000001 GR
-  2 G$jumpFrameCount$0_0$0                                      =  000002 GR
-  2 G$lastMovementX$0_0$0                                       =  000003 GR
-  2 G$lastMovementY$0_0$0                                       =  000004 GR
-  0 G$main$0$0                                                  =  0006DF GR
-  2 G$movementFrameCount$0_0$0                                  =  000000 GR
-  1 G$player$0_0$0                                              =  000000 GR
-  0 G$showTitle$0$0                                             =  0003F9 GR
-  2 G$slowingX$0_0$0                                            =  000005 GR
-  0 XG$LoadNextSpriteFrame$0$0                                  =  0001EE GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 28
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 22
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+  0 G$DetectCollisions$0$0                                      =  0003EE GR
+  0 G$LoadNextSpriteFrame$0$0                                   =  0001B3 GR
+  0 G$LoadSpriteFrame$0$0                                       =  000000 GR
+  0 G$MoveCharacter$0$0                                         =  000205 GR
+  0 G$MoveCharacterWithJoypad$0$0                               =  0002D6 GR
+  0 G$MovementPhysics$0$0                                       =  000415 GR
+  0 G$RefreshSprite$0$0                                         =  0001AA GR
+  0 G$ScrollCharacter$0$0                                       =  0002A5 GR
+  0 G$SetSpriteFlip$0$0                                         =  0001EF GR
+  0 G$SetupBackGround$0$0                                       =  0003D0 GR
+  0 G$SetupCharacter$0$0                                        =  000364 GR
+  2 G$animationFrameCount$0_0$0                                 =  000001 GR
+  2 G$jumpFrameCount$0_0$0                                      =  000002 GR
+  2 G$lastMovementX$0_0$0                                       =  000003 GR
+  2 G$lastMovementY$0_0$0                                       =  000004 GR
+  0 G$main$0$0                                                  =  000531 GR
+  2 G$movementFrameCount$0_0$0                                  =  000000 GR
+  1 G$player$0_0$0                                              =  000000 GR
+  0 G$showTitle$0$0                                             =  0003B2 GR
+  2 G$slowingX$0_0$0                                            =  000005 GR
+  0 XG$LoadNextSpriteFrame$0$0                                  =  0001EE GR
   0 XG$LoadSpriteFrame$0$0                                      =  0001A9 GR
-  0 XG$MoveCharacterWithJoypad$0$0                              =  0003AA GR
-  0 XG$MovementPhysics$0$0                                      =  0006DE GR
+  0 XG$MoveCharacterWithJoypad$0$0                              =  000363 GR
+  0 XG$MovementPhysics$0$0                                      =  000530 GR
   0 XG$RefreshSprite$0$0                                        =  0001B0 GR
-  0 XG$SetupBackGround$0$0                                      =  000423 GR
-  0 XG$main$0$0                                                 =  00074C GR
-  0 XG$showTitle$0$0                                            =  000422 GR
+  0 XG$SetupBackGround$0$0                                      =  0003ED GR
+  0 XG$main$0$0                                                 =  0005A3 GR
+  0 XG$showTitle$0$0                                            =  0003CF GR
+    _BackGroundSprite_tilemap                                      ****** GX
+    _BackGroundSprite_tileset                                      ****** GX
     _BirdSprite_tilemap                                            ****** GX
     _BirdSprite_tileset                                            ****** GX
-  0 _DetectCollisions                                              000424 GR
+  0 _DetectCollisions                                              0003EE GR
     _LCDC_REG                                                      ****** GX
   0 _LoadNextSpriteFrame                                           0001B3 GR
   0 _LoadSpriteFrame                                               000000 GR
   0 _MoveCharacter                                                 000205 GR
   0 _MoveCharacterWithJoypad                                       0002D6 GR
-  0 _MovementPhysics                                               00043A GR
+  0 _MovementPhysics                                               000415 GR
   0 _RefreshSprite                                                 0001AA GR
+    _SCX_REG                                                       ****** GX
   0 _ScrollCharacter                                               0002A5 GR
   0 _SetSpriteFlip                                                 0001EF GR
-  0 _SetupBackGround                                               000423 GR
-  0 _SetupCharacter                                                0003AB GR
+  0 _SetupBackGround                                               0003D0 GR
+  0 _SetupCharacter                                                000364 GR
     _SplashScreenSprite_tilemap                                    ****** GX
     _SplashScreenSprite_tileset                                    ****** GX
     __modsint                                                      ****** GX
@@ -1654,29 +1318,34 @@ Symbol Table
   7 __xinit__lastMovementY                                         000004 R
   7 __xinit__movementFrameCount                                    000000 R
   7 __xinit__slowingX                                              000005 R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 23
+Hexadecimal [24-Bits]
+
+Symbol Table
+
   2 _animationFrameCount                                           000001 GR
     _joypad                                                        ****** GX
   2 _jumpFrameCount                                                000002 GR
   2 _lastMovementX                                                 000003 GR
   2 _lastMovementY                                                 000004 GR
-  0 _main                                                          0006DF GR
+  0 _main                                                          000531 GR
   2 _movementFrameCount                                            000000 GR
   1 _player                                                        000000 GR
     _set_bkg_data                                                  ****** GX
     _set_bkg_tiles                                                 ****** GX
     _set_sprite_data                                               ****** GX
     _shadow_OAM                                                    ****** GX
-  0 _showTitle                                                     0003F9 GR
+  0 _showTitle                                                     0003B2 GR
   2 _slowingX                                                      000005 GR
     _wait_vbl_done                                                 ****** GX
 
 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 29
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 24
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    74E   flags    0
+   0 _CODE                                      size    5A5   flags    0
    1 _DATA                                      size     13   flags    0
    2 _INITIALIZED                               size      6   flags    0
    3 _DABS                                      size      0   flags    8
