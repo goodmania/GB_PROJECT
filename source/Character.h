@@ -89,7 +89,7 @@ void LoadSpriteFrame(Character* character, uint8_t frame)
             set_sprite_tile(spriteId, character->tilemap[x + (y * character->spriteTileWidth) + (frame * spriteCount)] + character->tilesetStart);
         }
     }
-    
+
 }
 
 void RefreshSprite(Character *character)
@@ -167,6 +167,13 @@ void MoveCharacterWithJoypad(Character *character)
     // Have we jumped?
     if ((buttons & J_A))
     {
+        // sound Noise Reg 
+        NR10_REG = 0x00;
+        NR11_REG = 0x81;
+        NR12_REG = 0x43;
+        NR13_REG = 0x73;
+        NR14_REG = 0x86;
+
         // Mark character as jumped
         character->hasJumped = 1;
         character->jumpedFrames = 0;

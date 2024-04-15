@@ -42,6 +42,10 @@ void ShowTitle(void)
 
     // Fill screen with map
     set_bkg_tiles(0, 0, 20, 18, SplashScreenSprite_tilemap);
+
+     SHOW_BKG;
+     SHOW_SPRITES;
+     DISPLAY_ON;
 }
 
 void SetupBackGround()
@@ -172,7 +176,15 @@ void ScrollBlock()
 
 void main(void)
 {
-     // init randomvariable generator
+     // enable sound
+     NR52_REG = 0x80; // 1000 0000 turns on sound
+     NR50_REG = 0x77; // sets the volume for both left and right channel to max
+     NR51_REG = 0xFF; // select which chanels using
+     
+     ShowTitle();
+     delay(2000);
+
+     // init randomvariable generator　
      initarand(__rand_seed);
 
      SetupBackGround();
@@ -197,7 +209,7 @@ void main(void)
      SHOW_BKG;
      SHOW_SPRITES;
      DISPLAY_ON;
-     
+
      BOOLEAN gameLoop = 1;
 
      while(gameLoop)

@@ -27,6 +27,7 @@
 	.globl _set_bkg_data
 	.globl _wait_vbl_done
 	.globl _joypad
+	.globl _delay
 	.globl _initarand
 	.globl _slowingX
 	.globl _lastMovementY
@@ -897,9 +898,9 @@ _MoveCharacterWithJoypad::
 	ldhl	sp,	#2
 	ld	(hl+), a
 	ld	(hl), #0x00
-	C$Character.h$171$1_0$165	= .
-	.globl	C$Character.h$171$1_0$165
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:171: character->hasJumped = 1;
+	C$Character.h$178$1_0$165	= .
+	.globl	C$Character.h$178$1_0$165
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:178: character->hasJumped = 1;
 	ld	hl, #0x000f
 	add	hl, bc
 	push	hl
@@ -910,9 +911,9 @@ _MoveCharacterWithJoypad::
 	ld	a, h
 	ldhl	sp,	#5
 	ld	(hl), a
-	C$Character.h$172$1_0$165	= .
-	.globl	C$Character.h$172$1_0$165
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:172: character->jumpedFrames = 0;
+	C$Character.h$179$1_0$165	= .
+	.globl	C$Character.h$179$1_0$165
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:179: character->jumpedFrames = 0;
 	ld	hl, #0x0010
 	add	hl, bc
 	push	hl
@@ -932,25 +933,50 @@ _MoveCharacterWithJoypad::
 	jr	Z, 00110$
 	C$Character.h$171$2_0$170	= .
 	.globl	C$Character.h$171$2_0$170
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:171: character->hasJumped = 1;
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:171: NR10_REG = 0x00;
+	C$Character.h$172$2_0$170	= .
+	.globl	C$Character.h$172$2_0$170
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:172: NR11_REG = 0x81;
+	C$Character.h$173$2_0$170	= .
+	.globl	C$Character.h$173$2_0$170
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:173: NR12_REG = 0x43;
+	C$Character.h$174$2_0$170	= .
+	.globl	C$Character.h$174$2_0$170
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:174: NR13_REG = 0x73;
+	C$Character.h$175$2_0$170	= .
+	.globl	C$Character.h$175$2_0$170
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:175: NR14_REG = 0x86;
+	C$Character.h$178$2_0$170	= .
+	.globl	C$Character.h$178$2_0$170
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:178: character->hasJumped = 1;
 	inc	hl
 	inc	hl
+	xor	a, a
+	ldh	(_NR10_REG + 0), a
+	ld	a, #0x81
+	ldh	(_NR11_REG + 0), a
+	ld	a, #0x43
+	ldh	(_NR12_REG + 0), a
+	ld	a, #0x73
+	ldh	(_NR13_REG + 0), a
+	ld	a, #0x86
+	ldh	(_NR14_REG + 0), a
 	ld	a,	(hl+)
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x01
-	C$Character.h$172$2_0$170	= .
-	.globl	C$Character.h$172$2_0$170
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:172: character->jumpedFrames = 0;
+	C$Character.h$179$2_0$170	= .
+	.globl	C$Character.h$179$2_0$170
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:179: character->jumpedFrames = 0;
 	ldhl	sp,	#6
 	ld	a,	(hl+)
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x00
 00110$:
-	C$Character.h$176$1_0$165	= .
-	.globl	C$Character.h$176$1_0$165
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:176: if (character->hasJumped && (buttons & J_A))
+	C$Character.h$183$1_0$165	= .
+	.globl	C$Character.h$183$1_0$165
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:183: if (character->hasJumped && (buttons & J_A))
 	ldhl	sp,#4
 	ld	a, (hl+)
 	ld	e, a
@@ -962,14 +988,14 @@ _MoveCharacterWithJoypad::
 	ldhl	sp,	#2
 	or	a, (hl)
 	jr	Z, 00112$
-	C$Character.h$179$2_0$171	= .
-	.globl	C$Character.h$179$2_0$171
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:179: moveY = -1;
+	C$Character.h$186$2_0$171	= .
+	.globl	C$Character.h$186$2_0$171
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:186: moveY = -1;
 	dec	hl
 	ld	(hl), #0xff
-	C$Character.h$182$2_0$171	= .
-	.globl	C$Character.h$182$2_0$171
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:182: character->jumpedFrames++;
+	C$Character.h$189$2_0$171	= .
+	.globl	C$Character.h$189$2_0$171
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:189: character->jumpedFrames++;
 	ldhl	sp,#6
 	ld	a, (hl+)
 	ld	e, a
@@ -984,9 +1010,9 @@ _MoveCharacterWithJoypad::
 	pop	af
 	ld	(hl), a
 00112$:
-	C$Character.h$186$1_0$165	= .
-	.globl	C$Character.h$186$1_0$165
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:186: character->movementForceX = moveX;
+	C$Character.h$193$1_0$165	= .
+	.globl	C$Character.h$193$1_0$165
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:193: character->movementForceX = moveX;
 	ld	hl, #0x000c
 	add	hl, bc
 	ld	e, l
@@ -994,9 +1020,9 @@ _MoveCharacterWithJoypad::
 	ldhl	sp,	#0
 	ld	a, (hl)
 	ld	(de), a
-	C$Character.h$187$1_0$165	= .
-	.globl	C$Character.h$187$1_0$165
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:187: character->movementForceY = moveY;
+	C$Character.h$194$1_0$165	= .
+	.globl	C$Character.h$194$1_0$165
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:194: character->movementForceY = moveY;
 	ld	hl, #0x000d
 	add	hl, bc
 	ld	c, l
@@ -1004,20 +1030,20 @@ _MoveCharacterWithJoypad::
 	ldhl	sp,	#1
 	ld	a, (hl)
 	ld	(bc), a
-	C$Character.h$188$1_0$165	= .
-	.globl	C$Character.h$188$1_0$165
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:188: }
+	C$Character.h$195$1_0$165	= .
+	.globl	C$Character.h$195$1_0$165
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:195: }
 	add	sp, #8
-	C$Character.h$188$1_0$165	= .
-	.globl	C$Character.h$188$1_0$165
+	C$Character.h$195$1_0$165	= .
+	.globl	C$Character.h$195$1_0$165
 	XG$MoveCharacterWithJoypad$0$0	= .
 	.globl	XG$MoveCharacterWithJoypad$0$0
 	ret
 	G$SetupCharacter$0$0	= .
 	.globl	G$SetupCharacter$0$0
-	C$Character.h$191$1_0$173	= .
-	.globl	C$Character.h$191$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:191: void SetupCharacter(Character* character, uint8_t spriteId, uint8_t tileWidth, uint8_t tileHeight, uint8_t tilesetStart, uint8_t totalFrames, const unsigned char* tilemap)
+	C$Character.h$198$1_0$173	= .
+	.globl	C$Character.h$198$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:198: void SetupCharacter(Character* character, uint8_t spriteId, uint8_t tileWidth, uint8_t tileHeight, uint8_t tilesetStart, uint8_t totalFrames, const unsigned char* tilemap)
 ;	---------------------------------
 ; Function SetupCharacter
 ; ---------------------------------
@@ -1025,9 +1051,9 @@ _SetupCharacter::
 	dec	sp
 	ldhl	sp,	#0
 	ld	(hl), a
-	C$Character.h$193$1_0$173	= .
-	.globl	C$Character.h$193$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:193: character->tilemap = tilemap;
+	C$Character.h$200$1_0$173	= .
+	.globl	C$Character.h$200$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:200: character->tilemap = tilemap;
 	ld	hl, #0x0011
 	add	hl, de
 	ld	c, l
@@ -1038,22 +1064,22 @@ _SetupCharacter::
 	inc	bc
 	ld	a, (hl)
 	ld	(bc), a
-	C$Character.h$194$1_0$173	= .
-	.globl	C$Character.h$194$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:194: character->spriteId = spriteId;
+	C$Character.h$201$1_0$173	= .
+	.globl	C$Character.h$201$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:201: character->spriteId = spriteId;
 	ldhl	sp,	#0
 	ld	a, (hl)
 	ld	(de), a
-	C$Character.h$195$1_0$173	= .
-	.globl	C$Character.h$195$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:195: character->spriteTileWidth = tileWidth;
+	C$Character.h$202$1_0$173	= .
+	.globl	C$Character.h$202$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:202: character->spriteTileWidth = tileWidth;
 	ld	c, e
 	ld	b, d
 	inc	bc
 	ldhl	sp,	#3
-	C$Character.h$196$1_0$173	= .
-	.globl	C$Character.h$196$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:196: character->spriteTileHeight = tileHeight;
+	C$Character.h$203$1_0$173	= .
+	.globl	C$Character.h$203$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:203: character->spriteTileHeight = tileHeight;
 	ld	a, (hl+)
 	ld	(bc), a
 	ld	c, e
@@ -1062,17 +1088,17 @@ _SetupCharacter::
 	inc	bc
 	ld	a, (hl)
 	ld	(bc), a
-	C$Character.h$197$1_0$173	= .
-	.globl	C$Character.h$197$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:197: character->tilesetStart = tilesetStart;
+	C$Character.h$204$1_0$173	= .
+	.globl	C$Character.h$204$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:204: character->tilesetStart = tilesetStart;
 	ld	hl, #0x0005
 	add	hl, de
 	ld	c, l
 	ld	b, h
 	ldhl	sp,	#5
-	C$Character.h$198$1_0$173	= .
-	.globl	C$Character.h$198$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:198: character->spriteFrames = totalFrames;
+	C$Character.h$205$1_0$173	= .
+	.globl	C$Character.h$205$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:205: character->spriteFrames = totalFrames;
 	ld	a, (hl+)
 	ld	(bc), a
 	ld	c, e
@@ -1082,32 +1108,32 @@ _SetupCharacter::
 	inc	bc
 	ld	a, (hl)
 	ld	(bc), a
-	C$Character.h$199$1_0$173	= .
-	.globl	C$Character.h$199$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:199: character->underfootState = 0;
+	C$Character.h$206$1_0$173	= .
+	.globl	C$Character.h$206$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:206: character->underfootState = 0;
 	ld	hl, #0x000e
 	add	hl, de
 	ld	(hl), #0x00
-	C$Character.h$200$1_0$173	= .
-	.globl	C$Character.h$200$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:200: character->jumpedFrames = 0;
+	C$Character.h$207$1_0$173	= .
+	.globl	C$Character.h$207$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:207: character->jumpedFrames = 0;
 	ld	hl, #0x0010
 	add	hl, de
 	ld	(hl), #0x00
-	C$Character.h$201$1_0$173	= .
-	.globl	C$Character.h$201$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:201: character->hasJumped = 0;
+	C$Character.h$208$1_0$173	= .
+	.globl	C$Character.h$208$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:208: character->hasJumped = 0;
 	ld	hl, #0x000f
 	add	hl, de
 	ld	(hl), #0x00
-	C$Character.h$203$1_0$173	= .
-	.globl	C$Character.h$203$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:203: LoadSpriteFrame(character, 0);
+	C$Character.h$210$1_0$173	= .
+	.globl	C$Character.h$210$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:210: LoadSpriteFrame(character, 0);
 	xor	a, a
 	call	_LoadSpriteFrame
-	C$Character.h$204$1_0$173	= .
-	.globl	C$Character.h$204$1_0$173
-;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:204: }
+	C$Character.h$211$1_0$173	= .
+	.globl	C$Character.h$211$1_0$173
+;C:\gbdk_dev\Project\GB_PROJECT\source\Character.h:211: }
 	inc	sp
 	pop	hl
 	add	sp, #6
@@ -1142,35 +1168,53 @@ _ShowTitle::
 	push	af
 	call	_set_bkg_tiles
 	add	sp, #6
-	C$main.c$45$1_0$178	= .
-	.globl	C$main.c$45$1_0$178
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:45: }
-	C$main.c$45$1_0$178	= .
-	.globl	C$main.c$45$1_0$178
+	C$main.c$46$1_0$178	= .
+	.globl	C$main.c$46$1_0$178
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:46: SHOW_BKG;
+	ldh	a, (_LCDC_REG + 0)
+	or	a, #0x01
+	ldh	(_LCDC_REG + 0), a
+	C$main.c$47$1_0$178	= .
+	.globl	C$main.c$47$1_0$178
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:47: SHOW_SPRITES;
+	ldh	a, (_LCDC_REG + 0)
+	or	a, #0x02
+	ldh	(_LCDC_REG + 0), a
+	C$main.c$48$1_0$178	= .
+	.globl	C$main.c$48$1_0$178
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:48: DISPLAY_ON;
+	ldh	a, (_LCDC_REG + 0)
+	or	a, #0x80
+	ldh	(_LCDC_REG + 0), a
+	C$main.c$49$1_0$178	= .
+	.globl	C$main.c$49$1_0$178
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:49: }
+	C$main.c$49$1_0$178	= .
+	.globl	C$main.c$49$1_0$178
 	XG$ShowTitle$0$0	= .
 	.globl	XG$ShowTitle$0$0
 	ret
 	G$SetupBackGround$0$0	= .
 	.globl	G$SetupBackGround$0$0
-	C$main.c$47$1_0$179	= .
-	.globl	C$main.c$47$1_0$179
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:47: void SetupBackGround()
+	C$main.c$51$1_0$179	= .
+	.globl	C$main.c$51$1_0$179
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:51: void SetupBackGround()
 ;	---------------------------------
 ; Function SetupBackGround
 ; ---------------------------------
 _SetupBackGround::
-	C$main.c$50$1_0$179	= .
-	.globl	C$main.c$50$1_0$179
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:50: set_bkg_data(0, BackGroundSprite_tileset_size, BackGroundSprite_tileset);
+	C$main.c$54$1_0$179	= .
+	.globl	C$main.c$54$1_0$179
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:54: set_bkg_data(0, BackGroundSprite_tileset_size, BackGroundSprite_tileset);
 	ld	de, #_BackGroundSprite_tileset
 	push	de
 	ld	hl, #0x3500
 	push	hl
 	call	_set_bkg_data
 	add	sp, #4
-	C$main.c$53$1_0$179	= .
-	.globl	C$main.c$53$1_0$179
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:53: set_bkg_tiles(0, 0, 40, 18, BackGroundSprite_tilemap);
+	C$main.c$57$1_0$179	= .
+	.globl	C$main.c$57$1_0$179
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:57: set_bkg_tiles(0, 0, 40, 18, BackGroundSprite_tilemap);
 	ld	de, #_BackGroundSprite_tilemap
 	push	de
 	ld	hl, #0x1228
@@ -1180,26 +1224,26 @@ _SetupBackGround::
 	push	af
 	call	_set_bkg_tiles
 	add	sp, #6
-	C$main.c$54$1_0$179	= .
-	.globl	C$main.c$54$1_0$179
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:54: }
-	C$main.c$54$1_0$179	= .
-	.globl	C$main.c$54$1_0$179
+	C$main.c$58$1_0$179	= .
+	.globl	C$main.c$58$1_0$179
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:58: }
+	C$main.c$58$1_0$179	= .
+	.globl	C$main.c$58$1_0$179
 	XG$SetupBackGround$0$0	= .
 	.globl	XG$SetupBackGround$0$0
 	ret
 	G$DetectCollisions$0$0	= .
 	.globl	G$DetectCollisions$0$0
-	C$main.c$56$1_0$181	= .
-	.globl	C$main.c$56$1_0$181
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:56: void DetectCollisions(Character *character, uint8_t *predictedX, uint8_t *predictedY)
+	C$main.c$60$1_0$181	= .
+	.globl	C$main.c$60$1_0$181
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:60: void DetectCollisions(Character *character, uint8_t *predictedX, uint8_t *predictedY)
 ;	---------------------------------
 ; Function DetectCollisions
 ; ---------------------------------
 _DetectCollisions::
-	C$main.c$59$1_0$181	= .
-	.globl	C$main.c$59$1_0$181
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:59: if (*predictedY >= GLOUND_LEVEL)
+	C$main.c$63$1_0$181	= .
+	.globl	C$main.c$63$1_0$181
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:63: if (*predictedY >= GLOUND_LEVEL)
 	ldhl	sp,	#2
 	ld	a, (hl+)
 	ld	c, a
@@ -1208,61 +1252,61 @@ _DetectCollisions::
 	ld	l, a
 ;	spillPairReg hl
 ;	spillPairReg hl
-	C$main.c$65$1_0$181	= .
-	.globl	C$main.c$65$1_0$181
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:65: character->velocityY = 0;
+	C$main.c$69$1_0$181	= .
+	.globl	C$main.c$69$1_0$181
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:69: character->velocityY = 0;
 	ld	a, e
 	add	a, #0x09
 	ld	e, a
 	jr	NC, 00122$
 	inc	d
 00122$:
-	C$main.c$59$1_0$181	= .
-	.globl	C$main.c$59$1_0$181
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:59: if (*predictedY >= GLOUND_LEVEL)
+	C$main.c$63$1_0$181	= .
+	.globl	C$main.c$63$1_0$181
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:63: if (*predictedY >= GLOUND_LEVEL)
 	ld	a, l
 	sub	a, #0x82
 	jr	C, 00104$
-	C$main.c$62$2_0$182	= .
-	.globl	C$main.c$62$2_0$182
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:62: *predictedY = GLOUND_LEVEL; 
+	C$main.c$66$2_0$182	= .
+	.globl	C$main.c$66$2_0$182
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:66: *predictedY = GLOUND_LEVEL; 
 	ld	a, #0x82
 	ld	(bc), a
-	C$main.c$65$2_0$182	= .
-	.globl	C$main.c$65$2_0$182
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:65: character->velocityY = 0;
+	C$main.c$69$2_0$182	= .
+	.globl	C$main.c$69$2_0$182
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:69: character->velocityY = 0;
 	xor	a, a
 	ld	(de), a
 	jr	00106$
 00104$:
-	C$main.c$66$1_0$181	= .
-	.globl	C$main.c$66$1_0$181
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:66: }else if(*predictedY < MAX_HEIGHT_LEVEL)
+	C$main.c$70$1_0$181	= .
+	.globl	C$main.c$70$1_0$181
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:70: }else if(*predictedY < MAX_HEIGHT_LEVEL)
 	ld	a, l
 	sub	a, #0x14
 	jr	NC, 00106$
-	C$main.c$69$2_0$183	= .
-	.globl	C$main.c$69$2_0$183
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:69: *predictedY = MAX_HEIGHT_LEVEL; 
+	C$main.c$73$2_0$183	= .
+	.globl	C$main.c$73$2_0$183
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:73: *predictedY = MAX_HEIGHT_LEVEL; 
 	ld	a, #0x14
 	ld	(bc), a
-	C$main.c$72$2_0$183	= .
-	.globl	C$main.c$72$2_0$183
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:72: character->velocityY = 0;
+	C$main.c$76$2_0$183	= .
+	.globl	C$main.c$76$2_0$183
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:76: character->velocityY = 0;
 	xor	a, a
 	ld	(de), a
 00106$:
-	C$main.c$74$1_0$181	= .
-	.globl	C$main.c$74$1_0$181
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:74: }
+	C$main.c$78$1_0$181	= .
+	.globl	C$main.c$78$1_0$181
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:78: }
 	pop	hl
 	pop	af
 	jp	(hl)
 	G$MovementPhysics$0$0	= .
 	.globl	G$MovementPhysics$0$0
-	C$main.c$76$1_0$185	= .
-	.globl	C$main.c$76$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:76: void MovementPhysics(Character *character, uint8_t slowDownFrames)
+	C$main.c$80$1_0$185	= .
+	.globl	C$main.c$80$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:80: void MovementPhysics(Character *character, uint8_t slowDownFrames)
 ;	---------------------------------
 ; Function MovementPhysics
 ; ---------------------------------
@@ -1271,9 +1315,9 @@ _MovementPhysics::
 	ldhl	sp,	#7
 	ld	a, e
 	ld	(hl+), a
-	C$main.c$79$1_1$185	= .
-	.globl	C$main.c$79$1_1$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:79: if (character->movementForceY != 0)
+	C$main.c$83$1_1$185	= .
+	.globl	C$main.c$83$1_1$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:83: if (character->movementForceY != 0)
 	ld	a, d
 	ld	(hl-), a
 	ld	a, (hl+)
@@ -1294,9 +1338,9 @@ _MovementPhysics::
 	ld	d, (hl)
 	ld	a, (de)
 	ldhl	sp,	#6
-	C$main.c$81$1_1$185	= .
-	.globl	C$main.c$81$1_1$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:81: character->velocityY += character->movementForceY;
+	C$main.c$85$1_1$185	= .
+	.globl	C$main.c$85$1_1$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:85: character->velocityY += character->movementForceY;
 	ld	(hl+), a
 	ld	a, (hl+)
 	ld	e, a
@@ -1306,16 +1350,16 @@ _MovementPhysics::
 	inc	sp
 	inc	sp
 	push	hl
-	C$main.c$79$1_0$185	= .
-	.globl	C$main.c$79$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:79: if (character->movementForceY != 0)
+	C$main.c$83$1_0$185	= .
+	.globl	C$main.c$83$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:83: if (character->movementForceY != 0)
 	ldhl	sp,	#6
 	ld	a, (hl)
 	or	a, a
 	jr	Z, 00116$
-	C$main.c$81$2_0$186	= .
-	.globl	C$main.c$81$2_0$186
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:81: character->velocityY += character->movementForceY;
+	C$main.c$85$2_0$186	= .
+	.globl	C$main.c$85$2_0$186
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:85: character->velocityY += character->movementForceY;
 	pop	de
 	push	de
 	ld	a, (de)
@@ -1324,16 +1368,16 @@ _MovementPhysics::
 	pop	hl
 	push	hl
 	ld	(hl), c
-	C$main.c$82$2_0$186	= .
-	.globl	C$main.c$82$2_0$186
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:82: jumpFrameCount = 0;
+	C$main.c$86$2_0$186	= .
+	.globl	C$main.c$86$2_0$186
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:86: jumpFrameCount = 0;
 	ld	hl, #_jumpFrameCount
 	ld	(hl), #0x00
 	jr	00117$
 00116$:
-	C$main.c$86$1_0$185	= .
-	.globl	C$main.c$86$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:86: else if (character->underfootState & FOOT_IN_AIR)
+	C$main.c$90$1_0$185	= .
+	.globl	C$main.c$90$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:90: else if (character->underfootState & FOOT_IN_AIR)
 	ldhl	sp,#7
 	ld	a, (hl+)
 	ld	e, a
@@ -1345,9 +1389,9 @@ _MovementPhysics::
 	ld	a, (bc)
 	bit	1, a
 	jr	Z, 00117$
-	C$main.c$89$2_0$187	= .
-	.globl	C$main.c$89$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:89: jumpFrameCount = (jumpFrameCount + 1) % 120;
+	C$main.c$93$2_0$187	= .
+	.globl	C$main.c$93$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:93: jumpFrameCount = (jumpFrameCount + 1) % 120;
 	ld	hl, #_jumpFrameCount
 	ld	e, (hl)
 	ld	d, #0x00
@@ -1356,72 +1400,72 @@ _MovementPhysics::
 	call	__modsint
 	ld	hl, #_jumpFrameCount
 	ld	(hl), c
-	C$main.c$92$2_0$187	= .
-	.globl	C$main.c$92$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:92: if (jumpFrameCount < 3)
+	C$main.c$96$2_0$187	= .
+	.globl	C$main.c$96$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:96: if (jumpFrameCount < 3)
 	ld	a, (hl)
 	sub	a, #0x03
 	jr	NC, 00111$
-	C$main.c$93$2_0$187	= .
-	.globl	C$main.c$93$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:93: character->velocityY = -2;
+	C$main.c$97$2_0$187	= .
+	.globl	C$main.c$97$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:97: character->velocityY = -2;
 	pop	hl
 	ld	(hl), #0xfe
 	push	hl
 	jr	00117$
 00111$:
-	C$main.c$94$2_0$187	= .
-	.globl	C$main.c$94$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:94: else if (jumpFrameCount < 10)
+	C$main.c$98$2_0$187	= .
+	.globl	C$main.c$98$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:98: else if (jumpFrameCount < 10)
 	ld	a, (#_jumpFrameCount)
 	sub	a, #0x0a
 	jr	NC, 00108$
-	C$main.c$95$2_0$187	= .
-	.globl	C$main.c$95$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:95: character->velocityY = -1;
+	C$main.c$99$2_0$187	= .
+	.globl	C$main.c$99$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:99: character->velocityY = -1;
 	pop	hl
 	ld	(hl), #0xff
 	push	hl
 	jr	00117$
 00108$:
-	C$main.c$96$2_0$187	= .
-	.globl	C$main.c$96$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:96: else if (jumpFrameCount < 14)
+	C$main.c$100$2_0$187	= .
+	.globl	C$main.c$100$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:100: else if (jumpFrameCount < 14)
 	ld	a, (#_jumpFrameCount)
 	sub	a, #0x0e
 	jr	NC, 00105$
-	C$main.c$97$2_0$187	= .
-	.globl	C$main.c$97$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:97: character->velocityY = 0;
+	C$main.c$101$2_0$187	= .
+	.globl	C$main.c$101$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:101: character->velocityY = 0;
 	pop	hl
 	ld	(hl), #0x00
 	push	hl
 	jr	00117$
 00105$:
-	C$main.c$98$2_0$187	= .
-	.globl	C$main.c$98$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:98: else if (jumpFrameCount < 20)
+	C$main.c$102$2_0$187	= .
+	.globl	C$main.c$102$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:102: else if (jumpFrameCount < 20)
 	ld	a, (#_jumpFrameCount)
 	sub	a, #0x14
 	jr	NC, 00102$
-	C$main.c$99$2_0$187	= .
-	.globl	C$main.c$99$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:99: character->velocityY = 1;
+	C$main.c$103$2_0$187	= .
+	.globl	C$main.c$103$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:103: character->velocityY = 1;
 	pop	hl
 	ld	(hl), #0x01
 	push	hl
 	jr	00117$
 00102$:
-	C$main.c$101$2_0$187	= .
-	.globl	C$main.c$101$2_0$187
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:101: character->velocityY = 2;
+	C$main.c$105$2_0$187	= .
+	.globl	C$main.c$105$2_0$187
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:105: character->velocityY = 2;
 	pop	hl
 	ld	(hl), #0x02
 	push	hl
 00117$:
-	C$main.c$105$1_0$185	= .
-	.globl	C$main.c$105$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:105: if (character->velocityY != 0 && character->velocityY < -3)
+	C$main.c$109$1_0$185	= .
+	.globl	C$main.c$109$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:109: if (character->velocityY != 0 && character->velocityY < -3)
 	pop	de
 	push	de
 	ld	a, (de)
@@ -1430,22 +1474,22 @@ _MovementPhysics::
 	xor	a, #0x80
 	sub	a, #0x7d
 	jr	NC, 00119$
-	C$main.c$106$1_0$185	= .
-	.globl	C$main.c$106$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:106: character->velocityY = -3;
+	C$main.c$110$1_0$185	= .
+	.globl	C$main.c$110$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:110: character->velocityY = -3;
 	pop	hl
 	ld	(hl), #0xfd
 	push	hl
 00119$:
-	C$main.c$105$1_1$185	= .
-	.globl	C$main.c$105$1_1$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:105: if (character->velocityY != 0 && character->velocityY < -3)
+	C$main.c$109$1_1$185	= .
+	.globl	C$main.c$109$1_1$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:109: if (character->velocityY != 0 && character->velocityY < -3)
 	pop	de
 	push	de
 	ld	a, (de)
-	C$main.c$107$1_0$185	= .
-	.globl	C$main.c$107$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:107: if (character->velocityY != 0 && character->velocityY > 3)
+	C$main.c$111$1_0$185	= .
+	.globl	C$main.c$111$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:111: if (character->velocityY != 0 && character->velocityY > 3)
 	ld	c, a
 	or	a, a
 	jr	Z, 00122$
@@ -1465,16 +1509,16 @@ _MovementPhysics::
 	scf
 00198$:
 	jr	NC, 00122$
-	C$main.c$108$1_0$185	= .
-	.globl	C$main.c$108$1_0$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:108: character->velocityY = 3;
+	C$main.c$112$1_0$185	= .
+	.globl	C$main.c$112$1_0$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:112: character->velocityY = 3;
 	pop	hl
 	ld	(hl), #0x03
 	push	hl
 00122$:
-	C$main.c$111$1_1$188	= .
-	.globl	C$main.c$111$1_1$188
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:111: uint8_t predictedY = character->y + character->velocityY;
+	C$main.c$115$1_1$188	= .
+	.globl	C$main.c$115$1_1$188
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:115: uint8_t predictedY = character->y + character->velocityY;
 	ldhl	sp,#7
 	ld	a, (hl+)
 	ld	e, a
@@ -1500,9 +1544,9 @@ _MovementPhysics::
 	ld	(hl), a
 	ld	a, (hl-)
 	ld	(hl), a
-	C$main.c$114$1_1$188	= .
-	.globl	C$main.c$114$1_1$188
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:114: DetectCollisions(character, &character->x, &predictedY);
+	C$main.c$118$1_1$188	= .
+	.globl	C$main.c$118$1_1$188
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:118: DetectCollisions(character, &character->x, &predictedY);
 	ldhl	sp,	#5
 	ld	c, l
 	ld	b, h
@@ -1524,9 +1568,9 @@ _MovementPhysics::
 	ld	d, (hl)
 	call	_DetectCollisions
 	pop	de
-	C$main.c$117$1_1$188	= .
-	.globl	C$main.c$117$1_1$188
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:117: MoveCharacter(character, character->x, predictedY);
+	C$main.c$121$1_1$188	= .
+	.globl	C$main.c$121$1_1$188
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:121: MoveCharacter(character, character->x, predictedY);
 	ld	a, (de)
 	ld	c, a
 	ldhl	sp,	#5
@@ -1539,29 +1583,29 @@ _MovementPhysics::
 	inc	hl
 	ld	d, (hl)
 	call	_MoveCharacter
-	C$main.c$120$1_1$188	= .
-	.globl	C$main.c$120$1_1$188
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:120: lastMovementY = character->movementForceY;
+	C$main.c$124$1_1$188	= .
+	.globl	C$main.c$124$1_1$188
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:124: lastMovementY = character->movementForceY;
 	ldhl	sp,#2
 	ld	a, (hl+)
 	ld	e, a
 	ld	d, (hl)
 	ld	a, (de)
 	ld	(#_lastMovementY),a
-	C$main.c$121$1_1$185	= .
-	.globl	C$main.c$121$1_1$185
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:121: }
+	C$main.c$125$1_1$185	= .
+	.globl	C$main.c$125$1_1$185
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:125: }
 	add	sp, #9
-	C$main.c$121$1_1$185	= .
-	.globl	C$main.c$121$1_1$185
+	C$main.c$125$1_1$185	= .
+	.globl	C$main.c$125$1_1$185
 	XG$MovementPhysics$0$0	= .
 	.globl	XG$MovementPhysics$0$0
 	ret
 	G$Hit$0$0	= .
 	.globl	G$Hit$0$0
-	C$main.c$123$1_1$190	= .
-	.globl	C$main.c$123$1_1$190
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:123: BOOLEAN Hit(uint8_t playerX, uint8_t playerY, uint8_t objX, uint8_t objY)
+	C$main.c$127$1_1$190	= .
+	.globl	C$main.c$127$1_1$190
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:127: BOOLEAN Hit(uint8_t playerX, uint8_t playerY, uint8_t objX, uint8_t objY)
 ;	---------------------------------
 ; Function Hit
 ; ---------------------------------
@@ -1570,9 +1614,9 @@ _Hit::
 	ld	c, a
 	ldhl	sp,	#4
 	ld	(hl), e
-	C$main.c$125$1_0$190	= .
-	.globl	C$main.c$125$1_0$190
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:125: return (playerX < objX + 8 && objX < playerX + 8) && (playerY < objY + 8 && objY < playerY + 8);
+	C$main.c$129$1_0$190	= .
+	.globl	C$main.c$129$1_0$190
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:129: return (playerX < objX + 8 && objX < playerX + 8) && (playerY < objY + 8 && objY < playerY + 8);
 	ldhl	sp,	#7
 	ld	a, (hl)
 	ldhl	sp,	#0
@@ -1706,18 +1750,18 @@ _Hit::
 00104$:
 	ld	a, #0x01
 00105$:
-	C$main.c$126$1_0$190	= .
-	.globl	C$main.c$126$1_0$190
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:126: }
+	C$main.c$130$1_0$190	= .
+	.globl	C$main.c$130$1_0$190
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:130: }
 	add	sp, #5
 	pop	hl
 	pop	bc
 	jp	(hl)
 	G$SetupBlock$0$0	= .
 	.globl	G$SetupBlock$0$0
-	C$main.c$128$1_0$192	= .
-	.globl	C$main.c$128$1_0$192
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:128: void SetupBlock(Block* block)
+	C$main.c$132$1_0$192	= .
+	.globl	C$main.c$132$1_0$192
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:132: void SetupBlock(Block* block)
 ;	---------------------------------
 ; Function SetupBlock
 ; ---------------------------------
@@ -1727,18 +1771,18 @@ _SetupBlock::
 	ld	a, e
 	ld	(hl+), a
 	ld	(hl), d
-	C$main.c$131$1_0$192	= .
-	.globl	C$main.c$131$1_0$192
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:131: set_sprite_data(BirdSprite_tileset_size + 1, 4, blocksprite_tileset);
+	C$main.c$135$1_0$192	= .
+	.globl	C$main.c$135$1_0$192
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:135: set_sprite_data(BirdSprite_tileset_size + 1, 4, blocksprite_tileset);
 	ld	de, #_blocksprite_tileset
 	push	de
 	ld	hl, #0x427
 	push	hl
 	call	_set_sprite_data
 	add	sp, #4
-	C$main.c$133$6_0$197	= .
-	.globl	C$main.c$133$6_0$197
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:133: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$137$6_0$197	= .
+	.globl	C$main.c$137$6_0$197
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:137: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ldhl	sp,#9
 	ld	a, (hl+)
 	ld	e, a
@@ -1769,15 +1813,15 @@ _SetupBlock::
 	ld	a, (hl)
 	sub	a, #0x06
 	jp	NC, 00118$
-	C$main.c$135$3_0$194	= .
-	.globl	C$main.c$135$3_0$194
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:135: uint8_t baseSpriteId = i * blockOffset;
+	C$main.c$139$3_0$194	= .
+	.globl	C$main.c$139$3_0$194
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:139: uint8_t baseSpriteId = i * blockOffset;
 	ld	a, (hl)
 	add	a, a
 	add	a, a
 	ldhl	sp,	#4
 	ld	(hl), a
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:136: set_sprite_tile(baseSpriteId + 4, 39); 
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:140: set_sprite_tile(baseSpriteId + 4, 39); 
 	ld	a, (hl+)
 	inc	hl
 	ld	(hl), a
@@ -1828,7 +1872,7 @@ _SetupBlock::
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x27
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:137: set_sprite_tile(baseSpriteId + 5, 40); 
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:141: set_sprite_tile(baseSpriteId + 5, 40); 
 	ldhl	sp,	#6
 	ld	a, (hl)
 	add	a, #0x05
@@ -1877,7 +1921,7 @@ _SetupBlock::
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x28
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:138: set_sprite_tile(baseSpriteId + 6, 41); 
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:142: set_sprite_tile(baseSpriteId + 6, 41); 
 	ldhl	sp,	#6
 	ld	a, (hl)
 	add	a, #0x06
@@ -1926,7 +1970,7 @@ _SetupBlock::
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x29
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:139: set_sprite_tile(baseSpriteId + 7, 42);
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:143: set_sprite_tile(baseSpriteId + 7, 42);
 	ldhl	sp,	#6
 	ld	a, (hl)
 	add	a, #0x07
@@ -1975,9 +2019,9 @@ _SetupBlock::
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x2a
-	C$main.c$141$2_0$192	= .
-	.globl	C$main.c$141$2_0$192
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:141: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
+	C$main.c$145$2_0$192	= .
+	.globl	C$main.c$145$2_0$192
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:145: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
 	ldhl	sp,	#12
 	ld	(hl), #0x00
 00113$:
@@ -1991,9 +2035,9 @@ _SetupBlock::
 	ld	a, (hl)
 	sub	a, b
 	jr	Z, 00117$
-	C$main.c$143$7_0$198	= .
-	.globl	C$main.c$143$7_0$198
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:143: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
+	C$main.c$147$7_0$198	= .
+	.globl	C$main.c$147$7_0$198
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:147: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
 	ldhl	sp,	#4
 	ld	a, (hl)
 	ldhl	sp,	#12
@@ -2013,9 +2057,9 @@ _SetupBlock::
 	ldhl	sp,	#8
 	sub	a, (hl)
 	jr	Z, 00114$
-	C$main.c$145$2_0$192	= .
-	.globl	C$main.c$145$2_0$192
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:145: uint8_t index = baseSpriteId + iy + (ix * block->blockWidth);
+	C$main.c$149$2_0$192	= .
+	.globl	C$main.c$149$2_0$192
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:149: uint8_t index = baseSpriteId + iy + (ix * block->blockWidth);
 	ldhl	sp,	#8
 	ld	e, (hl)
 	ldhl	sp,	#13
@@ -2028,7 +2072,7 @@ _SetupBlock::
 	add	a, (hl)
 	inc	hl
 	ld	(hl), a
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:146: move_sprite(index, block[i].x + (ix * 8), block[i].y + (iy * 8));       
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:150: move_sprite(index, block[i].x + (ix * 8), block[i].y + (iy * 8));       
 	ldhl	sp,	#11
 	ld	a, (hl)
 	ldhl	sp,	#7
@@ -2084,49 +2128,49 @@ _SetupBlock::
 	ld	a, b
 	ld	(hl+), a
 	ld	(hl), c
-	C$main.c$143$6_0$197	= .
-	.globl	C$main.c$143$6_0$197
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:143: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
+	C$main.c$147$6_0$197	= .
+	.globl	C$main.c$147$6_0$197
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:147: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
 	ldhl	sp,	#13
 	inc	(hl)
 	jr	00110$
 00114$:
-	C$main.c$141$4_0$195	= .
-	.globl	C$main.c$141$4_0$195
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:141: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
+	C$main.c$145$4_0$195	= .
+	.globl	C$main.c$145$4_0$195
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:145: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
 	ldhl	sp,	#12
 	inc	(hl)
 	jr	00113$
 00117$:
-	C$main.c$133$2_0$193	= .
-	.globl	C$main.c$133$2_0$193
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:133: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$137$2_0$193	= .
+	.globl	C$main.c$137$2_0$193
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:137: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ldhl	sp,	#11
 	inc	(hl)
 	jp	00116$
 00118$:
-	C$main.c$150$2_0$192	= .
-	.globl	C$main.c$150$2_0$192
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:150: }
+	C$main.c$154$2_0$192	= .
+	.globl	C$main.c$154$2_0$192
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:154: }
 	add	sp, #14
-	C$main.c$150$2_0$192	= .
-	.globl	C$main.c$150$2_0$192
+	C$main.c$154$2_0$192	= .
+	.globl	C$main.c$154$2_0$192
 	XG$SetupBlock$0$0	= .
 	.globl	XG$SetupBlock$0$0
 	ret
 	G$ScrollBlock$0$0	= .
 	.globl	G$ScrollBlock$0$0
-	C$main.c$152$2_0$215	= .
-	.globl	C$main.c$152$2_0$215
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:152: void ScrollBlock()
+	C$main.c$156$2_0$215	= .
+	.globl	C$main.c$156$2_0$215
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:156: void ScrollBlock()
 ;	---------------------------------
 ; Function ScrollBlock
 ; ---------------------------------
 _ScrollBlock::
 	add	sp, #-7
-	C$main.c$154$3_0$216	= .
-	.globl	C$main.c$154$3_0$216
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:154: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$158$3_0$216	= .
+	.globl	C$main.c$158$3_0$216
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:158: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ldhl	sp,	#4
 	ld	(hl), #0x00
 00114$:
@@ -2134,17 +2178,17 @@ _ScrollBlock::
 	ld	a, (hl)
 	sub	a, #0x06
 	jp	NC, 00116$
-	C$main.c$156$3_0$216	= .
-	.globl	C$main.c$156$3_0$216
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:156: uint8_t baseSpriteId = i * BLOCK_SPRITE_OFFSET;
+	C$main.c$160$3_0$216	= .
+	.globl	C$main.c$160$3_0$216
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:160: uint8_t baseSpriteId = i * BLOCK_SPRITE_OFFSET;
 	ld	a, (hl)
 	add	a, a
 	add	a, a
 	ldhl	sp,	#0
 	ld	(hl), a
-	C$main.c$157$3_0$216	= .
-	.globl	C$main.c$157$3_0$216
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:157: block[i].x -= 1;
+	C$main.c$161$3_0$216	= .
+	.globl	C$main.c$161$3_0$216
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:161: block[i].x -= 1;
 	ldhl	sp,	#4
 	ld	a, (hl+)
 	ld	(hl+), a
@@ -2186,9 +2230,9 @@ _ScrollBlock::
 	ld	l, (hl)
 	ld	h, a
 	ld	(hl), c
-	C$main.c$158$2_0$215	= .
-	.globl	C$main.c$158$2_0$215
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:158: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
+	C$main.c$162$2_0$215	= .
+	.globl	C$main.c$162$2_0$215
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:162: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
 	ldhl	sp,	#5
 	ld	(hl), #0x00
 00111$:
@@ -2198,9 +2242,9 @@ _ScrollBlock::
 	ld	a, (hl)
 	sub	a, b
 	jp	Z,00115$
-	C$main.c$160$7_0$220	= .
-	.globl	C$main.c$160$7_0$220
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:160: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
+	C$main.c$164$7_0$220	= .
+	.globl	C$main.c$164$7_0$220
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:164: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
 	ldhl	sp,	#0
 	ld	a, (hl)
 	ldhl	sp,	#5
@@ -2218,9 +2262,9 @@ _ScrollBlock::
 	ldhl	sp,	#3
 	sub	a, (hl)
 	jr	Z, 00112$
-	C$main.c$162$2_0$215	= .
-	.globl	C$main.c$162$2_0$215
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:162: uint8_t index = baseSpriteId + iy + (ix * block->blockWidth);
+	C$main.c$166$2_0$215	= .
+	.globl	C$main.c$166$2_0$215
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:166: uint8_t index = baseSpriteId + iy + (ix * block->blockWidth);
 	ldhl	sp,	#3
 	ld	e, (hl)
 	ldhl	sp,	#6
@@ -2245,9 +2289,9 @@ _ScrollBlock::
 	ld	(hl+), a
 	dec	(hl)
 	ld	a, (hl)
-	C$main.c$164$7_0$220	= .
-	.globl	C$main.c$164$7_0$220
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:164: if(block[i].x <= -128)
+	C$main.c$168$7_0$220	= .
+	.globl	C$main.c$168$7_0$220
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:168: if(block[i].x <= -128)
 	ldhl	sp,	#4
 	ld	a, (hl)
 	ld	d, #0x00
@@ -2287,58 +2331,82 @@ _ScrollBlock::
 	scf
 00175$:
 	jr	C, 00109$
-	C$main.c$166$8_0$221	= .
-	.globl	C$main.c$166$8_0$221
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:166: block[i].x = 127;
+	C$main.c$170$8_0$221	= .
+	.globl	C$main.c$170$8_0$221
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:170: block[i].x = 127;
 	ldhl	sp,	#2
 	ld	a,	(hl+)
 	ld	h, (hl)
 	ld	l, a
 	ld	(hl), #0x7f
 00109$:
-	C$main.c$160$6_0$219	= .
-	.globl	C$main.c$160$6_0$219
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:160: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
+	C$main.c$164$6_0$219	= .
+	.globl	C$main.c$164$6_0$219
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:164: for (uint8_t ix = 0; ix != block->blockWidth; ix++)
 	ldhl	sp,	#6
 	inc	(hl)
 	jr	00108$
 00112$:
-	C$main.c$158$4_0$217	= .
-	.globl	C$main.c$158$4_0$217
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:158: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
+	C$main.c$162$4_0$217	= .
+	.globl	C$main.c$162$4_0$217
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:162: for (uint8_t iy = 0; iy != block->blockHeight; iy++)
 	ldhl	sp,	#5
 	inc	(hl)
 	jp	00111$
 00115$:
-	C$main.c$154$2_0$215	= .
-	.globl	C$main.c$154$2_0$215
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:154: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$158$2_0$215	= .
+	.globl	C$main.c$158$2_0$215
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:158: for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ldhl	sp,	#4
 	inc	(hl)
 	jp	00114$
 00116$:
-	C$main.c$171$2_0$215	= .
-	.globl	C$main.c$171$2_0$215
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:171: }
+	C$main.c$175$2_0$215	= .
+	.globl	C$main.c$175$2_0$215
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:175: }
 	add	sp, #7
-	C$main.c$171$2_0$215	= .
-	.globl	C$main.c$171$2_0$215
+	C$main.c$175$2_0$215	= .
+	.globl	C$main.c$175$2_0$215
 	XG$ScrollBlock$0$0	= .
 	.globl	XG$ScrollBlock$0$0
 	ret
 	G$main$0$0	= .
 	.globl	G$main$0$0
-	C$main.c$173$2_0$226	= .
-	.globl	C$main.c$173$2_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:173: void main(void)
+	C$main.c$177$2_0$226	= .
+	.globl	C$main.c$177$2_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:177: void main(void)
 ;	---------------------------------
 ; Function main
 ; ---------------------------------
 _main::
 	add	sp, #-4
-	C$main.c$176$1_0$226	= .
-	.globl	C$main.c$176$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:176: initarand(__rand_seed);
+	C$main.c$180$1_0$226	= .
+	.globl	C$main.c$180$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:180: NR52_REG = 0x80; // 1000 0000 turns on sound
+	ld	a, #0x80
+	ldh	(_NR52_REG + 0), a
+	C$main.c$181$1_0$226	= .
+	.globl	C$main.c$181$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:181: NR50_REG = 0x77; // sets the volume for both left and right channel to max
+	ld	a, #0x77
+	ldh	(_NR50_REG + 0), a
+	C$main.c$182$1_0$226	= .
+	.globl	C$main.c$182$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:182: NR51_REG = 0xFF; // select which chanels using
+	ld	a, #0xff
+	ldh	(_NR51_REG + 0), a
+	C$main.c$184$1_0$226	= .
+	.globl	C$main.c$184$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:184: ShowTitle();
+	call	_ShowTitle
+	C$main.c$185$1_0$226	= .
+	.globl	C$main.c$185$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:185: delay(2000);
+	ld	de, #0x07d0
+	call	_delay
+	C$main.c$188$1_0$226	= .
+	.globl	C$main.c$188$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:188: initarand(__rand_seed);
 	ld	hl, #___rand_seed
 	ld	a, (hl+)
 	ld	e, a
@@ -2346,22 +2414,22 @@ _main::
 	push	de
 	call	_initarand
 	pop	hl
-	C$main.c$178$1_0$226	= .
-	.globl	C$main.c$178$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:178: SetupBackGround();
+	C$main.c$190$1_0$226	= .
+	.globl	C$main.c$190$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:190: SetupBackGround();
 	call	_SetupBackGround
-	C$main.c$180$1_0$226	= .
-	.globl	C$main.c$180$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:180: set_sprite_data(0, BirdSprite_tileset_size, BirdSprite_tileset);
+	C$main.c$192$1_0$226	= .
+	.globl	C$main.c$192$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:192: set_sprite_data(0, BirdSprite_tileset_size, BirdSprite_tileset);
 	ld	de, #_BirdSprite_tileset
 	push	de
 	ld	hl, #0x2600
 	push	hl
 	call	_set_sprite_data
 	add	sp, #4
-	C$main.c$182$1_0$226	= .
-	.globl	C$main.c$182$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:182: SetupCharacter(&player, 0, 2, 2, 0, 8, BirdSprite_tilemap);
+	C$main.c$194$1_0$226	= .
+	.globl	C$main.c$194$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:194: SetupCharacter(&player, 0, 2, 2, 0, 8, BirdSprite_tilemap);
 	ld	de, #_BirdSprite_tilemap
 	push	de
 	ld	a, #0x08
@@ -2377,27 +2445,27 @@ _main::
 	xor	a, a
 	ld	de, #_player
 	call	_SetupCharacter
-	C$main.c$184$1_0$226	= .
-	.globl	C$main.c$184$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:184: MoveCharacter(&player, 16, 56);
+	C$main.c$196$1_0$226	= .
+	.globl	C$main.c$196$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:196: MoveCharacter(&player, 16, 56);
 	ld	a, #0x38
 	push	af
 	inc	sp
 	ld	a, #0x10
 	ld	de, #_player
 	call	_MoveCharacter
-	C$main.c$187$3_0$227	= .
-	.globl	C$main.c$187$3_0$227
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:187: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$199$3_0$227	= .
+	.globl	C$main.c$199$3_0$227
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:199: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ld	c, #0x00
 00111$:
 	ld	a, c
 	xor	a, #0x80
 	sub	a, #0x86
 	jr	NC, 00101$
-	C$main.c$189$3_0$228	= .
-	.globl	C$main.c$189$3_0$228
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:189: block[i].x = 60 * (i + 1);
+	C$main.c$201$3_0$228	= .
+	.globl	C$main.c$201$3_0$228
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:201: block[i].x = 60 * (i + 1);
 	ld	a, c
 	ld	l, a
 ;	spillPairReg hl
@@ -2438,18 +2506,18 @@ _main::
 	ld	l, (hl)
 	ld	h, a
 	ld	(hl), c
-	C$main.c$190$3_0$228	= .
-	.globl	C$main.c$190$3_0$228
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:190: block[i].y = 20 * (i + 1);
+	C$main.c$202$3_0$228	= .
+	.globl	C$main.c$202$3_0$228
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:202: block[i].y = 20 * (i + 1);
 	ldhl	sp,	#1
 	ld	a, (hl+)
 	ld	c, a
 	ld	a, (hl+)
 	ld	b, a
 	inc	bc
-	C$main.c$191$3_0$228	= .
-	.globl	C$main.c$191$3_0$228
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:191: block[i].blockWidth = 2;
+	C$main.c$203$3_0$228	= .
+	.globl	C$main.c$203$3_0$228
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:203: block[i].blockWidth = 2;
 	ld	a, (hl-)
 	dec	hl
 	ld	e, a
@@ -2461,9 +2529,9 @@ _main::
 	ld	(bc), a
 	ld	a, (hl+)
 	ld	c, a
-	C$main.c$192$3_0$228	= .
-	.globl	C$main.c$192$3_0$228
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:192: block[i].blockHeight = 2;
+	C$main.c$204$3_0$228	= .
+	.globl	C$main.c$204$3_0$228
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:204: block[i].blockHeight = 2;
 	ld	a, (hl-)
 	ld	b, a
 	inc	bc
@@ -2472,9 +2540,9 @@ _main::
 	ld	(bc), a
 	ld	a, (hl+)
 	ld	c, a
-	C$main.c$187$2_0$227	= .
-	.globl	C$main.c$187$2_0$227
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:187: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$199$2_0$227	= .
+	.globl	C$main.c$199$2_0$227
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:199: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ld	a, (hl+)
 	ld	b, a
 	inc	bc
@@ -2485,45 +2553,45 @@ _main::
 	ld	c, (hl)
 	jr	00111$
 00101$:
-	C$main.c$195$1_0$226	= .
-	.globl	C$main.c$195$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:195: SetupBlock(block);
+	C$main.c$207$1_0$226	= .
+	.globl	C$main.c$207$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:207: SetupBlock(block);
 	ld	de, #_block
 	call	_SetupBlock
-	C$main.c$197$1_0$226	= .
-	.globl	C$main.c$197$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:197: SHOW_BKG;
+	C$main.c$209$1_0$226	= .
+	.globl	C$main.c$209$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:209: SHOW_BKG;
 	ldh	a, (_LCDC_REG + 0)
 	or	a, #0x01
 	ldh	(_LCDC_REG + 0), a
-	C$main.c$198$1_0$226	= .
-	.globl	C$main.c$198$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:198: SHOW_SPRITES;
+	C$main.c$210$1_0$226	= .
+	.globl	C$main.c$210$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:210: SHOW_SPRITES;
 	ldh	a, (_LCDC_REG + 0)
 	or	a, #0x02
 	ldh	(_LCDC_REG + 0), a
-	C$main.c$199$1_0$226	= .
-	.globl	C$main.c$199$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:199: DISPLAY_ON;
+	C$main.c$211$1_0$226	= .
+	.globl	C$main.c$211$1_0$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:211: DISPLAY_ON;
 	ldh	a, (_LCDC_REG + 0)
 	or	a, #0x80
 	ldh	(_LCDC_REG + 0), a
-	C$main.c$201$2_0$229	= .
-	.globl	C$main.c$201$2_0$229
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:201: BOOLEAN gameLoop = 1;
+	C$main.c$213$2_0$229	= .
+	.globl	C$main.c$213$2_0$229
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:213: BOOLEAN gameLoop = 1;
 	ldhl	sp,	#2
 	ld	(hl), #0x01
-	C$main.c$203$2_1$230	= .
-	.globl	C$main.c$203$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:203: while(gameLoop)
+	C$main.c$215$2_1$230	= .
+	.globl	C$main.c$215$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:215: while(gameLoop)
 00105$:
 	ldhl	sp,	#2
 	ld	a, (hl)
 	or	a, a
 	jp	Z, 00107$
-	C$main.c$205$2_1$230	= .
-	.globl	C$main.c$205$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:205: player.underfootState = player.y >= GLOUND_LEVEL ? FOOT_ON_LAND : FOOT_IN_AIR;
+	C$main.c$217$2_1$230	= .
+	.globl	C$main.c$217$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:217: player.underfootState = player.y >= GLOUND_LEVEL ? FOOT_ON_LAND : FOOT_IN_AIR;
 	ld	a, (#(_player + 7) + 0)
 	sub	a, #0x82
 	jr	C, 00118$
@@ -2544,42 +2612,42 @@ _main::
 	ldhl	sp,	#0
 	ld	a, (hl)
 	ld	(#(_player + 14)),a
-	C$main.c$206$2_1$230	= .
-	.globl	C$main.c$206$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:206: MoveCharacterWithJoypad(&player);
+	C$main.c$218$2_1$230	= .
+	.globl	C$main.c$218$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:218: MoveCharacterWithJoypad(&player);
 	ld	de, #_player
 	call	_MoveCharacterWithJoypad
-	C$main.c$207$2_1$230	= .
-	.globl	C$main.c$207$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:207: MovementPhysics(&player, 3);
+	C$main.c$219$2_1$230	= .
+	.globl	C$main.c$219$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:219: MovementPhysics(&player, 3);
 	ld	a, #0x03
 	ld	de, #_player
 	call	_MovementPhysics
-	C$main.c$208$2_1$230	= .
-	.globl	C$main.c$208$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:208: LoadNextSpriteFrame(&player);
+	C$main.c$220$2_1$230	= .
+	.globl	C$main.c$220$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:220: LoadNextSpriteFrame(&player);
 	ld	de, #_player
 	call	_LoadNextSpriteFrame
 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1392: SCX_REG+=x, SCY_REG+=y;
 	ldh	a, (_SCX_REG + 0)
 	inc	a
 	ldh	(_SCX_REG + 0), a
-	C$main.c$211$2_1$230	= .
-	.globl	C$main.c$211$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:211: ScrollBlock();
+	C$main.c$223$2_1$230	= .
+	.globl	C$main.c$223$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:223: ScrollBlock();
 	call	_ScrollBlock
-	C$main.c$213$1_1$226	= .
-	.globl	C$main.c$213$1_1$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:213: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$225$1_1$226	= .
+	.globl	C$main.c$225$1_1$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:225: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	ld	c, #0x00
 00114$:
 	ld	a, c
 	xor	a, #0x80
 	sub	a, #0x86
 	jr	NC, 00104$
-	C$main.c$215$4_1$232	= .
-	.globl	C$main.c$215$4_1$232
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:215: if(Hit(player.x, player.y, block[i].x, block[i].y))
+	C$main.c$227$4_1$232	= .
+	.globl	C$main.c$227$4_1$232
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:227: if(Hit(player.x, player.y, block[i].x, block[i].y))
 	ld	a, c
 	ld	l, a
 ;	spillPairReg hl
@@ -2619,31 +2687,31 @@ _main::
 	pop	bc
 	or	a, a
 	jr	Z, 00115$
-	C$main.c$217$5_1$233	= .
-	.globl	C$main.c$217$5_1$233
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:217: gameLoop= 0;
+	C$main.c$229$5_1$233	= .
+	.globl	C$main.c$229$5_1$233
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:229: gameLoop= 0;
 	ldhl	sp,	#2
 	ld	(hl), #0x00
-	C$main.c$218$5_1$233	= .
-	.globl	C$main.c$218$5_1$233
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:218: break;
+	C$main.c$230$5_1$233	= .
+	.globl	C$main.c$230$5_1$233
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:230: break;
 	jr	00104$
 00115$:
-	C$main.c$213$3_1$231	= .
-	.globl	C$main.c$213$3_1$231
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:213: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+	C$main.c$225$3_1$231	= .
+	.globl	C$main.c$225$3_1$231
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:225: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
 	inc	c
 	jr	00114$
 00104$:
-	C$main.c$221$2_1$230	= .
-	.globl	C$main.c$221$2_1$230
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:221: wait_vbl_done();
+	C$main.c$233$2_1$230	= .
+	.globl	C$main.c$233$2_1$230
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:233: wait_vbl_done();
 	call	_wait_vbl_done
 	jp	00105$
 00107$:
-	C$main.c$223$1_1$229	= .
-	.globl	C$main.c$223$1_1$229
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:223: HIDE_SPRITES;
+	C$main.c$235$1_1$229	= .
+	.globl	C$main.c$235$1_1$229
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:235: HIDE_SPRITES;
 	ldh	a, (_LCDC_REG + 0)
 	and	a, #0xfd
 	ldh	(_LCDC_REG + 0), a
@@ -2652,19 +2720,19 @@ _main::
 	ldh	(_SCX_REG + 0), a
 	xor	a, a
 	ldh	(_SCY_REG + 0), a
-	C$main.c$225$1_1$229	= .
-	.globl	C$main.c$225$1_1$229
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:225: printf("GameOver");
+	C$main.c$237$1_1$229	= .
+	.globl	C$main.c$237$1_1$229
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:237: printf("GameOver");
 	ld	de, #___str_0
 	push	de
 	call	_printf
 	pop	hl
-	C$main.c$226$1_1$226	= .
-	.globl	C$main.c$226$1_1$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:226: }
+	C$main.c$238$1_1$226	= .
+	.globl	C$main.c$238$1_1$226
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:238: }
 	add	sp, #4
-	C$main.c$226$1_1$226	= .
-	.globl	C$main.c$226$1_1$226
+	C$main.c$238$1_1$226	= .
+	.globl	C$main.c$238$1_1$226
 	XG$main$0$0	= .
 	.globl	XG$main$0$0
 	ret
