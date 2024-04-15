@@ -26,8 +26,8 @@
 	.globl _set_bkg_tiles
 	.globl _set_bkg_data
 	.globl _wait_vbl_done
+	.globl _waitpad
 	.globl _joypad
-	.globl _delay
 	.globl _initarand
 	.globl _slowingX
 	.globl _lastMovementY
@@ -2401,9 +2401,9 @@ _main::
 	call	_ShowTitle
 	C$main.c$185$1_0$226	= .
 	.globl	C$main.c$185$1_0$226
-;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:185: delay(2000);
-	ld	de, #0x07d0
-	call	_delay
+;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:185: waitpad(J_A);	
+	ld	a, #0x10
+	call	_waitpad
 	C$main.c$188$1_0$226	= .
 	.globl	C$main.c$188$1_0$226
 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:188: initarand(__rand_seed);

@@ -26,8 +26,8 @@
                                      26 	.globl _set_bkg_tiles
                                      27 	.globl _set_bkg_data
                                      28 	.globl _wait_vbl_done
-                                     29 	.globl _joypad
-                                     30 	.globl _delay
+                                     29 	.globl _waitpad
+                                     30 	.globl _joypad
                                      31 	.globl _initarand
                                      32 	.globl _slowingX
                                      33 	.globl _lastMovementY
@@ -2401,346 +2401,346 @@
       0008CF CDrC5r03         [24] 2401 	call	_ShowTitle
                            0008D2  2402 	C$main.c$185$1_0$226	= .
                                    2403 	.globl	C$main.c$185$1_0$226
-                                   2404 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:185: delay(2000);
-      0008D2 11 D0 07         [12] 2405 	ld	de, #0x07d0
-      0008D5 CDr00r00         [24] 2406 	call	_delay
-                           0008D8  2407 	C$main.c$188$1_0$226	= .
+                                   2404 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:185: waitpad(J_A);	
+      0008D2 3E 10            [ 8] 2405 	ld	a, #0x10
+      0008D4 CDr00r00         [24] 2406 	call	_waitpad
+                           0008D7  2407 	C$main.c$188$1_0$226	= .
                                    2408 	.globl	C$main.c$188$1_0$226
                                    2409 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:188: initarand(__rand_seed);
-      0008D8 21r00r00         [12] 2410 	ld	hl, #___rand_seed
-      0008DB 2A               [ 8] 2411 	ld	a, (hl+)
-      0008DC 5F               [ 4] 2412 	ld	e, a
-      0008DD 56               [ 8] 2413 	ld	d, (hl)
-      0008DE D5               [16] 2414 	push	de
-      0008DF CDr00r00         [24] 2415 	call	_initarand
-      0008E2 E1               [12] 2416 	pop	hl
-                           0008E3  2417 	C$main.c$190$1_0$226	= .
+      0008D7 21r00r00         [12] 2410 	ld	hl, #___rand_seed
+      0008DA 2A               [ 8] 2411 	ld	a, (hl+)
+      0008DB 5F               [ 4] 2412 	ld	e, a
+      0008DC 56               [ 8] 2413 	ld	d, (hl)
+      0008DD D5               [16] 2414 	push	de
+      0008DE CDr00r00         [24] 2415 	call	_initarand
+      0008E1 E1               [12] 2416 	pop	hl
+                           0008E2  2417 	C$main.c$190$1_0$226	= .
                                    2418 	.globl	C$main.c$190$1_0$226
                                    2419 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:190: SetupBackGround();
-      0008E3 CDrF5r03         [24] 2420 	call	_SetupBackGround
-                           0008E6  2421 	C$main.c$192$1_0$226	= .
+      0008E2 CDrF5r03         [24] 2420 	call	_SetupBackGround
+                           0008E5  2421 	C$main.c$192$1_0$226	= .
                                    2422 	.globl	C$main.c$192$1_0$226
                                    2423 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:192: set_sprite_data(0, BirdSprite_tileset_size, BirdSprite_tileset);
-      0008E6 11r00r00         [12] 2424 	ld	de, #_BirdSprite_tileset
-      0008E9 D5               [16] 2425 	push	de
-      0008EA 21 00 26         [12] 2426 	ld	hl, #0x2600
-      0008ED E5               [16] 2427 	push	hl
-      0008EE CDr00r00         [24] 2428 	call	_set_sprite_data
-      0008F1 E8 04            [16] 2429 	add	sp, #4
-                           0008F3  2430 	C$main.c$194$1_0$226	= .
+      0008E5 11r00r00         [12] 2424 	ld	de, #_BirdSprite_tileset
+      0008E8 D5               [16] 2425 	push	de
+      0008E9 21 00 26         [12] 2426 	ld	hl, #0x2600
+      0008EC E5               [16] 2427 	push	hl
+      0008ED CDr00r00         [24] 2428 	call	_set_sprite_data
+      0008F0 E8 04            [16] 2429 	add	sp, #4
+                           0008F2  2430 	C$main.c$194$1_0$226	= .
                                    2431 	.globl	C$main.c$194$1_0$226
                                    2432 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:194: SetupCharacter(&player, 0, 2, 2, 0, 8, BirdSprite_tilemap);
-      0008F3 11r00r00         [12] 2433 	ld	de, #_BirdSprite_tilemap
-      0008F6 D5               [16] 2434 	push	de
-      0008F7 3E 08            [ 8] 2435 	ld	a, #0x08
-      0008F9 F5               [16] 2436 	push	af
-      0008FA 33               [ 8] 2437 	inc	sp
-      0008FB AF               [ 4] 2438 	xor	a, a
-      0008FC 67               [ 4] 2439 	ld	h, a
-      0008FD 2E 02            [ 8] 2440 	ld	l, #0x02
-      0008FF E5               [16] 2441 	push	hl
-      000900 3E 02            [ 8] 2442 	ld	a, #0x02
-      000902 F5               [16] 2443 	push	af
-      000903 33               [ 8] 2444 	inc	sp
-      000904 AF               [ 4] 2445 	xor	a, a
-      000905 11r00r00         [12] 2446 	ld	de, #_player
-      000908 CDr77r03         [24] 2447 	call	_SetupCharacter
-                           00090B  2448 	C$main.c$196$1_0$226	= .
+      0008F2 11r00r00         [12] 2433 	ld	de, #_BirdSprite_tilemap
+      0008F5 D5               [16] 2434 	push	de
+      0008F6 3E 08            [ 8] 2435 	ld	a, #0x08
+      0008F8 F5               [16] 2436 	push	af
+      0008F9 33               [ 8] 2437 	inc	sp
+      0008FA AF               [ 4] 2438 	xor	a, a
+      0008FB 67               [ 4] 2439 	ld	h, a
+      0008FC 2E 02            [ 8] 2440 	ld	l, #0x02
+      0008FE E5               [16] 2441 	push	hl
+      0008FF 3E 02            [ 8] 2442 	ld	a, #0x02
+      000901 F5               [16] 2443 	push	af
+      000902 33               [ 8] 2444 	inc	sp
+      000903 AF               [ 4] 2445 	xor	a, a
+      000904 11r00r00         [12] 2446 	ld	de, #_player
+      000907 CDr77r03         [24] 2447 	call	_SetupCharacter
+                           00090A  2448 	C$main.c$196$1_0$226	= .
                                    2449 	.globl	C$main.c$196$1_0$226
                                    2450 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:196: MoveCharacter(&player, 16, 56);
-      00090B 3E 38            [ 8] 2451 	ld	a, #0x38
-      00090D F5               [16] 2452 	push	af
-      00090E 33               [ 8] 2453 	inc	sp
-      00090F 3E 10            [ 8] 2454 	ld	a, #0x10
-      000911 11r00r00         [12] 2455 	ld	de, #_player
-      000914 CDr05r02         [24] 2456 	call	_MoveCharacter
-                           000917  2457 	C$main.c$199$3_0$227	= .
+      00090A 3E 38            [ 8] 2451 	ld	a, #0x38
+      00090C F5               [16] 2452 	push	af
+      00090D 33               [ 8] 2453 	inc	sp
+      00090E 3E 10            [ 8] 2454 	ld	a, #0x10
+      000910 11r00r00         [12] 2455 	ld	de, #_player
+      000913 CDr05r02         [24] 2456 	call	_MoveCharacter
+                           000916  2457 	C$main.c$199$3_0$227	= .
                                    2458 	.globl	C$main.c$199$3_0$227
                                    2459 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:199: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
-      000917 0E 00            [ 8] 2460 	ld	c, #0x00
-      000919                       2461 00111$:
-      000919 79               [ 4] 2462 	ld	a, c
-      00091A EE 80            [ 8] 2463 	xor	a, #0x80
-      00091C D6 86            [ 8] 2464 	sub	a, #0x86
-      00091E 30 4E            [12] 2465 	jr	NC, 00101$
-                           000920  2466 	C$main.c$201$3_0$228	= .
+      000916 0E 00            [ 8] 2460 	ld	c, #0x00
+      000918                       2461 00111$:
+      000918 79               [ 4] 2462 	ld	a, c
+      000919 EE 80            [ 8] 2463 	xor	a, #0x80
+      00091B D6 86            [ 8] 2464 	sub	a, #0x86
+      00091D 30 4E            [12] 2465 	jr	NC, 00101$
+                           00091F  2466 	C$main.c$201$3_0$228	= .
                                    2467 	.globl	C$main.c$201$3_0$228
                                    2468 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:201: block[i].x = 60 * (i + 1);
-      000920 79               [ 4] 2469 	ld	a, c
-      000921 6F               [ 4] 2470 	ld	l, a
+      00091F 79               [ 4] 2469 	ld	a, c
+      000920 6F               [ 4] 2470 	ld	l, a
                                    2471 ;	spillPairReg hl
                                    2472 ;	spillPairReg hl
-      000922 07               [ 4] 2473 	rlca
-      000923 9F               [ 4] 2474 	sbc	a, a
-      000924 67               [ 4] 2475 	ld	h, a
+      000921 07               [ 4] 2473 	rlca
+      000922 9F               [ 4] 2474 	sbc	a, a
+      000923 67               [ 4] 2475 	ld	h, a
                                    2476 ;	spillPairReg hl
                                    2477 ;	spillPairReg hl
-      000925 29               [ 8] 2478 	add	hl, hl
-      000926 29               [ 8] 2479 	add	hl, hl
-      000927 5D               [ 4] 2480 	ld	e, l
-      000928 54               [ 4] 2481 	ld	d, h
-      000929 21r13r00         [12] 2482 	ld	hl, #_block
-      00092C 19               [ 8] 2483 	add	hl, de
-      00092D E5               [16] 2484 	push	hl
-      00092E 7D               [ 4] 2485 	ld	a, l
-      00092F F8 03            [12] 2486 	ldhl	sp,	#3
-      000931 77               [ 8] 2487 	ld	(hl), a
-      000932 E1               [12] 2488 	pop	hl
-      000933 7C               [ 4] 2489 	ld	a, h
-      000934 F8 02            [12] 2490 	ldhl	sp,	#2
-      000936 22               [ 8] 2491 	ld	(hl+), a
-      000937 79               [ 4] 2492 	ld	a, c
-      000938 3C               [ 4] 2493 	inc	a
-      000939 77               [ 8] 2494 	ld	(hl), a
-      00093A 3A               [ 8] 2495 	ld	a, (hl-)
-      00093B 4F               [ 4] 2496 	ld	c, a
-      00093C 87               [ 4] 2497 	add	a, a
-      00093D 87               [ 4] 2498 	add	a, a
-      00093E 87               [ 4] 2499 	add	a, a
-      00093F 87               [ 4] 2500 	add	a, a
-      000940 91               [ 4] 2501 	sub	a, c
-      000941 87               [ 4] 2502 	add	a, a
-      000942 87               [ 4] 2503 	add	a, a
-      000943 4F               [ 4] 2504 	ld	c, a
-      000944 3A               [ 8] 2505 	ld	a, (hl-)
-      000945 6E               [ 8] 2506 	ld	l, (hl)
-      000946 67               [ 4] 2507 	ld	h, a
-      000947 71               [ 8] 2508 	ld	(hl), c
-                           000948  2509 	C$main.c$202$3_0$228	= .
+      000924 29               [ 8] 2478 	add	hl, hl
+      000925 29               [ 8] 2479 	add	hl, hl
+      000926 5D               [ 4] 2480 	ld	e, l
+      000927 54               [ 4] 2481 	ld	d, h
+      000928 21r13r00         [12] 2482 	ld	hl, #_block
+      00092B 19               [ 8] 2483 	add	hl, de
+      00092C E5               [16] 2484 	push	hl
+      00092D 7D               [ 4] 2485 	ld	a, l
+      00092E F8 03            [12] 2486 	ldhl	sp,	#3
+      000930 77               [ 8] 2487 	ld	(hl), a
+      000931 E1               [12] 2488 	pop	hl
+      000932 7C               [ 4] 2489 	ld	a, h
+      000933 F8 02            [12] 2490 	ldhl	sp,	#2
+      000935 22               [ 8] 2491 	ld	(hl+), a
+      000936 79               [ 4] 2492 	ld	a, c
+      000937 3C               [ 4] 2493 	inc	a
+      000938 77               [ 8] 2494 	ld	(hl), a
+      000939 3A               [ 8] 2495 	ld	a, (hl-)
+      00093A 4F               [ 4] 2496 	ld	c, a
+      00093B 87               [ 4] 2497 	add	a, a
+      00093C 87               [ 4] 2498 	add	a, a
+      00093D 87               [ 4] 2499 	add	a, a
+      00093E 87               [ 4] 2500 	add	a, a
+      00093F 91               [ 4] 2501 	sub	a, c
+      000940 87               [ 4] 2502 	add	a, a
+      000941 87               [ 4] 2503 	add	a, a
+      000942 4F               [ 4] 2504 	ld	c, a
+      000943 3A               [ 8] 2505 	ld	a, (hl-)
+      000944 6E               [ 8] 2506 	ld	l, (hl)
+      000945 67               [ 4] 2507 	ld	h, a
+      000946 71               [ 8] 2508 	ld	(hl), c
+                           000947  2509 	C$main.c$202$3_0$228	= .
                                    2510 	.globl	C$main.c$202$3_0$228
                                    2511 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:202: block[i].y = 20 * (i + 1);
-      000948 F8 01            [12] 2512 	ldhl	sp,	#1
-      00094A 2A               [ 8] 2513 	ld	a, (hl+)
-      00094B 4F               [ 4] 2514 	ld	c, a
-      00094C 2A               [ 8] 2515 	ld	a, (hl+)
-      00094D 47               [ 4] 2516 	ld	b, a
-      00094E 03               [ 8] 2517 	inc	bc
-                           00094F  2518 	C$main.c$203$3_0$228	= .
+      000947 F8 01            [12] 2512 	ldhl	sp,	#1
+      000949 2A               [ 8] 2513 	ld	a, (hl+)
+      00094A 4F               [ 4] 2514 	ld	c, a
+      00094B 2A               [ 8] 2515 	ld	a, (hl+)
+      00094C 47               [ 4] 2516 	ld	b, a
+      00094D 03               [ 8] 2517 	inc	bc
+                           00094E  2518 	C$main.c$203$3_0$228	= .
                                    2519 	.globl	C$main.c$203$3_0$228
                                    2520 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:203: block[i].blockWidth = 2;
-      00094F 3A               [ 8] 2521 	ld	a, (hl-)
-      000950 2B               [ 8] 2522 	dec	hl
-      000951 5F               [ 4] 2523 	ld	e, a
-      000952 87               [ 4] 2524 	add	a, a
-      000953 87               [ 4] 2525 	add	a, a
-      000954 83               [ 4] 2526 	add	a, e
-      000955 87               [ 4] 2527 	add	a, a
-      000956 87               [ 4] 2528 	add	a, a
-      000957 02               [ 8] 2529 	ld	(bc), a
-      000958 2A               [ 8] 2530 	ld	a, (hl+)
-      000959 4F               [ 4] 2531 	ld	c, a
-                           00095A  2532 	C$main.c$204$3_0$228	= .
+      00094E 3A               [ 8] 2521 	ld	a, (hl-)
+      00094F 2B               [ 8] 2522 	dec	hl
+      000950 5F               [ 4] 2523 	ld	e, a
+      000951 87               [ 4] 2524 	add	a, a
+      000952 87               [ 4] 2525 	add	a, a
+      000953 83               [ 4] 2526 	add	a, e
+      000954 87               [ 4] 2527 	add	a, a
+      000955 87               [ 4] 2528 	add	a, a
+      000956 02               [ 8] 2529 	ld	(bc), a
+      000957 2A               [ 8] 2530 	ld	a, (hl+)
+      000958 4F               [ 4] 2531 	ld	c, a
+                           000959  2532 	C$main.c$204$3_0$228	= .
                                    2533 	.globl	C$main.c$204$3_0$228
                                    2534 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:204: block[i].blockHeight = 2;
-      00095A 3A               [ 8] 2535 	ld	a, (hl-)
-      00095B 47               [ 4] 2536 	ld	b, a
-      00095C 03               [ 8] 2537 	inc	bc
-      00095D 03               [ 8] 2538 	inc	bc
-      00095E 3E 02            [ 8] 2539 	ld	a, #0x02
-      000960 02               [ 8] 2540 	ld	(bc), a
-      000961 2A               [ 8] 2541 	ld	a, (hl+)
-      000962 4F               [ 4] 2542 	ld	c, a
-                           000963  2543 	C$main.c$199$2_0$227	= .
+      000959 3A               [ 8] 2535 	ld	a, (hl-)
+      00095A 47               [ 4] 2536 	ld	b, a
+      00095B 03               [ 8] 2537 	inc	bc
+      00095C 03               [ 8] 2538 	inc	bc
+      00095D 3E 02            [ 8] 2539 	ld	a, #0x02
+      00095F 02               [ 8] 2540 	ld	(bc), a
+      000960 2A               [ 8] 2541 	ld	a, (hl+)
+      000961 4F               [ 4] 2542 	ld	c, a
+                           000962  2543 	C$main.c$199$2_0$227	= .
                                    2544 	.globl	C$main.c$199$2_0$227
                                    2545 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:199: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
-      000963 2A               [ 8] 2546 	ld	a, (hl+)
-      000964 47               [ 4] 2547 	ld	b, a
-      000965 03               [ 8] 2548 	inc	bc
-      000966 03               [ 8] 2549 	inc	bc
-      000967 03               [ 8] 2550 	inc	bc
-      000968 3E 02            [ 8] 2551 	ld	a, #0x02
-      00096A 02               [ 8] 2552 	ld	(bc), a
-      00096B 4E               [ 8] 2553 	ld	c, (hl)
-      00096C 18 AB            [12] 2554 	jr	00111$
-      00096E                       2555 00101$:
-                           00096E  2556 	C$main.c$207$1_0$226	= .
+      000962 2A               [ 8] 2546 	ld	a, (hl+)
+      000963 47               [ 4] 2547 	ld	b, a
+      000964 03               [ 8] 2548 	inc	bc
+      000965 03               [ 8] 2549 	inc	bc
+      000966 03               [ 8] 2550 	inc	bc
+      000967 3E 02            [ 8] 2551 	ld	a, #0x02
+      000969 02               [ 8] 2552 	ld	(bc), a
+      00096A 4E               [ 8] 2553 	ld	c, (hl)
+      00096B 18 AB            [12] 2554 	jr	00111$
+      00096D                       2555 00101$:
+                           00096D  2556 	C$main.c$207$1_0$226	= .
                                    2557 	.globl	C$main.c$207$1_0$226
                                    2558 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:207: SetupBlock(block);
-      00096E 11r13r00         [12] 2559 	ld	de, #_block
-      000971 CDr13r06         [24] 2560 	call	_SetupBlock
-                           000974  2561 	C$main.c$209$1_0$226	= .
+      00096D 11r13r00         [12] 2559 	ld	de, #_block
+      000970 CDr13r06         [24] 2560 	call	_SetupBlock
+                           000973  2561 	C$main.c$209$1_0$226	= .
                                    2562 	.globl	C$main.c$209$1_0$226
                                    2563 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:209: SHOW_BKG;
-      000974 F0r00            [12] 2564 	ldh	a, (_LCDC_REG + 0)
-      000976 F6 01            [ 8] 2565 	or	a, #0x01
-      000978 E0r00            [12] 2566 	ldh	(_LCDC_REG + 0), a
-                           00097A  2567 	C$main.c$210$1_0$226	= .
+      000973 F0r00            [12] 2564 	ldh	a, (_LCDC_REG + 0)
+      000975 F6 01            [ 8] 2565 	or	a, #0x01
+      000977 E0r00            [12] 2566 	ldh	(_LCDC_REG + 0), a
+                           000979  2567 	C$main.c$210$1_0$226	= .
                                    2568 	.globl	C$main.c$210$1_0$226
                                    2569 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:210: SHOW_SPRITES;
-      00097A F0r00            [12] 2570 	ldh	a, (_LCDC_REG + 0)
-      00097C F6 02            [ 8] 2571 	or	a, #0x02
-      00097E E0r00            [12] 2572 	ldh	(_LCDC_REG + 0), a
-                           000980  2573 	C$main.c$211$1_0$226	= .
+      000979 F0r00            [12] 2570 	ldh	a, (_LCDC_REG + 0)
+      00097B F6 02            [ 8] 2571 	or	a, #0x02
+      00097D E0r00            [12] 2572 	ldh	(_LCDC_REG + 0), a
+                           00097F  2573 	C$main.c$211$1_0$226	= .
                                    2574 	.globl	C$main.c$211$1_0$226
                                    2575 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:211: DISPLAY_ON;
-      000980 F0r00            [12] 2576 	ldh	a, (_LCDC_REG + 0)
-      000982 F6 80            [ 8] 2577 	or	a, #0x80
-      000984 E0r00            [12] 2578 	ldh	(_LCDC_REG + 0), a
-                           000986  2579 	C$main.c$213$2_0$229	= .
+      00097F F0r00            [12] 2576 	ldh	a, (_LCDC_REG + 0)
+      000981 F6 80            [ 8] 2577 	or	a, #0x80
+      000983 E0r00            [12] 2578 	ldh	(_LCDC_REG + 0), a
+                           000985  2579 	C$main.c$213$2_0$229	= .
                                    2580 	.globl	C$main.c$213$2_0$229
                                    2581 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:213: BOOLEAN gameLoop = 1;
-      000986 F8 02            [12] 2582 	ldhl	sp,	#2
-      000988 36 01            [12] 2583 	ld	(hl), #0x01
-                           00098A  2584 	C$main.c$215$2_1$230	= .
+      000985 F8 02            [12] 2582 	ldhl	sp,	#2
+      000987 36 01            [12] 2583 	ld	(hl), #0x01
+                           000989  2584 	C$main.c$215$2_1$230	= .
                                    2585 	.globl	C$main.c$215$2_1$230
                                    2586 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:215: while(gameLoop)
-      00098A                       2587 00105$:
-      00098A F8 02            [12] 2588 	ldhl	sp,	#2
-      00098C 7E               [ 8] 2589 	ld	a, (hl)
-      00098D B7               [ 4] 2590 	or	a, a
-      00098E CAr11r0A         [16] 2591 	jp	Z, 00107$
-                           000991  2592 	C$main.c$217$2_1$230	= .
+      000989                       2587 00105$:
+      000989 F8 02            [12] 2588 	ldhl	sp,	#2
+      00098B 7E               [ 8] 2589 	ld	a, (hl)
+      00098C B7               [ 4] 2590 	or	a, a
+      00098D CAr10r0A         [16] 2591 	jp	Z, 00107$
+                           000990  2592 	C$main.c$217$2_1$230	= .
                                    2593 	.globl	C$main.c$217$2_1$230
                                    2594 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:217: player.underfootState = player.y >= GLOUND_LEVEL ? FOOT_ON_LAND : FOOT_IN_AIR;
-      000991 FAr07r00         [16] 2595 	ld	a, (#(_player + 7) + 0)
-      000994 D6 82            [ 8] 2596 	sub	a, #0x82
-      000996 38 09            [12] 2597 	jr	C, 00118$
-      000998 2B               [ 8] 2598 	dec	hl
-      000999 2B               [ 8] 2599 	dec	hl
-      00099A 3E 01            [ 8] 2600 	ld	a, #0x01
-      00099C 22               [ 8] 2601 	ld	(hl+), a
-      00099D AF               [ 4] 2602 	xor	a, a
-      00099E 77               [ 8] 2603 	ld	(hl), a
-      00099F 18 07            [12] 2604 	jr	00119$
-      0009A1                       2605 00118$:
-      0009A1 F8 00            [12] 2606 	ldhl	sp,	#0
-      0009A3 3E 02            [ 8] 2607 	ld	a, #0x02
-      0009A5 22               [ 8] 2608 	ld	(hl+), a
-      0009A6 AF               [ 4] 2609 	xor	a, a
-      0009A7 77               [ 8] 2610 	ld	(hl), a
-      0009A8                       2611 00119$:
-      0009A8 F8 00            [12] 2612 	ldhl	sp,	#0
-      0009AA 7E               [ 8] 2613 	ld	a, (hl)
-      0009AB EAr0Er00         [16] 2614 	ld	(#(_player + 14)),a
-                           0009AE  2615 	C$main.c$218$2_1$230	= .
+      000990 FAr07r00         [16] 2595 	ld	a, (#(_player + 7) + 0)
+      000993 D6 82            [ 8] 2596 	sub	a, #0x82
+      000995 38 09            [12] 2597 	jr	C, 00118$
+      000997 2B               [ 8] 2598 	dec	hl
+      000998 2B               [ 8] 2599 	dec	hl
+      000999 3E 01            [ 8] 2600 	ld	a, #0x01
+      00099B 22               [ 8] 2601 	ld	(hl+), a
+      00099C AF               [ 4] 2602 	xor	a, a
+      00099D 77               [ 8] 2603 	ld	(hl), a
+      00099E 18 07            [12] 2604 	jr	00119$
+      0009A0                       2605 00118$:
+      0009A0 F8 00            [12] 2606 	ldhl	sp,	#0
+      0009A2 3E 02            [ 8] 2607 	ld	a, #0x02
+      0009A4 22               [ 8] 2608 	ld	(hl+), a
+      0009A5 AF               [ 4] 2609 	xor	a, a
+      0009A6 77               [ 8] 2610 	ld	(hl), a
+      0009A7                       2611 00119$:
+      0009A7 F8 00            [12] 2612 	ldhl	sp,	#0
+      0009A9 7E               [ 8] 2613 	ld	a, (hl)
+      0009AA EAr0Er00         [16] 2614 	ld	(#(_player + 14)),a
+                           0009AD  2615 	C$main.c$218$2_1$230	= .
                                    2616 	.globl	C$main.c$218$2_1$230
                                    2617 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:218: MoveCharacterWithJoypad(&player);
-      0009AE 11r00r00         [12] 2618 	ld	de, #_player
-      0009B1 CDrD6r02         [24] 2619 	call	_MoveCharacterWithJoypad
-                           0009B4  2620 	C$main.c$219$2_1$230	= .
+      0009AD 11r00r00         [12] 2618 	ld	de, #_player
+      0009B0 CDrD6r02         [24] 2619 	call	_MoveCharacterWithJoypad
+                           0009B3  2620 	C$main.c$219$2_1$230	= .
                                    2621 	.globl	C$main.c$219$2_1$230
                                    2622 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:219: MovementPhysics(&player, 3);
-      0009B4 3E 03            [ 8] 2623 	ld	a, #0x03
-      0009B6 11r00r00         [12] 2624 	ld	de, #_player
-      0009B9 CDr3Ar04         [24] 2625 	call	_MovementPhysics
-                           0009BC  2626 	C$main.c$220$2_1$230	= .
+      0009B3 3E 03            [ 8] 2623 	ld	a, #0x03
+      0009B5 11r00r00         [12] 2624 	ld	de, #_player
+      0009B8 CDr3Ar04         [24] 2625 	call	_MovementPhysics
+                           0009BB  2626 	C$main.c$220$2_1$230	= .
                                    2627 	.globl	C$main.c$220$2_1$230
                                    2628 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:220: LoadNextSpriteFrame(&player);
-      0009BC 11r00r00         [12] 2629 	ld	de, #_player
-      0009BF CDrB3r01         [24] 2630 	call	_LoadNextSpriteFrame
+      0009BB 11r00r00         [12] 2629 	ld	de, #_player
+      0009BE CDrB3r01         [24] 2630 	call	_LoadNextSpriteFrame
                                    2631 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1392: SCX_REG+=x, SCY_REG+=y;
-      0009C2 F0r00            [12] 2632 	ldh	a, (_SCX_REG + 0)
-      0009C4 3C               [ 4] 2633 	inc	a
-      0009C5 E0r00            [12] 2634 	ldh	(_SCX_REG + 0), a
-                           0009C7  2635 	C$main.c$223$2_1$230	= .
+      0009C1 F0r00            [12] 2632 	ldh	a, (_SCX_REG + 0)
+      0009C3 3C               [ 4] 2633 	inc	a
+      0009C4 E0r00            [12] 2634 	ldh	(_SCX_REG + 0), a
+                           0009C6  2635 	C$main.c$223$2_1$230	= .
                                    2636 	.globl	C$main.c$223$2_1$230
                                    2637 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:223: ScrollBlock();
-      0009C7 CDrE4r07         [24] 2638 	call	_ScrollBlock
-                           0009CA  2639 	C$main.c$225$1_1$226	= .
+      0009C6 CDrE4r07         [24] 2638 	call	_ScrollBlock
+                           0009C9  2639 	C$main.c$225$1_1$226	= .
                                    2640 	.globl	C$main.c$225$1_1$226
                                    2641 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:225: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
-      0009CA 0E 00            [ 8] 2642 	ld	c, #0x00
-      0009CC                       2643 00114$:
-      0009CC 79               [ 4] 2644 	ld	a, c
-      0009CD EE 80            [ 8] 2645 	xor	a, #0x80
-      0009CF D6 86            [ 8] 2646 	sub	a, #0x86
-      0009D1 30 38            [12] 2647 	jr	NC, 00104$
-                           0009D3  2648 	C$main.c$227$4_1$232	= .
+      0009C9 0E 00            [ 8] 2642 	ld	c, #0x00
+      0009CB                       2643 00114$:
+      0009CB 79               [ 4] 2644 	ld	a, c
+      0009CC EE 80            [ 8] 2645 	xor	a, #0x80
+      0009CE D6 86            [ 8] 2646 	sub	a, #0x86
+      0009D0 30 38            [12] 2647 	jr	NC, 00104$
+                           0009D2  2648 	C$main.c$227$4_1$232	= .
                                    2649 	.globl	C$main.c$227$4_1$232
                                    2650 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:227: if(Hit(player.x, player.y, block[i].x, block[i].y))
-      0009D3 79               [ 4] 2651 	ld	a, c
-      0009D4 6F               [ 4] 2652 	ld	l, a
+      0009D2 79               [ 4] 2651 	ld	a, c
+      0009D3 6F               [ 4] 2652 	ld	l, a
                                    2653 ;	spillPairReg hl
                                    2654 ;	spillPairReg hl
-      0009D5 07               [ 4] 2655 	rlca
-      0009D6 9F               [ 4] 2656 	sbc	a, a
-      0009D7 67               [ 4] 2657 	ld	h, a
-      0009D8 29               [ 8] 2658 	add	hl, hl
-      0009D9 29               [ 8] 2659 	add	hl, hl
-      0009DA 11r13r00         [12] 2660 	ld	de, #_block
-      0009DD 19               [ 8] 2661 	add	hl, de
-      0009DE 5D               [ 4] 2662 	ld	e, l
-      0009DF 54               [ 4] 2663 	ld	d, h
-      0009E0 13               [ 8] 2664 	inc	de
-      0009E1 1A               [ 8] 2665 	ld	a, (de)
-      0009E2 46               [ 8] 2666 	ld	b, (hl)
-      0009E3 21r07r00         [12] 2667 	ld	hl, #(_player + 7)
-      0009E6 F5               [16] 2668 	push	af
-      0009E7 7E               [ 8] 2669 	ld	a, (hl)
-      0009E8 F8 05            [12] 2670 	ldhl	sp,	#5
-      0009EA 77               [ 8] 2671 	ld	(hl), a
-      0009EB F1               [12] 2672 	pop	af
-      0009EC 21r06r00         [12] 2673 	ld	hl, #(_player + 6)
-      0009EF 6E               [ 8] 2674 	ld	l, (hl)
+      0009D4 07               [ 4] 2655 	rlca
+      0009D5 9F               [ 4] 2656 	sbc	a, a
+      0009D6 67               [ 4] 2657 	ld	h, a
+      0009D7 29               [ 8] 2658 	add	hl, hl
+      0009D8 29               [ 8] 2659 	add	hl, hl
+      0009D9 11r13r00         [12] 2660 	ld	de, #_block
+      0009DC 19               [ 8] 2661 	add	hl, de
+      0009DD 5D               [ 4] 2662 	ld	e, l
+      0009DE 54               [ 4] 2663 	ld	d, h
+      0009DF 13               [ 8] 2664 	inc	de
+      0009E0 1A               [ 8] 2665 	ld	a, (de)
+      0009E1 46               [ 8] 2666 	ld	b, (hl)
+      0009E2 21r07r00         [12] 2667 	ld	hl, #(_player + 7)
+      0009E5 F5               [16] 2668 	push	af
+      0009E6 7E               [ 8] 2669 	ld	a, (hl)
+      0009E7 F8 05            [12] 2670 	ldhl	sp,	#5
+      0009E9 77               [ 8] 2671 	ld	(hl), a
+      0009EA F1               [12] 2672 	pop	af
+      0009EB 21r06r00         [12] 2673 	ld	hl, #(_player + 6)
+      0009EE 6E               [ 8] 2674 	ld	l, (hl)
                                    2675 ;	spillPairReg hl
-      0009F0 C5               [16] 2676 	push	bc
-      0009F1 F5               [16] 2677 	push	af
-      0009F2 33               [ 8] 2678 	inc	sp
-      0009F3 C5               [16] 2679 	push	bc
-      0009F4 33               [ 8] 2680 	inc	sp
-      0009F5 E5               [16] 2681 	push	hl
-      0009F6 F8 09            [12] 2682 	ldhl	sp,	#9
-      0009F8 5E               [ 8] 2683 	ld	e, (hl)
-      0009F9 E1               [12] 2684 	pop	hl
-      0009FA 7D               [ 4] 2685 	ld	a, l
-      0009FB CDr56r05         [24] 2686 	call	_Hit
-      0009FE C1               [12] 2687 	pop	bc
-      0009FF B7               [ 4] 2688 	or	a, a
-      000A00 28 06            [12] 2689 	jr	Z, 00115$
-                           000A02  2690 	C$main.c$229$5_1$233	= .
+      0009EF C5               [16] 2676 	push	bc
+      0009F0 F5               [16] 2677 	push	af
+      0009F1 33               [ 8] 2678 	inc	sp
+      0009F2 C5               [16] 2679 	push	bc
+      0009F3 33               [ 8] 2680 	inc	sp
+      0009F4 E5               [16] 2681 	push	hl
+      0009F5 F8 09            [12] 2682 	ldhl	sp,	#9
+      0009F7 5E               [ 8] 2683 	ld	e, (hl)
+      0009F8 E1               [12] 2684 	pop	hl
+      0009F9 7D               [ 4] 2685 	ld	a, l
+      0009FA CDr56r05         [24] 2686 	call	_Hit
+      0009FD C1               [12] 2687 	pop	bc
+      0009FE B7               [ 4] 2688 	or	a, a
+      0009FF 28 06            [12] 2689 	jr	Z, 00115$
+                           000A01  2690 	C$main.c$229$5_1$233	= .
                                    2691 	.globl	C$main.c$229$5_1$233
                                    2692 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:229: gameLoop= 0;
-      000A02 F8 02            [12] 2693 	ldhl	sp,	#2
-      000A04 36 00            [12] 2694 	ld	(hl), #0x00
-                           000A06  2695 	C$main.c$230$5_1$233	= .
+      000A01 F8 02            [12] 2693 	ldhl	sp,	#2
+      000A03 36 00            [12] 2694 	ld	(hl), #0x00
+                           000A05  2695 	C$main.c$230$5_1$233	= .
                                    2696 	.globl	C$main.c$230$5_1$233
                                    2697 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:230: break;
-      000A06 18 03            [12] 2698 	jr	00104$
-      000A08                       2699 00115$:
-                           000A08  2700 	C$main.c$225$3_1$231	= .
+      000A05 18 03            [12] 2698 	jr	00104$
+      000A07                       2699 00115$:
+                           000A07  2700 	C$main.c$225$3_1$231	= .
                                    2701 	.globl	C$main.c$225$3_1$231
                                    2702 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:225: for(int8_t i = 0; i < MAX_BLOCK_COUNT; i++)
-      000A08 0C               [ 4] 2703 	inc	c
-      000A09 18 C1            [12] 2704 	jr	00114$
-      000A0B                       2705 00104$:
-                           000A0B  2706 	C$main.c$233$2_1$230	= .
+      000A07 0C               [ 4] 2703 	inc	c
+      000A08 18 C1            [12] 2704 	jr	00114$
+      000A0A                       2705 00104$:
+                           000A0A  2706 	C$main.c$233$2_1$230	= .
                                    2707 	.globl	C$main.c$233$2_1$230
                                    2708 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:233: wait_vbl_done();
-      000A0B CDr00r00         [24] 2709 	call	_wait_vbl_done
-      000A0E C3r8Ar09         [16] 2710 	jp	00105$
-      000A11                       2711 00107$:
-                           000A11  2712 	C$main.c$235$1_1$229	= .
+      000A0A CDr00r00         [24] 2709 	call	_wait_vbl_done
+      000A0D C3r89r09         [16] 2710 	jp	00105$
+      000A10                       2711 00107$:
+                           000A10  2712 	C$main.c$235$1_1$229	= .
                                    2713 	.globl	C$main.c$235$1_1$229
                                    2714 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:235: HIDE_SPRITES;
-      000A11 F0r00            [12] 2715 	ldh	a, (_LCDC_REG + 0)
-      000A13 E6 FD            [ 8] 2716 	and	a, #0xfd
-      000A15 E0r00            [12] 2717 	ldh	(_LCDC_REG + 0), a
+      000A10 F0r00            [12] 2715 	ldh	a, (_LCDC_REG + 0)
+      000A12 E6 FD            [ 8] 2716 	and	a, #0xfd
+      000A14 E0r00            [12] 2717 	ldh	(_LCDC_REG + 0), a
                                    2718 ;c:\gbdk_dev\resources\gbdk\include\gb\gb.h:1378: SCX_REG=x, SCY_REG=y;
-      000A17 AF               [ 4] 2719 	xor	a, a
-      000A18 E0r00            [12] 2720 	ldh	(_SCX_REG + 0), a
-      000A1A AF               [ 4] 2721 	xor	a, a
-      000A1B E0r00            [12] 2722 	ldh	(_SCY_REG + 0), a
-                           000A1D  2723 	C$main.c$237$1_1$229	= .
+      000A16 AF               [ 4] 2719 	xor	a, a
+      000A17 E0r00            [12] 2720 	ldh	(_SCX_REG + 0), a
+      000A19 AF               [ 4] 2721 	xor	a, a
+      000A1A E0r00            [12] 2722 	ldh	(_SCY_REG + 0), a
+                           000A1C  2723 	C$main.c$237$1_1$229	= .
                                    2724 	.globl	C$main.c$237$1_1$229
                                    2725 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:237: printf("GameOver");
-      000A1D 11r28r0A         [12] 2726 	ld	de, #___str_0
-      000A20 D5               [16] 2727 	push	de
-      000A21 CDr00r00         [24] 2728 	call	_printf
-      000A24 E1               [12] 2729 	pop	hl
-                           000A25  2730 	C$main.c$238$1_1$226	= .
+      000A1C 11r27r0A         [12] 2726 	ld	de, #___str_0
+      000A1F D5               [16] 2727 	push	de
+      000A20 CDr00r00         [24] 2728 	call	_printf
+      000A23 E1               [12] 2729 	pop	hl
+                           000A24  2730 	C$main.c$238$1_1$226	= .
                                    2731 	.globl	C$main.c$238$1_1$226
                                    2732 ;C:\gbdk_dev\Project\GB_PROJECT\source\main.c:238: }
-      000A25 E8 04            [16] 2733 	add	sp, #4
-                           000A27  2734 	C$main.c$238$1_1$226	= .
+      000A24 E8 04            [16] 2733 	add	sp, #4
+                           000A26  2734 	C$main.c$238$1_1$226	= .
                                    2735 	.globl	C$main.c$238$1_1$226
-                           000A27  2736 	XG$main$0$0	= .
+                           000A26  2736 	XG$main$0$0	= .
                                    2737 	.globl	XG$main$0$0
-      000A27 C9               [16] 2738 	ret
-                           000A28  2739 Fmain$__str_0$0_0$0 == .
-      000A28                       2740 ___str_0:
-      000A28 47 61 6D 65 4F 76 65  2741 	.ascii "GameOver"
+      000A26 C9               [16] 2738 	ret
+                           000A27  2739 Fmain$__str_0$0_0$0 == .
+      000A27                       2740 ___str_0:
+      000A27 47 61 6D 65 4F 76 65  2741 	.ascii "GameOver"
              72
-      000A30 00                    2742 	.db 0x00
+      000A2F 00                    2742 	.db 0x00
                                    2743 	.area _CODE
                                    2744 	.area _INITIALIZER
                            000000  2745 Fmain$__xinit_movementFrameCount$0_0$0 == .

@@ -29,11 +29,11 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
      00000006  l__HEADER |    00000007  l__HEADER |    00000008  l__HEADER
      0000000C  l__GSINIT |    0000000C  l__INITIA |    0000000C  l__INITIA
      00000030  l__HEADER |    0000005C  l__HEADER |    00000095  l__DATA  
-     000000AF  l__HEADER |    00000200  s__CODE   |    000008FC  l__HOME  
-     00002000  _rROMB0   |    00002639  l__CODE   |    00002839  s__HOME  
-     00003000  _rROMB1   |    00003135  s__BASE   |    00003135  s__CODE_0
-     00003135  s__INITIA |    00003135  s__LIT    |    00003141  s__GSINIT
-     0000314D  s__GSFINA |    00004000  _rRAMB    |    00008000  __VRAM   
+     000000AF  l__HEADER |    00000200  s__CODE   |    000008D0  l__HOME  
+     00002000  _rROMB0   |    00002638  l__CODE   |    00002838  s__HOME  
+     00003000  _rROMB1   |    00003108  s__BASE   |    00003108  s__CODE_0
+     00003108  s__INITIA |    00003108  s__LIT    |    00003114  s__GSINIT
+     00003120  s__GSFINA |    00004000  _rRAMB    |    00008000  __VRAM   
      00008000  __VRAM800 |    00008800  __VRAM880 |    00009000  __VRAM900
      00009800  __SCRN0   |    00009C00  __SCRN1   |    0000A000  __SRAM   
      0000C000  __RAM     |    0000C000  _shadow_O |    0000C0A0  s__DATA  
@@ -75,7 +75,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -134,7 +134,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -194,7 +194,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -254,7 +254,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -314,7 +314,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -374,7 +374,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -434,7 +434,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -494,7 +494,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -554,7 +554,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -614,7 +614,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -674,7 +674,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -734,7 +734,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -777,122 +777,122 @@ _CODE                  00000200    00002639 =        9785. bytes (REL,CON)
      000018AF  A$main$23 |    000018AF  C$main.c$ |    000018B1  A$main$23
      000018B3  A$main$23 |    000018B3  C$main.c$ |    000018B5  A$main$23
      000018B7  A$main$24 |    000018B7  C$main.c$ |    000018BA  A$main$24
-     000018BA  C$main.c$ |    000018BD  A$main$24 |    000018C0  A$main$24
-     000018C0  C$main.c$ |    000018C3  A$main$24 |    000018C4  A$main$24
-     000018C5  A$main$24 |    000018C6  A$main$24 |    000018C7  A$main$24
-     000018CA  A$main$24 |    000018CB  A$main$24 |    000018CB  C$main.c$
-     000018CE  A$main$24 |    000018CE  C$main.c$ |    000018D1  A$main$24
-     000018D2  A$main$24 |    000018D5  A$main$24 |    000018D6  A$main$24
-     000018D9  A$main$24 |    000018DB  A$main$24 |    000018DB  C$main.c$
-     000018DE  A$main$24 |    000018DF  A$main$24 |    000018E1  A$main$24
-     000018E2  A$main$24 |    000018E3  A$main$24 |    000018E4  A$main$24
-     000018E5  A$main$24 |    000018E7  A$main$24 |    000018E8  A$main$24
-     000018EA  A$main$24 |    000018EB  A$main$24 |    000018EC  A$main$24
-     000018ED  A$main$24 |    000018F0  A$main$24 |    000018F3  A$main$24
+     000018BA  C$main.c$ |    000018BC  A$main$24 |    000018BF  A$main$24
+     000018BF  C$main.c$ |    000018C2  A$main$24 |    000018C3  A$main$24
+     000018C4  A$main$24 |    000018C5  A$main$24 |    000018C6  A$main$24
+     000018C9  A$main$24 |    000018CA  A$main$24 |    000018CA  C$main.c$
+     000018CD  A$main$24 |    000018CD  C$main.c$ |    000018D0  A$main$24
+     000018D1  A$main$24 |    000018D4  A$main$24 |    000018D5  A$main$24
+     000018D8  A$main$24 |    000018DA  A$main$24 |    000018DA  C$main.c$
+     000018DD  A$main$24 |    000018DE  A$main$24 |    000018E0  A$main$24
+     000018E1  A$main$24 |    000018E2  A$main$24 |    000018E3  A$main$24
+     000018E4  A$main$24 |    000018E6  A$main$24 |    000018E7  A$main$24
+     000018E9  A$main$24 |    000018EA  A$main$24 |    000018EB  A$main$24
+     000018EC  A$main$24 |    000018EF  A$main$24 |    000018F2  A$main$24
 ASxxxx Linker V03.00/V05.40 + sdld,  page 15.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     000018F3  C$main.c$ |    000018F5  A$main$24 |    000018F6  A$main$24
-     000018F7  A$main$24 |    000018F9  A$main$24 |    000018FC  A$main$24
-     000018FF  A$main$24 |    000018FF  C$main.c$ |    00001901  A$main$24
-     00001902  A$main$24 |    00001904  A$main$24 |    00001906  A$main$24
-     00001908  A$main$24 |    00001908  C$main.c$ |    00001909  A$main$24
-     0000190A  A$main$24 |    0000190B  A$main$24 |    0000190C  A$main$24
-     0000190D  A$main$24 |    0000190E  A$main$24 |    0000190F  A$main$24
-     00001910  A$main$24 |    00001911  A$main$24 |    00001914  A$main$24
-     00001915  A$main$24 |    00001916  A$main$24 |    00001917  A$main$24
-     00001919  A$main$24 |    0000191A  A$main$24 |    0000191B  A$main$24
-     0000191C  A$main$24 |    0000191E  A$main$24 |    0000191F  A$main$24
-     00001920  A$main$24 |    00001921  A$main$24 |    00001922  A$main$24
-     00001923  A$main$24 |    00001924  A$main$24 |    00001925  A$main$24
-     00001926  A$main$24 |    00001927  A$main$25 |    00001928  A$main$25
-     00001929  A$main$25 |    0000192A  A$main$25 |    0000192B  A$main$25
-     0000192C  A$main$25 |    0000192D  A$main$25 |    0000192E  A$main$25
-     0000192F  A$main$25 |    00001930  A$main$25 |    00001930  C$main.c$
-     00001932  A$main$25 |    00001933  A$main$25 |    00001934  A$main$25
-     00001935  A$main$25 |    00001936  A$main$25 |    00001937  A$main$25
-     00001937  C$main.c$ |    00001938  A$main$25 |    00001939  A$main$25
-     0000193A  A$main$25 |    0000193B  A$main$25 |    0000193C  A$main$25
-     0000193D  A$main$25 |    0000193E  A$main$25 |    0000193F  A$main$25
-     00001940  A$main$25 |    00001941  A$main$25 |    00001942  A$main$25
-     00001942  C$main.c$ |    00001943  A$main$25 |    00001944  A$main$25
-     00001945  A$main$25 |    00001946  A$main$25 |    00001948  A$main$25
-     00001949  A$main$25 |    0000194A  A$main$25 |    0000194B  A$main$25
-     0000194B  C$main.c$ |    0000194C  A$main$25 |    0000194D  A$main$25
-     0000194E  A$main$25 |    0000194F  A$main$25 |    00001950  A$main$25
-     00001952  A$main$25 |    00001953  A$main$25 |    00001954  A$main$25
-     00001956  A$main$25 |    00001956  C$main.c$ |    00001959  A$main$25
-     0000195C  A$main$25 |    0000195C  C$main.c$ |    0000195E  A$main$25
-     00001960  A$main$25 |    00001962  A$main$25 |    00001962  C$main.c$
-     00001964  A$main$25 |    00001966  A$main$25 |    00001968  A$main$25
-     00001968  C$main.c$ |    0000196A  A$main$25 |    0000196C  A$main$25
-     0000196E  A$main$25 |    0000196E  C$main.c$ |    00001970  A$main$25
-     00001972  A$main$25 |    00001972  C$main.c$ |    00001974  A$main$25
-     00001975  A$main$25 |    00001976  A$main$25 |    00001979  A$main$25
-     00001979  C$main.c$ |    0000197C  A$main$25 |    0000197E  A$main$25
-     00001980  A$main$25 |    00001981  A$main$25 |    00001982  A$main$26
-     00001984  A$main$26 |    00001985  A$main$26 |    00001986  A$main$26
-     00001987  A$main$26 |    00001989  A$main$26 |    0000198B  A$main$26
-     0000198D  A$main$26 |    0000198E  A$main$26 |    0000198F  A$main$26
-     00001990  A$main$26 |    00001992  A$main$26 |    00001993  A$main$26
-     00001996  A$main$26 |    00001996  C$main.c$ |    00001999  A$main$26
-     0000199C  A$main$26 |    0000199C  C$main.c$ |    0000199E  A$main$26
-     000019A1  A$main$26 |    000019A4  A$main$26 |    000019A4  C$main.c$
-     000019A7  A$main$26 |    000019AA  A$main$26 |    000019AC  A$main$26
-     000019AD  A$main$26 |    000019AF  A$main$26 |    000019AF  C$main.c$
-     000019B2  A$main$26 |    000019B2  C$main.c$ |    000019B4  A$main$26
-     000019B5  A$main$26 |    000019B7  A$main$26 |    000019B9  A$main$26
-     000019BB  A$main$26 |    000019BB  C$main.c$ |    000019BC  A$main$26
+     000018F2  C$main.c$ |    000018F4  A$main$24 |    000018F5  A$main$24
+     000018F6  A$main$24 |    000018F8  A$main$24 |    000018FB  A$main$24
+     000018FE  A$main$24 |    000018FE  C$main.c$ |    00001900  A$main$24
+     00001901  A$main$24 |    00001903  A$main$24 |    00001905  A$main$24
+     00001907  A$main$24 |    00001907  C$main.c$ |    00001908  A$main$24
+     00001909  A$main$24 |    0000190A  A$main$24 |    0000190B  A$main$24
+     0000190C  A$main$24 |    0000190D  A$main$24 |    0000190E  A$main$24
+     0000190F  A$main$24 |    00001910  A$main$24 |    00001913  A$main$24
+     00001914  A$main$24 |    00001915  A$main$24 |    00001916  A$main$24
+     00001918  A$main$24 |    00001919  A$main$24 |    0000191A  A$main$24
+     0000191B  A$main$24 |    0000191D  A$main$24 |    0000191E  A$main$24
+     0000191F  A$main$24 |    00001920  A$main$24 |    00001921  A$main$24
+     00001922  A$main$24 |    00001923  A$main$24 |    00001924  A$main$24
+     00001925  A$main$24 |    00001926  A$main$25 |    00001927  A$main$25
+     00001928  A$main$25 |    00001929  A$main$25 |    0000192A  A$main$25
+     0000192B  A$main$25 |    0000192C  A$main$25 |    0000192D  A$main$25
+     0000192E  A$main$25 |    0000192F  A$main$25 |    0000192F  C$main.c$
+     00001931  A$main$25 |    00001932  A$main$25 |    00001933  A$main$25
+     00001934  A$main$25 |    00001935  A$main$25 |    00001936  A$main$25
+     00001936  C$main.c$ |    00001937  A$main$25 |    00001938  A$main$25
+     00001939  A$main$25 |    0000193A  A$main$25 |    0000193B  A$main$25
+     0000193C  A$main$25 |    0000193D  A$main$25 |    0000193E  A$main$25
+     0000193F  A$main$25 |    00001940  A$main$25 |    00001941  A$main$25
+     00001941  C$main.c$ |    00001942  A$main$25 |    00001943  A$main$25
+     00001944  A$main$25 |    00001945  A$main$25 |    00001947  A$main$25
+     00001948  A$main$25 |    00001949  A$main$25 |    0000194A  A$main$25
+     0000194A  C$main.c$ |    0000194B  A$main$25 |    0000194C  A$main$25
+     0000194D  A$main$25 |    0000194E  A$main$25 |    0000194F  A$main$25
+     00001951  A$main$25 |    00001952  A$main$25 |    00001953  A$main$25
+     00001955  A$main$25 |    00001955  C$main.c$ |    00001958  A$main$25
+     0000195B  A$main$25 |    0000195B  C$main.c$ |    0000195D  A$main$25
+     0000195F  A$main$25 |    00001961  A$main$25 |    00001961  C$main.c$
+     00001963  A$main$25 |    00001965  A$main$25 |    00001967  A$main$25
+     00001967  C$main.c$ |    00001969  A$main$25 |    0000196B  A$main$25
+     0000196D  A$main$25 |    0000196D  C$main.c$ |    0000196F  A$main$25
+     00001971  A$main$25 |    00001971  C$main.c$ |    00001973  A$main$25
+     00001974  A$main$25 |    00001975  A$main$25 |    00001978  A$main$25
+     00001978  C$main.c$ |    0000197B  A$main$25 |    0000197D  A$main$25
+     0000197F  A$main$25 |    00001980  A$main$25 |    00001981  A$main$26
+     00001983  A$main$26 |    00001984  A$main$26 |    00001985  A$main$26
+     00001986  A$main$26 |    00001988  A$main$26 |    0000198A  A$main$26
+     0000198C  A$main$26 |    0000198D  A$main$26 |    0000198E  A$main$26
+     0000198F  A$main$26 |    00001991  A$main$26 |    00001992  A$main$26
+     00001995  A$main$26 |    00001995  C$main.c$ |    00001998  A$main$26
+     0000199B  A$main$26 |    0000199B  C$main.c$ |    0000199D  A$main$26
+     000019A0  A$main$26 |    000019A3  A$main$26 |    000019A3  C$main.c$
+     000019A6  A$main$26 |    000019A9  A$main$26 |    000019AB  A$main$26
+     000019AC  A$main$26 |    000019AE  A$main$26 |    000019AE  C$main.c$
+     000019B1  A$main$26 |    000019B1  C$main.c$ |    000019B3  A$main$26
+     000019B4  A$main$26 |    000019B6  A$main$26 |    000019B8  A$main$26
+     000019BA  A$main$26 |    000019BA  C$main.c$ |    000019BB  A$main$26
 ASxxxx Linker V03.00/V05.40 + sdld,  page 16.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00002639 =        9785. bytes (REL,CON)
+_CODE                  00000200    00002638 =        9784. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     000019BD  A$main$26 |    000019BE  A$main$26 |    000019BF  A$main$26
-     000019C0  A$main$26 |    000019C1  A$main$26 |    000019C2  A$main$26
-     000019C5  A$main$26 |    000019C6  A$main$26 |    000019C7  A$main$26
-     000019C8  A$main$26 |    000019C9  A$main$26 |    000019CA  A$main$26
-     000019CB  A$main$26 |    000019CE  A$main$26 |    000019CF  A$main$26
-     000019D0  A$main$26 |    000019D2  A$main$26 |    000019D3  A$main$26
-     000019D4  A$main$26 |    000019D7  A$main$26 |    000019D8  A$main$26
-     000019D9  A$main$26 |    000019DA  A$main$26 |    000019DB  A$main$26
-     000019DC  A$main$26 |    000019DD  A$main$26 |    000019DE  A$main$26
-     000019E0  A$main$26 |    000019E1  A$main$26 |    000019E2  A$main$26
-     000019E3  A$main$26 |    000019E6  A$main$26 |    000019E7  A$main$26
-     000019E8  A$main$26 |    000019EA  A$main$26 |    000019EA  C$main.c$
-     000019EC  A$main$26 |    000019EE  A$main$26 |    000019EE  C$main.c$
-     000019F0  A$main$27 |    000019F0  C$main.c$ |    000019F1  A$main$27
-     000019F3  A$main$27 |    000019F3  C$main.c$ |    000019F6  A$main$27
-     000019F9  A$main$27 |    000019F9  C$main.c$ |    000019FB  A$main$27
-     000019FD  A$main$27 |    000019FF  A$main$27 |    00001A00  A$main$27
-     00001A02  A$main$27 |    00001A03  A$main$27 |    00001A05  A$main$27
-     00001A05  C$main.c$ |    00001A08  A$main$27 |    00001A09  A$main$27
-     00001A0C  A$main$27 |    00001A0D  A$main$27 |    00001A0F  A$main$27
-     00001A0F  C$main.c$ |    00001A0F  XG$main$0 |    00001A10  Fmain$__s
-     00001A19  G$blocksp |    00001A19  _blockspr |    00001A59  G$BirdSpr
-     00001A59  _BirdSpri |    00001CB9  G$BirdSpr |    00001CB9  _BirdSpri
-     00001CD9  G$BackGro |    00001CD9  _BackGrou |    00002029  G$BackGro
-     00002029  _BackGrou |    000022F9  _arand    |    00002325  _initaran
-     00002350  __mulsuch |    00002353  __mulusch |    0000235C  __mulscha
-     00002364  __mulint  |    00002383  __mulucha |    00002395  _printf  
-     000023AA  __divsuch |    000023B0  __modsuch |    000023B9  __divusch
-     000023C2  __modusch |    000023CF  __divscha |    000023D4  __modscha
-     000023DB  __divsint |    000023E4  __modsint |    000023F0  __divucha
-     000023F5  __moducha |    000023FC  __divuint |    00002405  __moduint
-     00002411  .div8     |    00002411  .mod8     |    00002419  .div16   
-     00002419  .mod16    |    0000244F  .divu8    |    0000244F  .modu8   
-     00002452  .divu16   |    00002452  .modu16   |    000024C9  ___printf
-     00002818  _sprintf 
+     000019BC  A$main$26 |    000019BD  A$main$26 |    000019BE  A$main$26
+     000019BF  A$main$26 |    000019C0  A$main$26 |    000019C1  A$main$26
+     000019C4  A$main$26 |    000019C5  A$main$26 |    000019C6  A$main$26
+     000019C7  A$main$26 |    000019C8  A$main$26 |    000019C9  A$main$26
+     000019CA  A$main$26 |    000019CD  A$main$26 |    000019CE  A$main$26
+     000019CF  A$main$26 |    000019D1  A$main$26 |    000019D2  A$main$26
+     000019D3  A$main$26 |    000019D6  A$main$26 |    000019D7  A$main$26
+     000019D8  A$main$26 |    000019D9  A$main$26 |    000019DA  A$main$26
+     000019DB  A$main$26 |    000019DC  A$main$26 |    000019DD  A$main$26
+     000019DF  A$main$26 |    000019E0  A$main$26 |    000019E1  A$main$26
+     000019E2  A$main$26 |    000019E5  A$main$26 |    000019E6  A$main$26
+     000019E7  A$main$26 |    000019E9  A$main$26 |    000019E9  C$main.c$
+     000019EB  A$main$26 |    000019ED  A$main$26 |    000019ED  C$main.c$
+     000019EF  A$main$27 |    000019EF  C$main.c$ |    000019F0  A$main$27
+     000019F2  A$main$27 |    000019F2  C$main.c$ |    000019F5  A$main$27
+     000019F8  A$main$27 |    000019F8  C$main.c$ |    000019FA  A$main$27
+     000019FC  A$main$27 |    000019FE  A$main$27 |    000019FF  A$main$27
+     00001A01  A$main$27 |    00001A02  A$main$27 |    00001A04  A$main$27
+     00001A04  C$main.c$ |    00001A07  A$main$27 |    00001A08  A$main$27
+     00001A0B  A$main$27 |    00001A0C  A$main$27 |    00001A0E  A$main$27
+     00001A0E  C$main.c$ |    00001A0E  XG$main$0 |    00001A0F  Fmain$__s
+     00001A18  G$blocksp |    00001A18  _blockspr |    00001A58  G$BirdSpr
+     00001A58  _BirdSpri |    00001CB8  G$BirdSpr |    00001CB8  _BirdSpri
+     00001CD8  G$BackGro |    00001CD8  _BackGrou |    00002028  G$BackGro
+     00002028  _BackGrou |    000022F8  _arand    |    00002324  _initaran
+     0000234F  __mulsuch |    00002352  __mulusch |    0000235B  __mulscha
+     00002363  __mulint  |    00002382  __mulucha |    00002394  _printf  
+     000023A9  __divsuch |    000023AF  __modsuch |    000023B8  __divusch
+     000023C1  __modusch |    000023CE  __divscha |    000023D3  __modscha
+     000023DA  __divsint |    000023E3  __modsint |    000023EF  __divucha
+     000023F4  __moducha |    000023FB  __divuint |    00002404  __moduint
+     00002410  .div8     |    00002410  .mod8     |    00002418  .div16   
+     00002418  .mod16    |    0000244E  .divu8    |    0000244E  .modu8   
+     00002451  .divu16   |    00002451  .modu16   |    000024C8  ___printf
+     00002817  _sprintf 
 ASxxxx Linker V03.00/V05.40 + sdld,  page 17.
 Hexadecimal  [32-Bits]
 
@@ -1070,58 +1070,57 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_HOME                  00002839    000008FC =        2300. bytes (REL,CON)
+_HOME                  00002838    000008D0 =        2256. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     00002839  .memset_s |    00002842  .memcpy_s |    0000285F  .display_
-     0000285F  _display_ |    00002877  _rand     |    00002877  _randw   
-     000028A2  _initrand |    000028A4  .initrand |    000028AD  _set_tile
-     000028B2  _set_bkg_ |    000028B2  _set_win_ |    000028BA  _set_spri
-     000028EA  .padup    |    000028EA  _waitpadu |    000028FA  .jpad    
-     000028FA  _joypad   |    00002922  _waitpad  |    00002923  .wait_pad
-     0000292A  .delay    |    0000292A  _delay    |    00002956  _set_bkg_
-     0000296A  _font_loa |    00002971  font_load |    000029B9  font_copy
-     000029EF  font_set  |    000029FC  .put_char |    00002A14  .out_char
-     00002A1A  .del_char |    00002A70  _putchar  |    00002A79  _setchar 
-     00002A82  _font_loa |    00002A90  _font_set |    00002A9F  _font_ini
-     00002ABE  .cls      |    00002ABE  _cls      |    00002AE0  _gotoxy  
-     00002AEB  _posx     |    00002AFC  _posy     |    00002B24  .cr_curs 
-     00002B39  .adv_curs |    00002B95  .tmode    |    00002BB2  .tmode_ou
-     00002BBB  _color    |    00002BBB  _set_1bpp |    00002BCA  .drawing_
-     00002BE7  _font_ibm |    00002FC8  .add_LCD  |    00002FC8  _add_LCD 
-     00002FCE  .remove_L |    00002FCE  _remove_L |    00002FD4  .set_xy_w
-     00002FDD  .set_xy_b |    00002FEC  .set_xy_t |    0000302E  _uitoa   
-     0000303D  _itoa     |    0000304C  .itoa     |    00003060  .utoa    
-     000030D4  _set_bkg_ |    000030D4  _set_win_ |    000030DC  _set_spri
-     00003134  ___sdcc_c
+     00002838  .memset_s |    00002841  .memcpy_s |    0000285E  .display_
+     0000285E  _display_ |    00002876  _rand     |    00002876  _randw   
+     000028A1  _initrand |    000028A3  .initrand |    000028AC  .padup   
+     000028AC  _waitpadu |    000028BC  .jpad     |    000028BC  _joypad  
+     000028E4  _waitpad  |    000028E5  .wait_pad |    000028EC  _set_tile
+     000028F1  _set_bkg_ |    000028F1  _set_win_ |    000028F9  _set_spri
+     00002929  _set_bkg_ |    0000293D  _font_loa |    00002944  font_load
+     0000298C  font_copy |    000029C2  font_set  |    000029CF  .put_char
+     000029E7  .out_char |    000029ED  .del_char |    00002A43  _putchar 
+     00002A4C  _setchar  |    00002A55  _font_loa |    00002A63  _font_set
+     00002A72  _font_ini |    00002A91  .cls      |    00002A91  _cls     
+     00002AB3  _gotoxy   |    00002ABE  _posx     |    00002ACF  _posy    
+     00002AF7  .cr_curs  |    00002B0C  .adv_curs |    00002B68  .tmode   
+     00002B85  .tmode_ou |    00002B8E  _color    |    00002B8E  _set_1bpp
+     00002B9D  .drawing_ |    00002BBA  _font_ibm |    00002F9B  .add_LCD 
+     00002F9B  _add_LCD  |    00002FA1  .remove_L |    00002FA1  _remove_L
+     00002FA7  .set_xy_w |    00002FB0  .set_xy_b |    00002FBF  .set_xy_t
+     00003001  _uitoa    |    00003010  _itoa     |    0000301F  .itoa    
+     00003033  .utoa     |    000030A7  _set_bkg_ |    000030A7  _set_win_
+     000030AF  _set_spri |    00003107  ___sdcc_c
 ASxxxx Linker V03.00/V05.40 + sdld,  page 36.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_INITIALIZER           00003135    0000000C =          12. bytes (REL,CON)
+_INITIALIZER           00003108    0000000C =          12. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     00003135  Fmain$__x |    00003136  Fmain$__x |    00003137  Fmain$__x
-     00003138  Fmain$__x |    00003139  Fmain$__x |    0000313A  Fmain$__x
+     00003108  Fmain$__x |    00003109  Fmain$__x |    0000310A  Fmain$__x
+     0000310B  Fmain$__x |    0000310C  Fmain$__x |    0000310D  Fmain$__x
 ASxxxx Linker V03.00/V05.40 + sdld,  page 37.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_GSINIT                00003141    0000000C =          12. bytes (REL,CON)
+_GSINIT                00003114    0000000C =          12. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     00003141  gsinit   
+     00003114  gsinit   
 ASxxxx Linker V03.00/V05.40 + sdld,  page 38.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_GSFINAL               0000314D    00000001 =           1. bytes (REL,CON)
+_GSFINAL               00003120    00000001 =           1. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -1199,14 +1198,13 @@ Libraries Linked                          [ object file ]
 
 C:\gbdk_dev\Resources\gbdk\lib/sm83/sm83.lib
                                           [ rand.o ]
+C:\gbdk_dev\Resources\gbdk\lib/gb/gb.lib  [ pad.o ]
 C:\gbdk_dev\Resources\gbdk\lib/gb/gb.lib  [ sfr.o ]
 C:\gbdk_dev\Resources\gbdk\lib/sm83/sm83.lib
                                           [ arand.o ]
 C:\gbdk_dev\Resources\gbdk\lib/gb/gb.lib  [ set_data.o ]
 C:\gbdk_dev\Resources\gbdk\lib/sm83/sm83.lib
                                           [ mul.o ]
-C:\gbdk_dev\Resources\gbdk\lib/gb/gb.lib  [ pad.o ]
-C:\gbdk_dev\Resources\gbdk\lib/gb/gb.lib  [ delay.o ]
 C:\gbdk_dev\Resources\gbdk\lib/sm83/sm83.lib
                                           [ printf.o ]
 C:\gbdk_dev\Resources\gbdk\lib/sm83/sm83.lib

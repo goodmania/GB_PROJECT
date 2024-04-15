@@ -182,7 +182,7 @@ void main(void)
      NR51_REG = 0xFF; // select which chanels using
      
      ShowTitle();
-     delay(2000);
+     waitpad(J_A);	
 
      // init randomvariable generator　
      initarand(__rand_seed);
