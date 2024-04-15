@@ -3,7 +3,6 @@
 
 #define FOOT_ON_LAND    0x01U
 #define FOOT_IN_AIR     0x02U
-#define MAX_JUMP_FRAMES 15
 
 // A structure for a character
 typedef struct Character
@@ -73,6 +72,7 @@ void LoadSpriteFrame(Character* character, uint8_t frame)
 
     // Loop X and Y of sprite
     for (uint8_t y = 0; y != character->spriteTileHeight; y++)
+    {
         for (uint8_t x = 0; x != character->spriteTileWidth; x++)
         {
             // Calculate indexes
@@ -88,6 +88,8 @@ void LoadSpriteFrame(Character* character, uint8_t frame)
             // Set sprite tile
             set_sprite_tile(spriteId, character->tilemap[x + (y * character->spriteTileWidth) + (frame * spriteCount)] + character->tilesetStart);
         }
+    }
+    
 }
 
 void RefreshSprite(Character *character)

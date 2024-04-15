@@ -1,11 +1,15 @@
+#include <rand.h>
+
 #include "Character.h"
 #include "SplashScreenSprite.h"
 #include "BackGroundSprite.h"
 #include "BirdSprite.h"
+#include "BlockSprite.h"
 
 // prototype
-void showTitle(void);
+void ShowTitle(void);
 void SetupBackGround(void);
+void SetupBlock(void);
 
 // grobal variable
 Character player;
@@ -16,10 +20,12 @@ int8_t lastMovementX = 0;
 int8_t lastMovementY = 0;
 int8_t slowingX = 0;
 
+#define MAX_BLOCK_COUNT 4
 #define PLAYER_ANIMATION_FRAMES 8
 #define GLOUND_LEVEL 130
+#define MAX_HEIGHT_LEVEL 20
 
-void showTitle(void)
+void ShowTitle(void)
 {
     // Load tileset into GB memory
     set_bkg_data(0, SplashScreenSprite_tileset_size, SplashScreenSprite_tileset);
@@ -47,10 +53,10 @@ void DetectCollisions(Character *character, uint8_t *predictedX, uint8_t *predic
 
           // Remove velocity
           character->velocityY = 0;
-     }else if(*predictedY < 8)
+     }else if(*predictedY < MAX_HEIGHT_LEVEL)
      {
           // Snap to ground
-          *predictedY = 8; 
+          *predictedY = MAX_HEIGHT_LEVEL; 
 
           // Remove velocity
           character->velocityY = 0;
@@ -104,28 +110,65 @@ void MovementPhysics(Character *character, uint8_t slowDownFrames)
      lastMovementY = character->movementForceY;
 }
 
+BOOLEAN Hit(uint8_t playerX, uint8_t playerY, uint8_t objX, uint8_t objY)
+{
+     return (playerX < objX + 8 && objX < playerX + 8) && (playerY < objY + 8 && objY < playerY + 8) ;
+}
+
+void SetupBlock()
+{
+     const uint8_t blockOffset = 4;
+     set_sprite_data(BirdSprite_tileset_size + 1, 4, blocksprite_tileset);
+
+     for(uint8_t i = 0; i < MAX_BLOCK_COUNT; i++)
+     {
+          set_sprite_tile(i * blockOffset + 4, 39); 
+          set_sprite_tile(i * blockOffset + 5, 40); 
+          set_sprite_tile(i * blockOffset + 6, 41); 
+          set_sprite_tile(i * blockOffset + 7, 42); 
+
+          move_sprite(i * blockOffset + 4, 30, 30);
+          move_sprite(i * blockOffset + 5, 30, 38);
+          move_sprite(i * blockOffset + 6, 38, 30);
+          move_sprite(i * blockOffset + 7, 38, 38);
+     }
+}
+
 void main(void)
 {
-    SetupBackGround();
+     // init randomvariable generator
+     initarand(__rand_seed);
 
-    set_sprite_data(0, BirdSprite_tileset_size, BirdSprite_tileset);
+     SetupBackGround();
 
-    SetupCharacter(&player, 0, 2, 2, 0, 8, BirdSprite_tilemap);
+     set_sprite_data(0, BirdSprite_tileset_size, BirdSprite_tileset);
 
-    MoveCharacter(&player, 16, 56);
+     SetupCharacter(&player, 0, 2, 2, 0, 8, BirdSprite_tilemap);
 
-    SHOW_BKG;
-    SHOW_SPRITES;
-    DISPLAY_ON;
+     MoveCharacter(&player, 16, 56);
 
-    while(1)
-    {
-        player.underfootState = player.y >= GLOUND_LEVEL ? FOOT_ON_LAND : FOOT_IN_AIR;
-        MoveCharacterWithJoypad(&player);
-        MovementPhysics(&player, 3);
-        LoadNextSpriteFrame(&player);
+     SetupBlock();
 
-        scroll_bkg(1, 0);
-        wait_vbl_done();
-    }
+     SHOW_BKG;
+     SHOW_SPRITES;
+     DISPLAY_ON;
+     
+     BOOLEAN gameLoop = 1;
+
+     while(gameLoop)
+     {
+          player.underfootState = player.y >= GLOUND_LEVEL ? FOOT_ON_LAND : FOOT_IN_AIR;
+          MoveCharacterWithJoypad(&player);
+          MovementPhysics(&player, 3);
+          LoadNextSpriteFrame(&player);
+
+          scroll_bkg(1, 0);
+
+          if(Hit(player.x, player.y, 0, 0))
+          {
+               gameLoop= 0;
+          }
+          wait_vbl_done();
+     }
+     printf("GameOver");
 }

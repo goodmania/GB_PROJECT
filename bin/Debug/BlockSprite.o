@@ -1,0 +1,28 @@
+XL3
+H 9 areas 3 global symbols
+M BlockSprite
+O -msm83
+S .__.ABS. Def000000
+A _CODE size 40 flags 0 addr 0
+S _blocksprite_tileset Def000000
+S G$blocksprite_tileset$0_0$0 Def000000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00
+R 00 00 00 00
+T 00 00 00 FF FF C0 E0 A0 F0 90 F8 88 9C 80 8C 80
+R 00 00 00 00
+T 0D 00 00 80 80 80 80 80 87 80 8F 87 9F 88 B8 90
+R 00 00 00 00
+T 1A 00 00 F0 A0 A0 C0 FF FF FF FF 03 07 05 0F 09
+R 00 00 00 00
+T 27 00 00 1D 11 39 01 31 01 01 01 01 01 01 E1 01
+R 00 00 00 00
+T 34 00 00 F1 E1 F9 11 1D 09 0F 05 05 03 FF FF
+R 00 00 00 00
