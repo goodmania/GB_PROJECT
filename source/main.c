@@ -177,14 +177,14 @@ void ScrollBlock()
 void main(void)
 {
      // enable sound
-     NR52_REG = 0x80; // 1000 0000 turns on sound
+     NR52_REG = 0x80; // turns on sound
      NR50_REG = 0x77; // sets the volume for both left and right channel to max
-     NR51_REG = 0xFF; // select which chanels using
+     NR51_REG = 0xFF; // use all chanels
      
      ShowTitle();
      waitpad(J_A);	
 
-     // init randomvariable generator　
+     // init randomvariable generator(not used...)
      initarand(__rand_seed);
 
      SetupBackGround();
